@@ -13,24 +13,37 @@ body.home-page main {
 body.home-page main h1 {
   color: #455950;
   text-align: center;
-  margin: 40px 40px;
+  margin: 20px 40px;
 }
-body.home-page main p {
-  text-align: center;
-  margin: 20px 40px 40px 40px;
-}
-body.home-page main h3 {
-  background-color: #455950;
-  color: white;
-  text-align: center;
-  padding: 20px 40px 20px 40px;
-}
-body.home-page main h2 {
-  color: #455950;
+body.home-page main .sell-text {
   text-align: center;
   margin: 20px 40px;
 }
-body.home-page main .cta-button {
+body.home-page .vision-vip {
+  background-color: #455950;
+  padding: 20px 40px;
+  margin: 20px 0px;
+}
+body.home-page .vision-vip h3 {
+  color: white;
+  text-align: center;
+}
+body.home-page .vision-vip p {
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+body.home-page .trial {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body.home-page .trial h2 {
+  color: #455950;
+  text-align: center;
+  margin: 40px 40px 20px 40px;
+}
+body.home-page .trial .cta-button {
   background: #455950;
   border: 0px;
   color: white;
@@ -39,19 +52,6 @@ body.home-page main .cta-button {
   margin: 20px 40px;
   font-weight: bold;
   font-size: 16px;
-}
-body.home-page .customer-reviews-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  border: 2px solid #455950;
-  margin: 20px 100px 40px 100px;
-  padding: 20px;
-  gap: 20px;
-}
-body.home-page .customer-reviews-container img {
-  width: 100%;
-  height: auto;
 }
 body.home-page form {
   justify-content: center;
@@ -70,6 +70,7 @@ body.home-page input[type=text], body.home-page input[type=submit] {
   margin: 10px 0;
   display: inline-block;
   box-sizing: border-box;
+  border-radius: 8px;
 }
 body.home-page input[type=submit] {
   background-color: #455950;
@@ -77,7 +78,21 @@ body.home-page input[type=submit] {
   font-size: 16px;
   font-weight: bold;
   border: none;
+  border-radius: 8px;
 }
 body.home-page input[type=submit]:hover {
   opacity: 0.8;
+}
+body.home-page .customer-reviews-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 2px solid #455950;
+  margin: 20px 100px 40px 100px;
+  padding: 20px;
+  gap: 20px;
+}
+body.home-page .customer-reviews-container img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=styles.css.map */
