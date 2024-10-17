@@ -1,2 +1,74 @@
 /*# sourceMappingURL=styles.css.map */
 
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0e5b1;
+  padding: 20px;
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.navigation a {
+  font-size: 18px;
+  color: #333;
+}
+
+.navigation a:hover {
+  color: #666;
+}
+
+.login-div {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.login-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
