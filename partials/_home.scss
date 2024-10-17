@@ -12,30 +12,29 @@ body.home-page {
         justify-content: center;
         flex-wrap: wrap;
 
+        .img-wrap {
+            overflow: hidden;
+        }
+
         h1 {
-            color: #455950;
-            text-align: center;
-            margin: 20px 40px;
+            color: $primary-green;
         }
 
         .sell-text {
-            text-align: center;
             margin: 20px 40px;
         }
     }
 
     .vision-vip {
-        background-color: #455950;
+        background-color: $primary-green;
         padding: 20px 40px;
-        margin: 20px 0px;
 
         h3 {
             color: white;
-            text-align: center;
         }
 
         p {
-            text-align: center;
+            text-align: end;
             color: white;
             font-style: italic;
         }
@@ -53,7 +52,7 @@ body.home-page {
         }
 
         .cta-button {
-            background: #455950;
+            background: $primary-green;
             border: 0px;
             color: white;
             padding: 20px;
@@ -72,7 +71,7 @@ body.home-page {
       
       .newsletter-container {
         padding: 0px 40px;
-        color: #455950;
+        color: $primary-green;
 
             h2 {
                 text-align: center;
@@ -89,7 +88,7 @@ body.home-page {
       }
 
       input[type=submit] {
-        background-color: #455950;
+        background-color: $primary-green;
         color: white;
         font-size: 16px;
         font-weight: bold ;
@@ -106,7 +105,7 @@ body.home-page {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        border: 2px solid #455950;
+        border: 2px solid $primary-green;
         margin: 20px 100px 40px 100px;
         padding: 20px;
         gap: 20px;

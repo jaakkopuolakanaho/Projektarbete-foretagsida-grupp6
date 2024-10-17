@@ -1,0 +1,154 @@
+body.home-page {
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body.home-page main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body.home-page main .img-wrap {
+  overflow: hidden;
+}
+body.home-page main h1 {
+  color: #455950;
+}
+body.home-page main .sell-text {
+  margin: 20px 40px;
+}
+body.home-page .vision-vip {
+  background-color: #455950;
+  padding: 20px 40px;
+}
+body.home-page .vision-vip h3 {
+  color: white;
+}
+body.home-page .vision-vip p {
+  text-align: end;
+  color: white;
+  font-style: italic;
+}
+body.home-page .trial {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body.home-page .trial h2 {
+  color: #455950;
+  text-align: center;
+  margin: 40px 40px 20px 40px;
+}
+body.home-page .trial .cta-button {
+  background: #455950;
+  border: 0px;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 40px;
+  font-weight: bold;
+  font-size: 16px;
+}
+body.home-page form {
+  justify-content: center;
+  margin: 40px 0px;
+}
+body.home-page .newsletter-container {
+  padding: 0px 40px;
+  color: #455950;
+}
+body.home-page .newsletter-container h2 {
+  text-align: center;
+}
+body.home-page input[type=text], body.home-page input[type=submit] {
+  width: 100%;
+  padding: 20px 40px;
+  margin: 10px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+body.home-page input[type=submit] {
+  background-color: #455950;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+}
+body.home-page input[type=submit]:hover {
+  opacity: 0.8;
+}
+body.home-page .customer-reviews-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 2px solid #455950;
+  margin: 20px 100px 40px 100px;
+  padding: 20px;
+  gap: 20px;
+}
+body.home-page .customer-reviews-container img {
+  width: 100%;
+  height: auto;
+}
+
+body.about-page {
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body.about-page main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body.about-page main .img-wrap {
+  overflow: hidden;
+}
+body.about-page main .img-wrap img {
+  width: 100%;
+}
+body.about-page main .about-text {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+body.about-page main .about-text h1 {
+  color: #455950;
+  margin: 0px;
+}
+body.about-page main .about-text h2 {
+  color: #455950;
+  margin: 10px 0px 0px 0px;
+}
+body.about-page main .about-text p {
+  margin: 10px 0px;
+}
+body.about-page .staff-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #455950;
+  padding: 20px 40px;
+  gap: 20px;
+}
+body.about-page .staff-container h2 {
+  color: white;
+}
+body.about-page .staff-container .staff-one, body.about-page .staff-container .staff-two, body.about-page .staff-container .staff-three, body.about-page .staff-container .staff-four, body.about-page .staff-container .staff-five, body.about-page .staff-container .staff-six {
+  background: white;
+  padding: 10px;
+  width: 220px;
+}
+body.about-page .staff-container .staff-one img, body.about-page .staff-container .staff-two img, body.about-page .staff-container .staff-three img, body.about-page .staff-container .staff-four img, body.about-page .staff-container .staff-five img, body.about-page .staff-container .staff-six img {
+  width: 100%;
+}
+body.about-page .staff-container .staff-one h3, body.about-page .staff-container .staff-one h4, body.about-page .staff-container .staff-one b, body.about-page .staff-container .staff-two h3, body.about-page .staff-container .staff-two h4, body.about-page .staff-container .staff-two b, body.about-page .staff-container .staff-three h3, body.about-page .staff-container .staff-three h4, body.about-page .staff-container .staff-three b, body.about-page .staff-container .staff-four h3, body.about-page .staff-container .staff-four h4, body.about-page .staff-container .staff-four b, body.about-page .staff-container .staff-five h3, body.about-page .staff-container .staff-five h4, body.about-page .staff-container .staff-five b, body.about-page .staff-container .staff-six h3, body.about-page .staff-container .staff-six h4, body.about-page .staff-container .staff-six b {
+  margin: 0px;
+  color: #455950;
+}/*# sourceMappingURL=styles.css.map */

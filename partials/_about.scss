@@ -1,0 +1,77 @@
+
+
+
+body.about-page {
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    main {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .img-wrap {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .about-text {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px;
+
+            h1 {
+                color: $primary-green;
+                margin: 0px;
+            }
+
+            h2 {
+                color: $primary-green;
+                margin: 10px 0px 0px 0px;
+            }
+
+            p {
+                margin: 10px 0px;
+            }
+        }
+    }
+
+    .staff-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: $primary-green;
+        padding: 20px 40px;
+        gap: 20px;
+
+        h2 {
+            color: white;
+        }
+
+        .staff-one, .staff-two, .staff-three, .staff-four, .staff-five, .staff-six {
+            background: white;
+            padding: 10px;
+            width: 220px;
+
+            img {
+                width: 100%;
+            }
+
+            h3, h4, b {
+                margin: 0px;
+                color: $primary-green;
+            }
+
+        }
+
+ 
+
+    }
+
+}
