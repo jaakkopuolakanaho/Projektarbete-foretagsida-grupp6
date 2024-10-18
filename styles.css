@@ -265,7 +265,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   color: #455950;
-  border: rgb(225, 0, 255) solid; /*Just to mark out while working */
+  border: red solid; /*Just to mark out while working */
   padding: 10px;
   margin: 10px;
   height: auto;
