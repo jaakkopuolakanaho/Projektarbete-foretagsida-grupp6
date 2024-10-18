@@ -8,129 +8,133 @@ footer{
   height: auto; 
   background-color:#455950 ;
   color: white;
-  margin:10px;
   padding: 5px;
- 
-
 }
 
-
-.fot-parent{ /* Omkring allt */
+  .fot-parent{ /* Omkring allt */
  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  /* border: rgb(225, 0, 255) solid; Just to mark out while working */
-  padding:10px;
-  margin:10px;
-  height: auto;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    /* border: rgb(225, 0, 255) solid; Just to mark out while working */
+    padding:10px;
+    margin:10px;
+    height: auto;
+    width: 100%;
+    
   
-
-}
-
-.fot-container{ /* Home - Contact , subscribe & Sign in*/
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items:center;
-  width: 100%;
-  height: auto;
-  color: white;
-  padding:10px;
-  margin:10px;
- /* border: aqua solid; Just to mark out while working*/
-
-}
-
-.fot, a{
-  list-style: none;
-  color: white;
-  text-decoration: none;
-  width: 100%;
-  padding:10px;
-
+  }
+  
+  .fot-container{ /* Home - Contact , subscribe & Sign in*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: auto;
+    color: white;
+    padding:10px;
+    margin:10px;
+   /* border: aqua solid; Just to mark out while working*/
+  
+  }
+  
+  .fot, a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    padding:10px;
+  
+   
+  
+  }
+  
+  .fot-menu{
+    display: inline-block;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style: none;
+    width: auto;
+    height: auto;
+    /*border: orange solid 5px; Just to mark out while working*/
+    padding:15px;
+    margin:15px;
+  }
+  
+  
+  /* 
+  Parent till menyn
+  .fot-menu{} */
+  
+  
+  .fot-menu-child-1{
+  padding: 5px;
+        } 
+  .fot-menu-child-2{
+  padding: 5px;
+      }
+  .fot-menu-child-3{
+  padding: 5px;
+      }
+  .fot-menu-child-4{
+  padding: 5px;
+      }
+  
+  
+  
+  
+  .fot-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content:space-around;
+    width: auto;
+    height: auto;
+    padding:15px;
+    margin:15px;
+    /*border: purple solid 5px; Just to mark out while working*/
+  }
+  
+  
+  
+  
+  
+  .horizontal-line {
+    width: 90%;          /* Makes the line span the full width of the page */
+    height: 2px;         
+    background-color: white;
+    margin: 20px ;     /* Optional: Adds space above and below the line */
+    margin-top: 10px;
+  }
+  
+  
+  
+  
+  .store{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+  }
+  
+  
+   .copyright{
+    display: flex;
+    position:relative;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  } 
  
 
-}
-
-.fot-menu{
-  display: inline-block;
-  flex-direction: column;
-  justify-content: flex-start;
-  list-style: none;
-  width: auto;
-  height: auto;
-  /*border: orange solid 5px; Just to mark out while working*/
-  padding:15px;
-  margin:15px;
-}
 
 
-/* 
-Parent till menyn
-.fot-menu{} */
-
-
-.fot-menu-child-1{
-padding: 5px;
-      } 
-.fot-menu-child-2{
-padding: 5px;
-    }
-.fot-menu-child-3{
-padding: 5px;
-    }
-.fot-menu-child-4{
-padding: 5px;
-    }
-
-
-
-
-.fot-btn{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content:space-around;
-  width: auto;
-  height: auto;
-  padding:15px;
-  margin:15px;
-  /*border: purple solid 5px; Just to mark out while working*/
 }
 
 
 
-
-
-.horizontal-line {
-  width: 90%;          /* Makes the line span the full width of the page */
-  height: 2px;         
-  background-color: white;
-  margin: 20px ;     /* Optional: Adds space above and below the line */
-  margin-top: 10px;
-}
-
-
-
-
-.store{
-  display: flex;
-  width: 100%;
-  margin-top: 10px;
-  padding: 5px;
-}
-
-
- .copyright{
-  display: flex;
-  position:relative;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-} 
 
 
 
