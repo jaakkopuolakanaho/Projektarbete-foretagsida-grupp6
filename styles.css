@@ -242,6 +242,65 @@ body.about-page .staff-container .staff-one h3, body.about-page .staff-container
   color: #455950;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: #455950;
+}
+
+h2 {
+  color: #455950;
+}
+
+h3 {
+  color: #455950;
+}
+
+.service-wrap { /* Omkring allt */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #455950;
+  border: rgb(225, 0, 255) solid; /*Just to mark out while working */
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  width: 100%;
+}
+
+.button {
+  background-color: #455950;
+  border: 1px solid #455950;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-style: bold;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.button1:hover {
+  background-color: white;
+  color: #455950;
+}
+
+.sub {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
 footer {
   display: flex;
   flex-direction: row;
@@ -286,9 +345,7 @@ footer {
   color: white;
   text-decoration: none;
   width: 100%;
-  /* padding:10px;
-   margin:10px;
-  */
+  padding: 10px;
 }
 
 .fot-menu {
@@ -346,6 +403,7 @@ Parent till menyn
   display: flex;
   width: 100%;
   margin-top: 10px;
+  padding: 5px;
 }
 
 .copyright {
