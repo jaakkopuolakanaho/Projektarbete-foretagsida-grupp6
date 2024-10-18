@@ -1,3 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0e5b1;
+  padding: 20px;
+  border-bottom: 2px solid #ccc;
+  position: relative;
+  height: 100px;
+}
+
+.logo-div {
+  flex: 1;
+}
+
+.logo {
+  height: 70px;
+  max-width: 100%;
+  display: block;
+}
+
+.center-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.navigation li {
+  margin-right: 30px;
+  letter-spacing: 2px;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.navigation a:hover {
+  color: #666;
+}
+
+.login-div {
+  flex: 1;
+  text-align: right;
+}
+
+.login-btn {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.login-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
 body.home-page {
   background-color: white;
   height: 100vh;
@@ -151,5 +240,176 @@ body.about-page .staff-container .staff-one img, body.about-page .staff-containe
 body.about-page .staff-container .staff-one h3, body.about-page .staff-container .staff-one h4, body.about-page .staff-container .staff-one b, body.about-page .staff-container .staff-two h3, body.about-page .staff-container .staff-two h4, body.about-page .staff-container .staff-two b, body.about-page .staff-container .staff-three h3, body.about-page .staff-container .staff-three h4, body.about-page .staff-container .staff-three b, body.about-page .staff-container .staff-four h3, body.about-page .staff-container .staff-four h4, body.about-page .staff-container .staff-four b, body.about-page .staff-container .staff-five h3, body.about-page .staff-container .staff-five h4, body.about-page .staff-container .staff-five b, body.about-page .staff-container .staff-six h3, body.about-page .staff-container .staff-six h4, body.about-page .staff-container .staff-six b {
   margin: 0px;
   color: #455950;
-}/*# sourceMappingURL=styles.css.map */
+}
 
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: #455950;
+}
+
+h2 {
+  color: #455950;
+}
+
+h3 {
+  color: #455950;
+}
+
+.service-wrap { /* Omkring allt */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #455950;
+  border: rgb(225, 0, 255) solid; /*Just to mark out while working */
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  width: 100%;
+}
+
+.button {
+  background-color: #455950;
+  border: 1px solid #455950;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-style: bold;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.button1:hover {
+  background-color: white;
+  color: #455950;
+}
+
+.sub {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* position:relative;
+  bottom: 0; left: 0; */
+  width: 100%;
+  height: auto;
+  background-color: #455950;
+  color: white;
+  margin: 10px;
+  padding: 5px;
+}
+
+.fot-parent { /* Omkring allt */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  /* border: rgb(225, 0, 255) solid; Just to mark out while working */
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  width: 100%;
+}
+
+.fot-container { /* Home - Contact , subscribe & Sign in*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  /* border: aqua solid; Just to mark out while working*/
+}
+
+.fot, a {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px;
+}
+
+.fot-menu {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: flex-start;
+  list-style: none;
+  width: auto;
+  height: auto;
+  /*border: orange solid 5px; Just to mark out while working*/
+  padding: 15px;
+  margin: 15px;
+}
+
+/* 
+Parent till menyn
+.fot-menu{} */
+.fot-menu-child-1 {
+  padding: 5px;
+}
+
+.fot-menu-child-2 {
+  padding: 5px;
+}
+
+.fot-menu-child-3 {
+  padding: 5px;
+}
+
+.fot-menu-child-4 {
+  padding: 5px;
+}
+
+.fot-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  margin: 15px;
+  /*border: purple solid 5px; Just to mark out while working*/
+}
+
+.horizontal-line {
+  width: 90%; /* Makes the line span the full width of the page */
+  height: 2px;
+  background-color: white;
+  margin: 20px; /* Optional: Adds space above and below the line */
+  margin-top: 10px;
+}
+
+.store {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.copyright {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */
