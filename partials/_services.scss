@@ -1,82 +1,95 @@
-$primary-green: #455950;
 
-main{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
-h1{
-    color: $primary-green;
+body.services-page{
     
-}
-
-
-h2{
-    color: $primary-green;
-    
-}
-
-
-h3{
-    color: $primary-green;
-    
-}
-
-.service-wrap{ /* Omkring allt */
- 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: $primary-green;
-    border: rgb(225, 0, 255) solid; /*Just to mark out while working */
-    padding:10px;
-    margin:10px;
-    height: auto;
-    width: 100%;
-    
-  
-  }
-
-//   .free-trial{
+    //   .free-trial{
 //     color: yellow;
 //     border: 20px solid green;
 //     border-radius: 8px;
+
+
+    main{
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .service-wrap{ /* Omkring allt */
     
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $primary-green;
+            border: rgb(225, 0, 255) solid; /*Just to mark out while working */
+            padding:10px;
+            margin:10px;
+            height: auto;
+            width: 100%;
+            
+        
+        }
+    
+    
+        .button {
+            background-color: $primary-green;
+            border: 1px solid $primary-green;
+            color: white;
+            padding: 12px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            font-style: bold;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+        
+        .button1:hover {
+            background-color: white;
+            color: $primary-green;
+        }
+    
+        
+        
+    
+    
+        .sub{
+            display: flex;
+            justify-content: flex-end;
+            // border: lightcoral solid ;
+            padding: 20px;
+        
+        }
+        }
+    
+    
+        h1{
+            color: $primary-green;
+            
+        }
+    
+    
+        h2{
+            color: $primary-green;
+            
+        }
+    
+    
+        h3{
+            color: $primary-green;
+            
+        }
 
-.button {
-    background-color: $primary-green;
-    border: 1px solid $primary-green;
-    color: white;
-    padding: 12px 28px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    font-style: bold;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    margin-top: 40px;
-  }
-  
-  .button1:hover {
-    background-color: white;
-    color: $primary-green;
-  }
-
-  
 
 
-  
 
 
-.sub{
-    display: flex;
-    justify-content: flex-end;
-    // border: lightcoral solid ;
-    padding: 20px;
-  
+
+
+    }
+
+
 }
