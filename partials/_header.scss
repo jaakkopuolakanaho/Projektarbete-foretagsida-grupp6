@@ -5,84 +5,110 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Karla;
 }
 
 header {
+  position: sticky;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f0e5b1;
-  padding: 20px;
-  border-bottom: 2px solid #ccc;
-  position: relative;
-  height: 100px;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #ffffff;
+  // border-bottom: 35px solid $primary-green;
+  height: 165px;
 }
 
-.logo-div {
-  flex: 1;
+.logo-container {
+  display: flex;
+  align-self: flex-start;
 }
 
-.logo {
-  height: 70px;
-  max-width: 100%;
-  display: block;
+.logo-container img {
+  margin-left:10%;
+  height:120px;
+  max-width:100%;
+  position:absolute;
+  z-index: 0;
+}
+
+.slogan{
+  position:relative;
+max-width:80%;
+}
+
+.slogan h2{
+  position:relative;
+  display:flex;
+  justify-content: flex-end;
+margin-right:50px;
+ padding:0.5%;
+  font-style: italic;
 }
 
 .center-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+ z-index:1;
+  // left: 50%;
+  // transform: translateX(-50%);
+width:100%;
   text-align: center;
-  white-space:nowrap;
 }
-
-h1 {
-  font-size: 36px;
-  color: #333;
-  letter-spacing: 2px;
-  margin-bottom: 5px;
+.nav-container{
+  width:100%;
+  background-color: $primary-green;
+}
+.navigation {
+  // margin:auto;
+// margin-top: 100px;
+  display:flex;
+  justify-content:space-between;
+  // flex:2;
+  align-items: center;
 }
 
 .navigation ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  padding: 0;
+  justify-content: space-between;
+  padding: 15px;
+  margin-left:15%;
 }
-
 .navigation li {
-  margin-right: 30px;
-  letter-spacing: 2px;
+  margin-right: 40px;
 }
-
 .navigation a {
+  margin:auto;
   text-decoration: none;
-  font-size: 18px;
-  color: #333;
+  font-size: 16px;
+  font-weight:bolder;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
-
 .navigation a:hover {
   color: #666;
 }
-
-.login-div {
-  flex: 1;
-  text-align: right;
+nav.navigation {
+  max-width:75%;
 }
+// .login-container {
+//   text-align: right;
+//   display:flex;
+//   position:relative;
+// justify-content: center;
+// }
 
 .login-btn {
   text-decoration: none;
+  margin-right: 40px;
+  letter-spacing: 2px;
   font-size: 18px;
   color: #333;
-  font-weight: bold;
-  padding: 8px 16px;
-  border: 2px solid #333;
-  border-radius: 4px;
   background-color: transparent;
 }
 
-.login-btn:hover {
-  background-color: #333;
-  color: #fff;
-}
+
+
+// .login-btn:hover {
+//   background-color: #333;
+//   color: #fff;
+// }

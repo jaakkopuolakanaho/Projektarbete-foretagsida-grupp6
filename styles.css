@@ -1,3 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Karla;
+}
+
+header {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #ffffff;
+  height: 165px;
+}
+
+.logo-container {
+  display: flex;
+  align-self: flex-start;
+}
+
+.logo-container img {
+  margin-left: 10%;
+  height: 120px;
+  max-width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.slogan {
+  position: relative;
+  max-width: 80%;
+}
+
+.slogan h2 {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+  padding: 0.5%;
+  font-style: italic;
+}
+
+.center-container {
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-container {
+  width: 100%;
+  background-color: #455950;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-left: 15%;
+}
+
+.navigation li {
+  margin-right: 40px;
+}
+
+.navigation a {
+  margin: auto;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.navigation a:hover {
+  color: #666;
+}
+
+nav.navigation {
+  max-width: 75%;
+}
+
+.login-btn {
+  text-decoration: none;
+  margin-right: 40px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  color: #333;
+  background-color: transparent;
+}
+
 body.home-page {
   background-color: white;
   height: 100vh;
@@ -151,5 +253,118 @@ body.about-page .staff-container .staff-one img, body.about-page .staff-containe
 body.about-page .staff-container .staff-one h3, body.about-page .staff-container .staff-one h4, body.about-page .staff-container .staff-one b, body.about-page .staff-container .staff-two h3, body.about-page .staff-container .staff-two h4, body.about-page .staff-container .staff-two b, body.about-page .staff-container .staff-three h3, body.about-page .staff-container .staff-three h4, body.about-page .staff-container .staff-three b, body.about-page .staff-container .staff-four h3, body.about-page .staff-container .staff-four h4, body.about-page .staff-container .staff-four b, body.about-page .staff-container .staff-five h3, body.about-page .staff-container .staff-five h4, body.about-page .staff-container .staff-five b, body.about-page .staff-container .staff-six h3, body.about-page .staff-container .staff-six h4, body.about-page .staff-container .staff-six b {
   margin: 0px;
   color: #455950;
-}/*# sourceMappingURL=styles.css.map */
+}
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* position:relative;
+  bottom: 0; left: 0; */
+  width: 100%;
+  height: auto;
+  background-color: #455950;
+  color: white;
+  margin: 10px;
+  padding: 5px;
+}
+
+.fot-parent { /* Omkring allt */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  /* border: rgb(225, 0, 255) solid; Just to mark out while working */
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  width: 100%;
+}
+
+.fot-container { /* Home - Contact , subscribe & Sign in*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  /* border: aqua solid; Just to mark out while working*/
+}
+
+.fot, a {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  /* padding:10px;
+   margin:10px;
+  */
+}
+
+.fot-menu {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: flex-start;
+  list-style: none;
+  width: auto;
+  height: auto;
+  /*border: orange solid 5px; Just to mark out while working*/
+  padding: 15px;
+  margin: 15px;
+}
+
+/* 
+Parent till menyn
+.fot-menu{} */
+.fot-menu-child-1 {
+  padding: 5px;
+}
+
+.fot-menu-child-2 {
+  padding: 5px;
+}
+
+.fot-menu-child-3 {
+  padding: 5px;
+}
+
+.fot-menu-child-4 {
+  padding: 5px;
+}
+
+.fot-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  margin: 15px;
+  /*border: purple solid 5px; Just to mark out while working*/
+}
+
+.horizontal-line {
+  width: 90%; /* Makes the line span the full width of the page */
+  height: 2px;
+  background-color: white;
+  margin: 20px; /* Optional: Adds space above and below the line */
+  margin-top: 10px;
+}
+
+.store {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.copyright {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */
