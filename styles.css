@@ -176,12 +176,12 @@ body.home-page .customer-reviews-container {
   flex-wrap: wrap;
   border: 2px solid #455950;
   margin: 20px 100px 40px 100px;
+  border-radius: 8px;
   padding: 20px;
   gap: 20px;
 }
 body.home-page .customer-reviews-container img {
   width: 100%;
-  height: auto;
 }
 
 body.about-page {
