@@ -23,27 +23,48 @@ body.home-page {
 
         h1 {
             color: $primary-green;
+            margin-top: 10px;
         }
 
         .sell-text {
-            margin: 20px 40px;
+            margin: 0px 40px;
+
+            p {
+                margin-top: 10px;
+            }
         }
     }
 
     .vision-text-vip {
-        background-color: $primary-green;
+        border-left: 10px solid $primary-green;
+        border-right: 10px solid $primary-green;
         padding: 20px 40px;
+        margin: 40px;
 
-        h3 {
-            color: white;
-        }
 
         q {
+            color: $primary-green;
+            font-size: larger;
+        }
+
+        p {
             text-align: end;
-            color: white;
+            color: $primary-green;
             font-style: italic;
         }
     }
+
+    .google-apple-store {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        img {
+            height: 58.5px;
+            margin-top: 20px;
+        }
+    }
+
 
     .trial {
         display: flex;
@@ -53,7 +74,7 @@ body.home-page {
         h2 {
             color: #455950;
             text-align: center;
-            margin: 40px 40px 20px 40px;
+            margin: 0px 40px 10px 40px;
         }
 
         .cta-button {
@@ -62,7 +83,7 @@ body.home-page {
             color: white;
             padding: 20px;
             border-radius: 8px;
-            margin: 20px 40px;
+            margin: 10px 40px;
             font-weight: bold;
             font-size: 16px;
         }

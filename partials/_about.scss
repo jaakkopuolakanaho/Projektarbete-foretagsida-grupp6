@@ -72,9 +72,14 @@ body.about-page {
                 height: 200px;
             }
 
-            h3, h4, b {
-                margin: 0px;
+            h3, h4, {
+                margin-top: 10px;
                 color: $primary-green;
+            }
+
+            p {
+                margin-top: 10px;
+                color: black;
             }
 
         }
