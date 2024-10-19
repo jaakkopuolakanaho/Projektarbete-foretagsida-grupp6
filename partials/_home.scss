@@ -7,10 +7,25 @@ body.home-page {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    } 
+
     main {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0px 100px;
+            max-width: 640px;
+        }
 
         .img-wrap {
             overflow: hidden;
@@ -33,26 +48,28 @@ body.home-page {
                 margin-top: 10px;
             }
         }
+
+        .vision-text-vip {
+            border-left: 10px solid $primary-green;
+            border-right: 10px solid $primary-green;
+            padding: 20px 40px;
+            margin: 40px;
+    
+            q {
+                color: $primary-green;
+                font-size: larger;
+                font-weight: bold;
+            }
+    
+            p {
+                text-align: end;
+                color: $primary-green;
+                font-style: italic;
+                margin-top: 10px;
+            }
+        }
     }
 
-    .vision-text-vip {
-        border-left: 10px solid $primary-green;
-        border-right: 10px solid $primary-green;
-        padding: 20px 40px;
-        margin: 40px;
-
-
-        q {
-            color: $primary-green;
-            font-size: larger;
-        }
-
-        p {
-            text-align: end;
-            color: $primary-green;
-            font-style: italic;
-        }
-    }
 
     .google-apple-store {
         display: flex;
@@ -70,6 +87,14 @@ body.home-page {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+
+        @include desktop {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 640px;
+            margin: 0 px 200px;
+        }
     
         h2 {
             color: #455950;
@@ -92,6 +117,16 @@ body.home-page {
     form {
         justify-content: center;
         margin: 40px 0px;
+
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 200px;
+            max-width: 640px;
+        }
+
       }
       
       .newsletter-container {
@@ -136,8 +171,22 @@ body.home-page {
         padding: 20px;
         gap: 20px;
 
+        @include desktop {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 640px;
+        }
+
         img {
             width: 186px;
+
+            @include desktop {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                max-width: 185px;
+            }
 
         }    
     }

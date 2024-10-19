@@ -8,6 +8,12 @@ body.about-page {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }    
+
     main {
         display: flex;
         justify-content: center;
@@ -16,20 +22,32 @@ body.about-page {
         .img-wrap {
             overflow: hidden;
 
+            @include desktop {
+                display: flex;
+                justify-content: center;
+                width: 640px;
+                height: auto;
+            }
+
             img {
                 width: 430px;
                 height: 287px;
+
+                @include desktop {
+                    width: 640px;
+                    height: auto;
+                }
             }
         }
 
         .about-text {
             display: flex;
             flex-wrap: wrap;
-            padding: 40px;
+            padding: 10px 40px 40px 40px;
 
             h1 {
                 color: $primary-green;
-                margin: 0px;
+                margin-top: 10px;
             }
 
             h2 {
@@ -37,9 +55,21 @@ body.about-page {
                 margin: 10px 0px 0px 0px;
             }
 
-            p {
-                margin: 10px 0px;
+            h3 {
+                color: $primary-green;
+                margin: 10px 0px 0px 0px;
             }
+
+            p {
+                margin-top: 10px;
+            }
+        }
+
+        @include desktop {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 640px;
         }
     }
 
@@ -48,42 +78,72 @@ body.about-page {
         justify-content: center;
         flex-wrap: wrap;
         background: $primary-green;
-        padding: 20px 40px;
+        padding: 20px 80px;
         gap: 20px;
 
+        @include desktop {
+            display: flex;
+            align-items: center;
+            min-width: 100%;
+        }  
+
         .staff-h2 {
-            display: inline;
-            justify-content: flex-start;
-        }
-            h2 {
-                color: white;
-                text-align: left;
-            }
-            
-    }
+            display: flex;
+            flex-direction: column;
 
-        .staff-one, .staff-two, .staff-three, .staff-four, .staff-five, .staff-six {
-            background: white;
-            padding: 10px;
-            width: 220px;
-
-            img {
-                width: 200px;
-                height: 200px;
-            }
-
-            h3, h4, {
-                margin-top: 10px;
-                color: $primary-green;
-            }
-
-            p {
-                margin-top: 10px;
-                color: black;
-            }
 
         }
 
- 
+        h2 {
+            color: white;
+        }
+        
+        .staff {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 20px;
 
+            @include desktop {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0px 220px;
+            }  
+
+            .staff-one, .staff-two, .staff-three, .staff-four, .staff-five, .staff-six {
+                background: white;
+                padding: 10px;
+                width: 220px;
+
+                @include desktop {
+                    width: 220px;
+                    height: 425px;
+                }  
+    
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+    
+                h3, h4, {
+                    margin-top: 10px;
+                    color: $primary-green;
+                }
+    
+                p {
+                    margin-top: 10px;
+                    color: black;
+                }
+            }
+
+        }
     }
+}
+    
+        
+
+
+
+    
