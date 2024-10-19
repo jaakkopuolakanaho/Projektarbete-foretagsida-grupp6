@@ -17,7 +17,8 @@ body.about-page {
             overflow: hidden;
 
             img {
-                width: 100%;
+                width: 430px;
+                height: 287px;
             }
         }
 
@@ -50,9 +51,16 @@ body.about-page {
         padding: 20px 40px;
         gap: 20px;
 
-        h2 {
-            color: white;
+        .staff-h2 {
+            display: inline;
+            justify-content: flex-start;
         }
+            h2 {
+                color: white;
+                text-align: left;
+            }
+            
+    }
 
         .staff-one, .staff-two, .staff-three, .staff-four, .staff-five, .staff-six {
             background: white;
@@ -60,7 +68,8 @@ body.about-page {
             width: 220px;
 
             img {
-                width: 100%;
+                width: 200px;
+                height: 200px;
             }
 
             h3, h4, b {
@@ -73,5 +82,3 @@ body.about-page {
  
 
     }
-
-}
