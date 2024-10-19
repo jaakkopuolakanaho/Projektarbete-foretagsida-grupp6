@@ -63,14 +63,14 @@ header .navigation li {
 header .navigation a {
   margin: auto;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: bolder;
-  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 19px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
 }
 header .navigation a:hover {
-  color: #666;
+  color: #969696;
 }
 header nav.navigation {
   max-width: 75%;
@@ -79,9 +79,12 @@ header .login-btn {
   text-decoration: none;
   margin-right: 40px;
   letter-spacing: 2px;
-  font-size: 18px;
+  font-size: 19px;
   color: #333;
   background-color: transparent;
+}
+header .active {
+  font-style: italic;
 }
 
 body.home-page {
