@@ -113,14 +113,14 @@ body.home-page main h1 {
 body.home-page main .sell-text {
   margin: 20px 40px;
 }
-body.home-page .vision-vip {
+body.home-page .vision-text-vip {
   background-color: #455950;
   padding: 20px 40px;
 }
-body.home-page .vision-vip h3 {
+body.home-page .vision-text-vip h3 {
   color: white;
 }
-body.home-page .vision-vip p {
+body.home-page .vision-text-vip q {
   text-align: end;
   color: white;
   font-style: italic;
@@ -256,21 +256,19 @@ body.about-page .staff-one h3, body.about-page .staff-one h4, body.about-page .s
 
 body.services-page {
   background-color: white;
-  height: 100vh; /*Här har jag lagt in auto för att se till att bodyn växer vid behov*/
+  height: auto;
   width: 100%;
-  margin: 0px;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 10px; /* Lagt in lite padding för mobiler */
+  padding: 10px;
 }
-
-.service-wrap {
+body.services-page .service-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-
-.button {
+body.services-page .service-wrap .button {
   background-color: #455950;
   border: 3px solid #455950;
   color: white;
@@ -279,88 +277,85 @@ body.services-page {
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  font-style: bold;
-  margin: 10px 0; /* Minska marginaler för mobil */
+  font-weight: bold;
+  margin: 10px 0;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 9px;
   margin-bottom: 20px;
   margin-top: 40px;
 }
-
-.button1:hover {
+body.services-page .service-wrap .button:hover {
   background-color: white;
   color: #455950;
 }
-
-.sub {
+body.services-page .sub {
   display: flex;
   justify-content: flex-end;
-  /* border: rgb(235, 160, 10) solid ; */
   padding: 20px;
   margin: 20px;
 }
-
-.pricing-plan {
+body.services-page .pricing-plan {
   display: flex;
-  flex-direction: column; /* För att visa i kolumn för mobil*/
+  flex-direction: column;
   align-items: center;
   padding: 20px;
 }
-
-h1, h2, h3 {
+@media (min-width: 768px) {
+  body.services-page .pricing-plan { /* tablet och upp */
+    display: flex;
+  }
+}
+body.services-page h1, body.services-page h2, body.services-page h3 {
   color: #455950;
   text-align: center;
+  /*&.h3 { Om vi behöver ändra h3orna}*/
 }
-
-h1 {
+body.services-page h1.h1, body.services-page h2.h1, body.services-page h3.h1 {
   margin: 45px;
+  font-size: 2em; /* Så att texten blir större med skärmen  */
 }
-
-h2 {
-  margin: 10px 10px 10px 10px;
+@media (min-width: 1200px) {
+  body.services-page h1.h1, body.services-page h2.h1, body.services-page h3.h1 {
+    margin: 60px; /* För desktop*/
+  }
+}
+body.services-page h1.h2, body.services-page h2.h2, body.services-page h3.h2 {
+  margin: 10px;
   padding: 5px;
+  margin: 20px 0; /* Mer marginal runt h2 för desktop/större skärmar */
 }
-
-p {
+body.services-page p {
   color: black;
   text-align: center;
-  margin: 10px 0px;
+  margin: 10px 0;
   padding: 8px;
   margin-top: 20px;
   margin-bottom: 40px;
+  line-height: 1.5;
 }
-
-li {
+@media (min-width: 1200px) {
+  body.services-page p {
+    /* Vi far kolla om det är nagot vi behöver ändra */
+  }
+}
+body.services-page li {
   color: black;
-  margin: 10px 0px;
+  margin: 10px 0;
 }
-
-/* tablet och upp */
 @media (min-width: 768px) {
-  .pricing-plan {
-    display: flex;
-  }
-  h1 {
-    font-size: 2em; /* Så att texten blir större med skärmen  */
-  }
-  .button {
+  body.services-page .button {
     font-size: 16px;
   }
 }
-/* För desktop och över*/
 @media (min-width: 1200px) {
-  .service-wrap {
-    max-width: 1200px; /* Satte en men vi kan ju bestämma det ihop när vi ska justera allt */
-    margin: 0 auto; /* för att centrera på sidan */
-  }
-  h2 {
-    margin: 20px 0; /* mer marginal runt h2:or */
-  }
-  p {
-    line-height: 1.5; /* Ökar radavståndet*/
+  body.services-page { /* Satte en men vi kan ju bestämma det ihop när vi ska justera allt */ }
+  body.services-page .service-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
+
 footer {
   display: flex;
   flex-direction: row;

@@ -1,8 +1,4 @@
-@include media(">phone", "<tablet") {
-}
 
-@include media(">tablet", "<950px") {
-}
 
 body.home-page {
     background-color: white;
@@ -34,7 +30,7 @@ body.home-page {
         }
     }
 
-    .vision-vip {
+    .vision-text-vip {
         background-color: $primary-green;
         padding: 20px 40px;
 
@@ -42,7 +38,7 @@ body.home-page {
             color: white;
         }
 
-        p {
+        q {
             text-align: end;
             color: white;
             font-style: italic;
