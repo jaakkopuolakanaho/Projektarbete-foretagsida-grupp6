@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -102,6 +103,10 @@ body.home-page main {
 body.home-page main .img-wrap {
   overflow: hidden;
 }
+body.home-page main .img-wrap img {
+  width: 640px;
+  height: 427px;
+}
 body.home-page main h1 {
   color: #455950;
 }
@@ -181,7 +186,7 @@ body.home-page .customer-reviews-container {
   gap: 20px;
 }
 body.home-page .customer-reviews-container img {
-  width: 100%;
+  width: 186px;
 }
 
 body.about-page {
@@ -200,7 +205,8 @@ body.about-page main .img-wrap {
   overflow: hidden;
 }
 body.about-page main .img-wrap img {
-  width: 100%;
+  width: 430px;
+  height: 287px;
 }
 body.about-page main .about-text {
   display: flex;
@@ -226,55 +232,47 @@ body.about-page .staff-container {
   padding: 20px 40px;
   gap: 20px;
 }
+body.about-page .staff-container .staff-h2 {
+  display: inline;
+  justify-content: flex-start;
+}
 body.about-page .staff-container h2 {
   color: white;
+  text-align: left;
 }
-body.about-page .staff-container .staff-one, body.about-page .staff-container .staff-two, body.about-page .staff-container .staff-three, body.about-page .staff-container .staff-four, body.about-page .staff-container .staff-five, body.about-page .staff-container .staff-six {
+body.about-page .staff-one, body.about-page .staff-two, body.about-page .staff-three, body.about-page .staff-four, body.about-page .staff-five, body.about-page .staff-six {
   background: white;
   padding: 10px;
   width: 220px;
 }
-body.about-page .staff-container .staff-one img, body.about-page .staff-container .staff-two img, body.about-page .staff-container .staff-three img, body.about-page .staff-container .staff-four img, body.about-page .staff-container .staff-five img, body.about-page .staff-container .staff-six img {
-  width: 100%;
+body.about-page .staff-one img, body.about-page .staff-two img, body.about-page .staff-three img, body.about-page .staff-four img, body.about-page .staff-five img, body.about-page .staff-six img {
+  width: 200px;
+  height: 200px;
 }
-body.about-page .staff-container .staff-one h3, body.about-page .staff-container .staff-one h4, body.about-page .staff-container .staff-one b, body.about-page .staff-container .staff-two h3, body.about-page .staff-container .staff-two h4, body.about-page .staff-container .staff-two b, body.about-page .staff-container .staff-three h3, body.about-page .staff-container .staff-three h4, body.about-page .staff-container .staff-three b, body.about-page .staff-container .staff-four h3, body.about-page .staff-container .staff-four h4, body.about-page .staff-container .staff-four b, body.about-page .staff-container .staff-five h3, body.about-page .staff-container .staff-five h4, body.about-page .staff-container .staff-five b, body.about-page .staff-container .staff-six h3, body.about-page .staff-container .staff-six h4, body.about-page .staff-container .staff-six b {
+body.about-page .staff-one h3, body.about-page .staff-one h4, body.about-page .staff-one b, body.about-page .staff-two h3, body.about-page .staff-two h4, body.about-page .staff-two b, body.about-page .staff-three h3, body.about-page .staff-three h4, body.about-page .staff-three b, body.about-page .staff-four h3, body.about-page .staff-four h4, body.about-page .staff-four b, body.about-page .staff-five h3, body.about-page .staff-five h4, body.about-page .staff-five b, body.about-page .staff-six h3, body.about-page .staff-six h4, body.about-page .staff-six b {
   margin: 0px;
   color: #455950;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+body.services-page {
+  background-color: white;
+  height: 100vh; /*Här har jag lagt in auto för att se till att bodyn växer vid behov*/
+  width: 100%;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px; /* Lagt in lite padding för mobiler */
 }
 
-h1 {
-  color: #455950;
-}
-
-h2 {
-  color: #455950;
-}
-
-h3 {
-  color: #455950;
-}
-
-.service-wrap { /* Omkring allt */
+.service-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #455950;
-  border: red solid; /*Just to mark out while working */
-  padding: 10px;
-  margin: 10px;
-  height: auto;
   width: 100%;
 }
 
 .button {
   background-color: #455950;
-  border: 1px solid #455950;
+  border: 3px solid #455950;
   color: white;
   padding: 12px 28px;
   text-align: center;
@@ -282,10 +280,10 @@ h3 {
   display: inline-block;
   font-size: 14px;
   font-style: bold;
-  margin: 4px 2px;
+  margin: 10px 0; /* Minska marginaler för mobil */
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 9px;
   margin-bottom: 20px;
   margin-top: 40px;
 }
@@ -298,9 +296,71 @@ h3 {
 .sub {
   display: flex;
   justify-content: flex-end;
+  /* border: rgb(235, 160, 10) solid ; */
+  padding: 20px;
+  margin: 20px;
+}
+
+.pricing-plan {
+  display: flex;
+  flex-direction: column; /* För att visa i kolumn för mobil*/
+  align-items: center;
   padding: 20px;
 }
 
+h1, h2, h3 {
+  color: #455950;
+  text-align: center;
+}
+
+h1 {
+  margin: 45px;
+}
+
+h2 {
+  margin: 10px 10px 10px 10px;
+  padding: 5px;
+}
+
+p {
+  color: black;
+  text-align: center;
+  margin: 10px 0px;
+  padding: 8px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+li {
+  color: black;
+  margin: 10px 0px;
+}
+
+/* tablet och upp */
+@media (min-width: 768px) {
+  .pricing-plan {
+    display: flex;
+  }
+  h1 {
+    font-size: 2em; /* Så att texten blir större med skärmen  */
+  }
+  .button {
+    font-size: 16px;
+  }
+}
+/* För desktop och över*/
+@media (min-width: 1200px) {
+  .service-wrap {
+    max-width: 1200px; /* Satte en men vi kan ju bestämma det ihop när vi ska justera allt */
+    margin: 0 auto; /* för att centrera på sidan */
+  }
+  h2 {
+    margin: 20px 0; /* mer marginal runt h2:or */
+  }
+  p {
+    line-height: 1.5; /* Ökar radavståndet*/
+  }
+}
 footer {
   display: flex;
   flex-direction: row;
@@ -312,9 +372,11 @@ footer {
   background-color: #455950;
   color: white;
   padding: 5px;
+  /* 
+  Parent till menyn
+  .fot-menu{} */
 }
-
-.fot-parent { /* Omkring allt */
+footer .fot-parent { /* Omkring allt */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -325,8 +387,7 @@ footer {
   height: auto;
   width: 100%;
 }
-
-.fot-container { /* Home - Contact , subscribe & Sign in*/
+footer .fot-container { /* Home - Contact , subscribe & Sign in*/
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -338,16 +399,14 @@ footer {
   margin: 10px;
   /* border: aqua solid; Just to mark out while working*/
 }
-
-.fot, a {
+footer .fot, footer a {
   list-style: none;
   color: white;
   text-decoration: none;
   width: 100%;
   padding: 10px;
 }
-
-.fot-menu {
+footer .fot-menu {
   display: inline-block;
   flex-direction: column;
   justify-content: flex-start;
@@ -358,27 +417,19 @@ footer {
   padding: 15px;
   margin: 15px;
 }
-
-/* 
-Parent till menyn
-.fot-menu{} */
-.fot-menu-child-1 {
+footer .fot-menu-child-1 {
   padding: 5px;
 }
-
-.fot-menu-child-2 {
+footer .fot-menu-child-2 {
   padding: 5px;
 }
-
-.fot-menu-child-3 {
+footer .fot-menu-child-3 {
   padding: 5px;
 }
-
-.fot-menu-child-4 {
+footer .fot-menu-child-4 {
   padding: 5px;
 }
-
-.fot-btn {
+footer .fot-btn {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -389,23 +440,20 @@ Parent till menyn
   margin: 15px;
   /*border: purple solid 5px; Just to mark out while working*/
 }
-
-.horizontal-line {
+footer .horizontal-line {
   width: 90%; /* Makes the line span the full width of the page */
   height: 2px;
   background-color: white;
   margin: 20px; /* Optional: Adds space above and below the line */
   margin-top: 10px;
 }
-
-.store {
+footer .store {
   display: flex;
   width: 100%;
   margin-top: 10px;
   padding: 5px;
 }
-
-.copyright {
+footer .copyright {
   display: flex;
   position: relative;
   flex-direction: row;
