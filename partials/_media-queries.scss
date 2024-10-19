@@ -1,0 +1,14 @@
+//Mobile First. Start Dimension 430px > Breakpoint 590px
+
+@mixin mobile {
+    @media ( 590px > width > 530px ){
+        @content
+    }
+}
+
+@mixin desktop {
+    @media ( width > 590px ){
+        @content
+        
+    }
+}
