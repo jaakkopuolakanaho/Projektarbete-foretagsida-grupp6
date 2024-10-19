@@ -109,21 +109,37 @@ body.home-page main .img-wrap img {
 }
 body.home-page main h1 {
   color: #455950;
+  margin-top: 10px;
 }
 body.home-page main .sell-text {
-  margin: 20px 40px;
+  margin: 0px 40px;
+}
+body.home-page main .sell-text p {
+  margin-top: 10px;
 }
 body.home-page .vision-text-vip {
-  background-color: #455950;
+  border-left: 10px solid #455950;
+  border-right: 10px solid #455950;
   padding: 20px 40px;
-}
-body.home-page .vision-text-vip h3 {
-  color: white;
+  margin: 40px;
 }
 body.home-page .vision-text-vip q {
+  color: #455950;
+  font-size: larger;
+}
+body.home-page .vision-text-vip p {
   text-align: end;
-  color: white;
+  color: #455950;
   font-style: italic;
+}
+body.home-page .google-apple-store {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+body.home-page .google-apple-store img {
+  height: 58.5px;
+  margin-top: 20px;
 }
 body.home-page .trial {
   display: flex;
@@ -133,7 +149,7 @@ body.home-page .trial {
 body.home-page .trial h2 {
   color: #455950;
   text-align: center;
-  margin: 40px 40px 20px 40px;
+  margin: 0px 40px 10px 40px;
 }
 body.home-page .trial .cta-button {
   background: #455950;
@@ -141,7 +157,7 @@ body.home-page .trial .cta-button {
   color: white;
   padding: 20px;
   border-radius: 8px;
-  margin: 20px 40px;
+  margin: 10px 40px;
   font-weight: bold;
   font-size: 16px;
 }
@@ -249,9 +265,13 @@ body.about-page .staff-one img, body.about-page .staff-two img, body.about-page 
   width: 200px;
   height: 200px;
 }
-body.about-page .staff-one h3, body.about-page .staff-one h4, body.about-page .staff-one b, body.about-page .staff-two h3, body.about-page .staff-two h4, body.about-page .staff-two b, body.about-page .staff-three h3, body.about-page .staff-three h4, body.about-page .staff-three b, body.about-page .staff-four h3, body.about-page .staff-four h4, body.about-page .staff-four b, body.about-page .staff-five h3, body.about-page .staff-five h4, body.about-page .staff-five b, body.about-page .staff-six h3, body.about-page .staff-six h4, body.about-page .staff-six b {
-  margin: 0px;
+body.about-page .staff-one h3, body.about-page .staff-one h4, body.about-page .staff-two h3, body.about-page .staff-two h4, body.about-page .staff-three h3, body.about-page .staff-three h4, body.about-page .staff-four h3, body.about-page .staff-four h4, body.about-page .staff-five h3, body.about-page .staff-five h4, body.about-page .staff-six h3, body.about-page .staff-six h4 {
+  margin-top: 10px;
   color: #455950;
+}
+body.about-page .staff-one p, body.about-page .staff-two p, body.about-page .staff-three p, body.about-page .staff-four p, body.about-page .staff-five p, body.about-page .staff-six p {
+  margin-top: 10px;
+  color: black;
 }
 
 body.services-page {
@@ -357,101 +377,106 @@ body.services-page li {
 }
 
 footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /* position:relative;
-  bottom: 0; left: 0; */
-  width: 100%;
-  height: auto;
   background-color: #455950;
   color: white;
-  padding: 5px;
-  /* 
-  Parent till menyn
-  .fot-menu{} */
+  width: 100%;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
-footer .fot-parent { /* Omkring allt */
+footer .fot-parent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
-  /* border: rgb(225, 0, 255) solid; Just to mark out while working */
   padding: 10px;
-  margin: 10px;
-  height: auto;
-  width: 100%;
 }
-footer .fot-container { /* Home - Contact , subscribe & Sign in*/
+footer .fot-parent .fot-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column; /* för mobiler */
   align-items: center;
   width: 100%;
-  height: auto;
-  color: white;
-  padding: 10px;
-  margin: 10px;
-  /* border: aqua solid; Just to mark out while working*/
 }
-footer .fot, footer a {
+@media (min-width: 768px) {
+  footer .fot-parent .fot-container {
+    flex-direction: row;
+    justify-content: space-between; /* gör lite luftigare*/
+  }
+}
+footer .fot-parent .fot-container .fot-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  margin: 5px;
+  list-style: none;
+  line-height: 1.5;
+}
+footer .fot-parent .fot-container .fot-menu fot, footer .fot-parent .fot-container .fot-menu a {
   list-style: none;
   color: white;
   text-decoration: none;
   width: 100%;
-  padding: 10px;
 }
-footer .fot-menu {
-  display: inline-block;
-  flex-direction: column;
-  justify-content: flex-start;
-  list-style: none;
-  width: auto;
-  height: auto;
-  /*border: orange solid 5px; Just to mark out while working*/
-  padding: 15px;
-  margin: 15px;
-}
-footer .fot-menu-child-1 {
+footer .fot-parent .fot-container .fot-menu-child-1, footer .fot-parent .fot-container .fot-menu-child-2, footer .fot-parent .fot-container .fot-menu-child-3, footer .fot-parent .fot-container .fot-menu-child-4 {
   padding: 5px;
 }
-footer .fot-menu-child-2 {
-  padding: 5px;
+@media (min-width: 768px) {
+  footer .fot-parent .fot-container .fot-menu {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
-footer .fot-menu-child-3 {
-  padding: 5px;
-}
-footer .fot-menu-child-4 {
-  padding: 5px;
-}
-footer .fot-btn {
+footer .fot-parent .fot-container .fot-btn {
+  color: #455950;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
-  width: auto;
-  height: auto;
-  padding: 15px;
-  margin: 15px;
-  /*border: purple solid 5px; Just to mark out while working*/
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
 }
-footer .horizontal-line {
-  width: 90%; /* Makes the line span the full width of the page */
+footer .fot-parent .fot-container .fot-btn button {
+  width: auto;
+  border-radius: 15px;
+  padding-left: 12px;
+  padding-right: 10px;
+  margin: 15px;
+}
+footer .fot-parent .fot-container .fot-btn input {
+  background-color: #455950;
+  width: auto;
+  border-radius: 15px;
+  margin-inline-start: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+@media (min-width: 768px) {
+  footer .fot-parent .fot-container .fot-btn {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+footer .fot-parent .sign-in {
+  padding-top: 10px;
+}
+footer .fot-parent .sign-in button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding: 5px;
+  border-radius: 12px;
+}
+footer .fot-parent .horizontal-line {
+  width: 90%;
   height: 2px;
   background-color: white;
-  margin: 20px; /* Optional: Adds space above and below the line */
+  margin: 20px 0;
+}
+footer .fot-parent .store {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
 }
-footer .store {
+footer .fot-parent .copyright {
   display: flex;
-  width: 100%;
-  margin-top: 10px;
-  padding: 5px;
-}
-footer .copyright {
-  display: flex;
-  position: relative;
-  flex-direction: row;
   justify-content: center;
   width: 100%;
+  margin-top: 15px;
 }/*# sourceMappingURL=styles.css.map */
