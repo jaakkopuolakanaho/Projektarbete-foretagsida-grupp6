@@ -63,14 +63,14 @@ header .navigation li {
 header .navigation a {
   margin: auto;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: bolder;
-  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 19px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
 }
 header .navigation a:hover {
-  color: #666;
+  color: #969696;
 }
 header nav.navigation {
   max-width: 75%;
@@ -79,9 +79,12 @@ header .login-btn {
   text-decoration: none;
   margin-right: 40px;
   letter-spacing: 2px;
-  font-size: 18px;
+  font-size: 19px;
   color: #333;
   background-color: transparent;
+}
+header .active {
+  font-style: italic;
 }
 
 body.home-page {
@@ -423,4 +426,56 @@ footer .fot-parent .fot-container .fot-menu-child-1, footer .fot-parent .fot-con
 }
 footer .fot-parent .fot-container .fot-btn {
   color: #455950;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+footer .fot-parent .fot-container .fot-btn button {
+  width: auto;
+  border-radius: 15px;
+  padding-left: 12px;
+  padding-right: 10px;
+  margin: 15px;
+}
+footer .fot-parent .fot-container .fot-btn input {
+  background-color: #455950;
+  width: auto;
+  border-radius: 15px;
+  margin-inline-start: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+@media (min-width: 768px) {
+  footer .fot-parent .fot-container .fot-btn {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+footer .fot-parent .sign-in {
+  padding-top: 10px;
+}
+footer .fot-parent .sign-in button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding: 5px;
+  border-radius: 12px;
+}
+footer .fot-parent .horizontal-line {
+  width: 90%;
+  height: 2px;
+  background-color: white;
+  margin: 20px 0;
+}
+footer .fot-parent .store {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+footer .fot-parent .copyright {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
 }/*# sourceMappingURL=styles.css.map */
