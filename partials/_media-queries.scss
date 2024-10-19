@@ -1,7 +1,7 @@
-//Mobile First. Start Dimension 430px > Breakpoint 590px
+//Mobile First. Start Dimension 430px (iPhone 14 Pro Max) - Breakpoint 590px
 
 @mixin mobile {
-    @media ( 590px > width > 530px ){
+    @media ( 590px > width ){
         @content
     }
 }
