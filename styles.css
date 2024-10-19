@@ -1,14 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Karla;
-}
-
 header {
+  font-family: Karla;
   position: sticky;
   display: flex;
   justify-content: center;
@@ -16,26 +7,27 @@ header {
   background-color: #ffffff;
   height: 165px;
 }
-
-.logo-container {
+header * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header .logo-container {
   display: flex;
   align-self: flex-start;
 }
-
-.logo-container img {
+header .logo-container img {
   margin-left: 10%;
   height: 120px;
   max-width: 100%;
   position: absolute;
   z-index: 0;
 }
-
-.slogan {
+header .slogan {
   position: relative;
   max-width: 80%;
 }
-
-.slogan h2 {
+header .slogan h2 {
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -43,37 +35,31 @@ header {
   padding: 0.5%;
   font-style: italic;
 }
-
-.center-container {
+header .center-container {
   z-index: 1;
   width: 100%;
   text-align: center;
 }
-
-.nav-container {
+header .nav-container {
   width: 100%;
   background-color: #455950;
 }
-
-.navigation {
+header .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.navigation ul {
+header .navigation ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   padding: 15px;
   margin-left: 15%;
 }
-
-.navigation li {
+header .navigation li {
   margin-right: 40px;
 }
-
-.navigation a {
+header .navigation a {
   margin: auto;
   text-decoration: none;
   font-size: 16px;
@@ -82,16 +68,13 @@ header {
   text-transform: uppercase;
   color: #ffffff;
 }
-
-.navigation a:hover {
+header .navigation a:hover {
   color: #666;
 }
-
-nav.navigation {
+header nav.navigation {
   max-width: 75%;
 }
-
-.login-btn {
+header .login-btn {
   text-decoration: none;
   margin-right: 40px;
   letter-spacing: 2px;

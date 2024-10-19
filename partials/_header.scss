@@ -1,21 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Karla;
-}
-
 header {
+  font-family: Karla;
   position: sticky;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   background-color: #ffffff;
-  // border-bottom: 35px solid $primary-green;
   height: 165px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .logo-container {
@@ -57,11 +52,8 @@ width:100%;
   background-color: $primary-green;
 }
 .navigation {
-  // margin:auto;
-// margin-top: 100px;
   display:flex;
   justify-content:space-between;
-  // flex:2;
   align-items: center;
 }
 
@@ -90,12 +82,6 @@ width:100%;
 nav.navigation {
   max-width:75%;
 }
-// .login-container {
-//   text-align: right;
-//   display:flex;
-//   position:relative;
-// justify-content: center;
-// }
 
 .login-btn {
   text-decoration: none;
@@ -106,9 +92,4 @@ nav.navigation {
   background-color: transparent;
 }
 
-
-
-// .login-btn:hover {
-//   background-color: #333;
-//   color: #fff;
-// }
+}
