@@ -98,23 +98,43 @@ body.home-page main {
 body.home-page main .img-wrap {
   overflow: hidden;
 }
+body.home-page main .img-wrap img {
+  width: 640px;
+  height: 427px;
+}
 body.home-page main h1 {
   color: #455950;
+  margin-top: 10px;
 }
 body.home-page main .sell-text {
-  margin: 20px 40px;
+  margin: 0px 40px;
 }
-body.home-page .vision-vip {
-  background-color: #455950;
+body.home-page main .sell-text p {
+  margin-top: 10px;
+}
+body.home-page .vision-text-vip {
+  border-left: 10px solid #455950;
+  border-right: 10px solid #455950;
   padding: 20px 40px;
+  margin: 40px;
 }
-body.home-page .vision-vip h3 {
-  color: white;
+body.home-page .vision-text-vip q {
+  color: #455950;
+  font-size: larger;
 }
-body.home-page .vision-vip p {
+body.home-page .vision-text-vip p {
   text-align: end;
-  color: white;
+  color: #455950;
   font-style: italic;
+}
+body.home-page .google-apple-store {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+body.home-page .google-apple-store img {
+  height: 58.5px;
+  margin-top: 20px;
 }
 body.home-page .trial {
   display: flex;
@@ -124,7 +144,7 @@ body.home-page .trial {
 body.home-page .trial h2 {
   color: #455950;
   text-align: center;
-  margin: 40px 40px 20px 40px;
+  margin: 0px 40px 10px 40px;
 }
 body.home-page .trial .cta-button {
   background: #455950;
@@ -132,7 +152,7 @@ body.home-page .trial .cta-button {
   color: white;
   padding: 20px;
   border-radius: 8px;
-  margin: 20px 40px;
+  margin: 10px 40px;
   font-weight: bold;
   font-size: 16px;
 }
@@ -172,12 +192,12 @@ body.home-page .customer-reviews-container {
   flex-wrap: wrap;
   border: 2px solid #455950;
   margin: 20px 100px 40px 100px;
+  border-radius: 8px;
   padding: 20px;
   gap: 20px;
 }
 body.home-page .customer-reviews-container img {
-  width: 100%;
-  height: auto;
+  width: 186px;
 }
 
 body.about-page {
@@ -196,7 +216,8 @@ body.about-page main .img-wrap {
   overflow: hidden;
 }
 body.about-page main .img-wrap img {
-  width: 100%;
+  width: 430px;
+  height: 287px;
 }
 body.about-page main .about-text {
   display: flex;
@@ -222,132 +243,183 @@ body.about-page .staff-container {
   padding: 20px 40px;
   gap: 20px;
 }
+body.about-page .staff-container .staff-h2 {
+  display: inline;
+  justify-content: flex-start;
+}
 body.about-page .staff-container h2 {
   color: white;
+  text-align: left;
 }
-body.about-page .staff-container .staff-one, body.about-page .staff-container .staff-two, body.about-page .staff-container .staff-three, body.about-page .staff-container .staff-four, body.about-page .staff-container .staff-five, body.about-page .staff-container .staff-six {
+body.about-page .staff-one, body.about-page .staff-two, body.about-page .staff-three, body.about-page .staff-four, body.about-page .staff-five, body.about-page .staff-six {
   background: white;
   padding: 10px;
   width: 220px;
 }
-body.about-page .staff-container .staff-one img, body.about-page .staff-container .staff-two img, body.about-page .staff-container .staff-three img, body.about-page .staff-container .staff-four img, body.about-page .staff-container .staff-five img, body.about-page .staff-container .staff-six img {
-  width: 100%;
+body.about-page .staff-one img, body.about-page .staff-two img, body.about-page .staff-three img, body.about-page .staff-four img, body.about-page .staff-five img, body.about-page .staff-six img {
+  width: 200px;
+  height: 200px;
 }
-body.about-page .staff-container .staff-one h3, body.about-page .staff-container .staff-one h4, body.about-page .staff-container .staff-one b, body.about-page .staff-container .staff-two h3, body.about-page .staff-container .staff-two h4, body.about-page .staff-container .staff-two b, body.about-page .staff-container .staff-three h3, body.about-page .staff-container .staff-three h4, body.about-page .staff-container .staff-three b, body.about-page .staff-container .staff-four h3, body.about-page .staff-container .staff-four h4, body.about-page .staff-container .staff-four b, body.about-page .staff-container .staff-five h3, body.about-page .staff-container .staff-five h4, body.about-page .staff-container .staff-five b, body.about-page .staff-container .staff-six h3, body.about-page .staff-container .staff-six h4, body.about-page .staff-container .staff-six b {
-  margin: 0px;
+body.about-page .staff-one h3, body.about-page .staff-one h4, body.about-page .staff-two h3, body.about-page .staff-two h4, body.about-page .staff-three h3, body.about-page .staff-three h4, body.about-page .staff-four h3, body.about-page .staff-four h4, body.about-page .staff-five h3, body.about-page .staff-five h4, body.about-page .staff-six h3, body.about-page .staff-six h4 {
+  margin-top: 10px;
   color: #455950;
 }
-
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /* position:relative;
-  bottom: 0; left: 0; */
-  width: 100%;
-  height: auto;
-  background-color: #455950;
-  color: white;
-  margin: 10px;
-  padding: 5px;
+body.about-page .staff-one p, body.about-page .staff-two p, body.about-page .staff-three p, body.about-page .staff-four p, body.about-page .staff-five p, body.about-page .staff-six p {
+  margin-top: 10px;
+  color: black;
 }
 
-.fot-parent { /* Omkring allt */
+body.services-page {
+  background-color: white;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+body.services-page .service-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
-  /* border: rgb(225, 0, 255) solid; Just to mark out while working */
-  padding: 10px;
-  margin: 10px;
-  height: auto;
   width: 100%;
 }
-
-.fot-container { /* Home - Contact , subscribe & Sign in*/
+body.services-page .service-wrap .button {
+  background-color: #455950;
+  border: 3px solid #455950;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+body.services-page .service-wrap .button:hover {
+  background-color: white;
+  color: #455950;
+}
+body.services-page .sub {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
+  padding: 20px;
+  margin: 20px;
+}
+body.services-page .pricing-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  body.services-page .pricing-plan { /* tablet och upp */
+    display: flex;
+  }
+}
+body.services-page h1, body.services-page h2, body.services-page h3 {
+  color: #455950;
+  text-align: center;
+  /*&.h3 { Om vi behöver ändra h3orna}*/
+}
+body.services-page h1.h1, body.services-page h2.h1, body.services-page h3.h1 {
+  margin: 45px;
+  font-size: 2em; /* Så att texten blir större med skärmen  */
+}
+@media (min-width: 1200px) {
+  body.services-page h1.h1, body.services-page h2.h1, body.services-page h3.h1 {
+    margin: 60px; /* För desktop*/
+  }
+}
+body.services-page h1.h2, body.services-page h2.h2, body.services-page h3.h2 {
+  margin: 10px;
+  padding: 5px;
+  margin: 20px 0; /* Mer marginal runt h2 för desktop/större skärmar */
+}
+body.services-page p {
+  color: black;
+  text-align: center;
+  margin: 10px 0;
+  padding: 8px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+@media (min-width: 1200px) {
+  body.services-page p {
+    /* Vi far kolla om det är nagot vi behöver ändra */
+  }
+}
+body.services-page li {
+  color: black;
+  margin: 10px 0;
+}
+@media (min-width: 768px) {
+  body.services-page .button {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  body.services-page { /* Satte en men vi kan ju bestämma det ihop när vi ska justera allt */ }
+  body.services-page .service-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  background-color: #455950;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+footer .fot-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+footer .fot-parent .fot-container {
+  display: flex;
+  flex-direction: column; /* för mobiler */
   align-items: center;
   width: 100%;
-  height: auto;
-  color: white;
-  padding: 10px;
-  margin: 10px;
-  /* border: aqua solid; Just to mark out while working*/
 }
-
-.fot, a {
+@media (min-width: 768px) {
+  footer .fot-parent .fot-container {
+    flex-direction: row;
+    justify-content: space-between; /* gör lite luftigare*/
+  }
+}
+footer .fot-parent .fot-container .fot-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  margin: 5px;
+  list-style: none;
+  line-height: 1.5;
+}
+footer .fot-parent .fot-container .fot-menu fot, footer .fot-parent .fot-container .fot-menu a {
   list-style: none;
   color: white;
   text-decoration: none;
   width: 100%;
-  /* padding:10px;
-   margin:10px;
-  */
 }
-
-.fot-menu {
-  display: inline-block;
-  flex-direction: column;
-  justify-content: flex-start;
-  list-style: none;
-  width: auto;
-  height: auto;
-  /*border: orange solid 5px; Just to mark out while working*/
-  padding: 15px;
-  margin: 15px;
-}
-
-/* 
-Parent till menyn
-.fot-menu{} */
-.fot-menu-child-1 {
+footer .fot-parent .fot-container .fot-menu-child-1, footer .fot-parent .fot-container .fot-menu-child-2, footer .fot-parent .fot-container .fot-menu-child-3, footer .fot-parent .fot-container .fot-menu-child-4 {
   padding: 5px;
 }
-
-.fot-menu-child-2 {
-  padding: 5px;
+@media (min-width: 768px) {
+  footer .fot-parent .fot-container .fot-menu {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
-
-.fot-menu-child-3 {
-  padding: 5px;
-}
-
-.fot-menu-child-4 {
-  padding: 5px;
-}
-
-.fot-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
-  width: auto;
-  height: auto;
-  padding: 15px;
-  margin: 15px;
-  /*border: purple solid 5px; Just to mark out while working*/
-}
-
-.horizontal-line {
-  width: 90%; /* Makes the line span the full width of the page */
-  height: 2px;
-  background-color: white;
-  margin: 20px; /* Optional: Adds space above and below the line */
-  margin-top: 10px;
-}
-
-.store {
-  display: flex;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.copyright {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+footer .fot-parent .fot-container .fot-btn {
+  color: #455950;
 }/*# sourceMappingURL=styles.css.map */
