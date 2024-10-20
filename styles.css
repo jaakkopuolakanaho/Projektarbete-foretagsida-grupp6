@@ -1,90 +1,90 @@
-* {
+@charset "UTF-8";
+header {
+  font-family: Karla;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #ffffff;
+  height: 165px;
+}
+header * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
+header .logo-container {
+  display: flex;
+  align-self: flex-start;
 }
-
-header {
+header .logo-container img {
+  margin-left: 10%;
+  height: 120px;
+  max-width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+header .slogan {
+  position: relative;
+  max-width: 80%;
+}
+header .slogan h2 {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+  padding: 0.5%;
+  font-style: italic;
+}
+header .center-container {
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+header .nav-container {
+  width: 100%;
+  background-color: #455950;
+}
+header .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f0e5b1;
-  padding: 20px;
-  border-bottom: 2px solid #ccc;
-  position: relative;
-  height: 100px;
 }
-
-.logo-div {
-  flex: 1;
-}
-
-.logo {
-  height: 70px;
-  max-width: 100%;
-  display: block;
-}
-
-.center-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  white-space: nowrap;
-}
-
-h1 {
-  font-size: 36px;
-  color: #333;
-  letter-spacing: 2px;
-  margin-bottom: 5px;
-}
-
-.navigation ul {
+header .navigation ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  padding: 0;
+  justify-content: space-between;
+  padding: 15px;
+  margin-left: 15%;
 }
-
-.navigation li {
-  margin-right: 30px;
+header .navigation li {
+  margin-right: 40px;
+}
+header .navigation a {
+  margin: auto;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 19px;
   letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
-
-.navigation a {
+header .navigation a:hover {
+  color: #969696;
+}
+header nav.navigation {
+  max-width: 75%;
+}
+header .login-btn {
   text-decoration: none;
-  font-size: 18px;
+  margin-right: 40px;
+  letter-spacing: 2px;
+  font-size: 19px;
   color: #333;
-}
-
-.navigation a:hover {
-  color: #666;
-}
-
-.login-div {
-  flex: 1;
-  text-align: right;
-}
-
-.login-btn {
-  text-decoration: none;
-  font-size: 18px;
-  color: #333;
-  font-weight: bold;
-  padding: 8px 16px;
-  border: 2px solid #333;
-  border-radius: 4px;
   background-color: transparent;
 }
-
-.login-btn:hover {
-  background-color: #333;
-  color: #fff;
+header .active {
+  font-style: italic;
 }
 
 body.home-page {
@@ -94,41 +94,89 @@ body.home-page {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
+@media (width > 590px) {
+  body.home-page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 body.home-page main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+@media (width > 590px) {
+  body.home-page main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px 100px;
+    max-width: 640px;
+  }
+}
 body.home-page main .img-wrap {
   overflow: hidden;
 }
+body.home-page main .img-wrap img {
+  width: 640px;
+  height: 427px;
+}
 body.home-page main h1 {
   color: #455950;
+  margin-top: 10px;
 }
 body.home-page main .sell-text {
-  margin: 20px 40px;
+  margin: 0px 40px;
 }
-body.home-page .vision-vip {
-  background-color: #455950;
+body.home-page main .sell-text p {
+  margin-top: 10px;
+}
+body.home-page main .vision-text-vip {
+  border-left: 10px solid #455950;
+  border-right: 10px solid #455950;
   padding: 20px 40px;
+  margin: 40px;
 }
-body.home-page .vision-vip h3 {
-  color: white;
+body.home-page main .vision-text-vip q {
+  color: #455950;
+  font-size: larger;
+  font-weight: bold;
 }
-body.home-page .vision-vip p {
+body.home-page main .vision-text-vip p {
   text-align: end;
-  color: white;
+  color: #455950;
   font-style: italic;
+  margin-top: 10px;
+}
+body.home-page .google-apple-store {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+body.home-page .google-apple-store img {
+  height: 58.5px;
+  margin-top: 20px;
 }
 body.home-page .trial {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+@media (width > 590px) {
+  body.home-page .trial {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 640px;
+    margin: 0 px 200px;
+  }
+}
 body.home-page .trial h2 {
   color: #455950;
   text-align: center;
-  margin: 40px 40px 20px 40px;
+  margin: 0px 40px 10px 40px;
 }
 body.home-page .trial .cta-button {
   background: #455950;
@@ -136,13 +184,23 @@ body.home-page .trial .cta-button {
   color: white;
   padding: 20px;
   border-radius: 8px;
-  margin: 20px 40px;
+  margin: 10px 40px;
   font-weight: bold;
   font-size: 16px;
 }
 body.home-page form {
   justify-content: center;
   margin: 40px 0px;
+}
+@media (width > 590px) {
+  body.home-page form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 200px;
+    max-width: 640px;
+  }
 }
 body.home-page .newsletter-container {
   padding: 0px 40px;
@@ -176,12 +234,28 @@ body.home-page .customer-reviews-container {
   flex-wrap: wrap;
   border: 2px solid #455950;
   margin: 20px 100px 40px 100px;
+  border-radius: 8px;
   padding: 20px;
   gap: 20px;
 }
+@media (width > 590px) {
+  body.home-page .customer-reviews-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 640px;
+  }
+}
 body.home-page .customer-reviews-container img {
-  width: 100%;
-  height: auto;
+  width: 186px;
+}
+@media (width > 590px) {
+  body.home-page .customer-reviews-container img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 185px;
+  }
 }
 
 body.about-page {
@@ -191,6 +265,13 @@ body.about-page {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
+@media (width > 590px) {
+  body.about-page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 body.about-page main {
   display: flex;
   justify-content: center;
@@ -199,216 +280,316 @@ body.about-page main {
 body.about-page main .img-wrap {
   overflow: hidden;
 }
+@media (width > 590px) {
+  body.about-page main .img-wrap {
+    display: flex;
+    justify-content: center;
+    width: 640px;
+    height: auto;
+  }
+}
 body.about-page main .img-wrap img {
-  width: 100%;
+  width: 430px;
+  height: 287px;
+}
+@media (width > 590px) {
+  body.about-page main .img-wrap img {
+    width: 640px;
+    height: auto;
+  }
 }
 body.about-page main .about-text {
   display: flex;
   flex-wrap: wrap;
-  padding: 40px;
+  padding: 10px 40px 40px 40px;
 }
 body.about-page main .about-text h1 {
   color: #455950;
-  margin: 0px;
+  margin-top: 10px;
 }
 body.about-page main .about-text h2 {
   color: #455950;
   margin: 10px 0px 0px 0px;
 }
+body.about-page main .about-text h3 {
+  color: #455950;
+  margin: 10px 0px 0px 0px;
+}
 body.about-page main .about-text p {
-  margin: 10px 0px;
+  margin-top: 10px;
+}
+@media (width > 590px) {
+  body.about-page main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 640px;
+  }
 }
 body.about-page .staff-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   background: #455950;
-  padding: 20px 40px;
+  padding: 20px 80px;
   gap: 20px;
+}
+@media (width > 590px) {
+  body.about-page .staff-container {
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+  }
+}
+body.about-page .staff-container .staff-h2 {
+  display: flex;
+  flex-direction: column;
 }
 body.about-page .staff-container h2 {
   color: white;
 }
-body.about-page .staff-container .staff-one, body.about-page .staff-container .staff-two, body.about-page .staff-container .staff-three, body.about-page .staff-container .staff-four, body.about-page .staff-container .staff-five, body.about-page .staff-container .staff-six {
+body.about-page .staff-container .staff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+@media (width > 590px) {
+  body.about-page .staff-container .staff {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 220px;
+  }
+}
+body.about-page .staff-container .staff .staff-one, body.about-page .staff-container .staff .staff-two, body.about-page .staff-container .staff .staff-three, body.about-page .staff-container .staff .staff-four, body.about-page .staff-container .staff .staff-five, body.about-page .staff-container .staff .staff-six {
   background: white;
   padding: 10px;
   width: 220px;
 }
-body.about-page .staff-container .staff-one img, body.about-page .staff-container .staff-two img, body.about-page .staff-container .staff-three img, body.about-page .staff-container .staff-four img, body.about-page .staff-container .staff-five img, body.about-page .staff-container .staff-six img {
+@media (width > 590px) {
+  body.about-page .staff-container .staff .staff-one, body.about-page .staff-container .staff .staff-two, body.about-page .staff-container .staff .staff-three, body.about-page .staff-container .staff .staff-four, body.about-page .staff-container .staff .staff-five, body.about-page .staff-container .staff .staff-six {
+    width: 220px;
+    height: 425px;
+  }
+}
+body.about-page .staff-container .staff .staff-one img, body.about-page .staff-container .staff .staff-two img, body.about-page .staff-container .staff .staff-three img, body.about-page .staff-container .staff .staff-four img, body.about-page .staff-container .staff .staff-five img, body.about-page .staff-container .staff .staff-six img {
+  width: 200px;
+  height: 200px;
+}
+body.about-page .staff-container .staff .staff-one h3, body.about-page .staff-container .staff .staff-one h4, body.about-page .staff-container .staff .staff-two h3, body.about-page .staff-container .staff .staff-two h4, body.about-page .staff-container .staff .staff-three h3, body.about-page .staff-container .staff .staff-three h4, body.about-page .staff-container .staff .staff-four h3, body.about-page .staff-container .staff .staff-four h4, body.about-page .staff-container .staff .staff-five h3, body.about-page .staff-container .staff .staff-five h4, body.about-page .staff-container .staff .staff-six h3, body.about-page .staff-container .staff .staff-six h4 {
+  margin-top: 10px;
+  color: #455950;
+}
+body.about-page .staff-container .staff .staff-one p, body.about-page .staff-container .staff .staff-two p, body.about-page .staff-container .staff .staff-three p, body.about-page .staff-container .staff .staff-four p, body.about-page .staff-container .staff .staff-five p, body.about-page .staff-container .staff .staff-six p {
+  margin-top: 10px;
+  color: black;
+}
+
+body.services-page {
+  background-color: white;
+  height: auto;
   width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
 }
-body.about-page .staff-container .staff-one h3, body.about-page .staff-container .staff-one h4, body.about-page .staff-container .staff-one b, body.about-page .staff-container .staff-two h3, body.about-page .staff-container .staff-two h4, body.about-page .staff-container .staff-two b, body.about-page .staff-container .staff-three h3, body.about-page .staff-container .staff-three h4, body.about-page .staff-container .staff-three b, body.about-page .staff-container .staff-four h3, body.about-page .staff-container .staff-four h4, body.about-page .staff-container .staff-four b, body.about-page .staff-container .staff-five h3, body.about-page .staff-container .staff-five h4, body.about-page .staff-container .staff-five b, body.about-page .staff-container .staff-six h3, body.about-page .staff-container .staff-six h4, body.about-page .staff-container .staff-six b {
-  margin: 0px;
-  color: #455950;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-h1 {
-  color: #455950;
-}
-
-h2 {
-  color: #455950;
-}
-
-h3 {
-  color: #455950;
-}
-
-.service-wrap { /* Omkring allt */
+body.services-page .service-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #455950;
-  border: red solid; /*Just to mark out while working */
-  padding: 10px;
-  margin: 10px;
-  height: auto;
   width: 100%;
 }
-
-.button {
+body.services-page .service-wrap .button {
   background-color: #455950;
-  border: 1px solid #455950;
+  border: 3px solid #455950;
   color: white;
   padding: 12px 28px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  font-style: bold;
-  margin: 4px 2px;
+  font-weight: bold;
+  margin: 10px 0;
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 9px;
   margin-bottom: 20px;
   margin-top: 40px;
 }
-
-.button1:hover {
+body.services-page .service-wrap .button:hover {
   background-color: white;
   color: #455950;
 }
-
-.sub {
+body.services-page .sub {
   display: flex;
   justify-content: flex-end;
   padding: 20px;
+  margin: 20px;
 }
-
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /* position:relative;
-  bottom: 0; left: 0; */
-  width: 100%;
-  height: auto;
-  background-color: #455950;
-  color: white;
-  padding: 5px;
-}
-
-.fot-parent { /* Omkring allt */
+body.services-page .pricing-plan {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
-  /* border: rgb(225, 0, 255) solid; Just to mark out while working */
-  padding: 10px;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  body.services-page .pricing-plan { /* tablet och upp */
+    display: flex;
+  }
+}
+body.services-page h1, body.services-page h2, body.services-page h3 {
+  color: #455950;
+  text-align: center;
+  /*&.h3 { Om vi behöver ändra h3orna}*/
+}
+body.services-page h1.h1, body.services-page h2.h1, body.services-page h3.h1 {
+  margin: 45px;
+  font-size: 2em; /* Så att texten blir större med skärmen  */
+}
+@media (min-width: 1200px) {
+  body.services-page h1.h1, body.services-page h2.h1, body.services-page h3.h1 {
+    margin: 60px; /* För desktop*/
+  }
+}
+body.services-page h1.h2, body.services-page h2.h2, body.services-page h3.h2 {
   margin: 10px;
-  height: auto;
-  width: 100%;
+  padding: 5px;
+  margin: 20px 0; /* Mer marginal runt h2 för desktop/större skärmar */
+}
+body.services-page p {
+  color: black;
+  text-align: center;
+  margin: 10px 0;
+  padding: 8px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+@media (min-width: 1200px) {
+  body.services-page p {
+    /* Vi far kolla om det är nagot vi behöver ändra */
+  }
+}
+body.services-page li {
+  color: black;
+  margin: 10px 0;
+}
+@media (min-width: 768px) {
+  body.services-page .button {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  body.services-page { /* Satte en men vi kan ju bestämma det ihop när vi ska justera allt */ }
+  body.services-page .service-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
-.fot-container { /* Home - Contact , subscribe & Sign in*/
+footer {
+  background-color: #455950;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+footer .fot-parent {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+footer .fot-parent .fot-container {
+  display: flex;
+  flex-direction: column; /* för mobiler */
   align-items: center;
   width: 100%;
-  height: auto;
-  color: white;
-  padding: 10px;
-  margin: 10px;
-  /* border: aqua solid; Just to mark out while working*/
 }
-
-.fot, a {
+@media (min-width: 768px) {
+  footer .fot-parent .fot-container {
+    flex-direction: row;
+    justify-content: space-between; /* gör lite luftigare*/
+  }
+}
+footer .fot-parent .fot-container .fot-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  margin: 5px;
+  list-style: none;
+  line-height: 1.5;
+}
+footer .fot-parent .fot-container .fot-menu fot, footer .fot-parent .fot-container .fot-menu a {
   list-style: none;
   color: white;
   text-decoration: none;
   width: 100%;
-  padding: 10px;
 }
-
-.fot-menu {
-  display: inline-block;
-  flex-direction: column;
-  justify-content: flex-start;
-  list-style: none;
-  width: auto;
-  height: auto;
-  /*border: orange solid 5px; Just to mark out while working*/
-  padding: 15px;
-  margin: 15px;
-}
-
-/* 
-Parent till menyn
-.fot-menu{} */
-.fot-menu-child-1 {
+footer .fot-parent .fot-container .fot-menu-child-1, footer .fot-parent .fot-container .fot-menu-child-2, footer .fot-parent .fot-container .fot-menu-child-3, footer .fot-parent .fot-container .fot-menu-child-4 {
   padding: 5px;
 }
-
-.fot-menu-child-2 {
-  padding: 5px;
+@media (min-width: 768px) {
+  footer .fot-parent .fot-container .fot-menu {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
-
-.fot-menu-child-3 {
-  padding: 5px;
-}
-
-.fot-menu-child-4 {
-  padding: 5px;
-}
-
-.fot-btn {
+footer .fot-parent .fot-container .fot-btn {
+  color: #455950;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
-  width: auto;
-  height: auto;
-  padding: 15px;
-  margin: 15px;
-  /*border: purple solid 5px; Just to mark out while working*/
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
 }
-
-.horizontal-line {
-  width: 90%; /* Makes the line span the full width of the page */
+footer .fot-parent .fot-container .fot-btn button {
+  width: auto;
+  border-radius: 15px;
+  padding-left: 12px;
+  padding-right: 10px;
+  margin: 15px;
+}
+footer .fot-parent .fot-container .fot-btn input {
+  background-color: #455950;
+  width: auto;
+  border-radius: 15px;
+  margin-inline-start: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+@media (min-width: 768px) {
+  footer .fot-parent .fot-container .fot-btn {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+footer .fot-parent .sign-in {
+  padding-top: 10px;
+}
+footer .fot-parent .sign-in button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding: 5px;
+  border-radius: 12px;
+}
+footer .fot-parent .horizontal-line {
+  width: 90%;
   height: 2px;
   background-color: white;
-  margin: 20px; /* Optional: Adds space above and below the line */
+  margin: 20px 0;
+}
+footer .fot-parent .store {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
 }
-
-.store {
+footer .fot-parent .copyright {
   display: flex;
-  width: 100%;
-  margin-top: 10px;
-  padding: 5px;
-}
-
-.copyright {
-  display: flex;
-  position: relative;
-  flex-direction: row;
   justify-content: center;
   width: 100%;
+  margin-top: 15px;
 }/*# sourceMappingURL=styles.css.map */
