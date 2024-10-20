@@ -5,12 +5,61 @@ body.services-page {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
+ 
+    @include mobile {
+        .service-wrap {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
 
-    .service-wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        .button{
+            width: 100%;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            margin:20px 0;
+        }
+
+        h2 {
+        font-size: 1.4em;
+        }
+
+        .pricing-plan{
+            padding: 20px;
+        }
+    }
+    
+    @include desktop {
+        .service-wrap{
+            flex-direction: row;
+            justify-content: space-around;
+            max-width: 1200px;
+            max-width: 0 auto;
+        }
+
+        .button {
+            width: auto;
+            font-size: 16px;
+        }
+
+        h1{
+            font-size: 2.5em;
+            margin: 40px 0;
+        }
+
+        h2{
+            font-size: 1.8em;
+        }
+
+        .pricing-plan {
+            padding: 40px;
+            max-width: 1000px;
+        }
+    }
+
 
         .button {
             background-color: #455950;
@@ -34,78 +83,92 @@ body.services-page {
                 color: #455950;
             }
         }
-    }
+    
 
     .sub {
         display: flex;
         justify-content: flex-end;
         padding: 20px;
         margin: 20px;
+
+        @include mobile {
+            justify-content: center;
+            padding: 20px;
+        }
+
+        @include desktop {
+            justify-content: flex-end;
+            padding: 20px;
+        }
     }
+    
 
     .pricing-plan {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 40px;
 
-        @media (min-width: 768px) { /* tablet och upp */
-            display: flex; 
+        @include mobile{
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        @include desktop{
+            flex-direction: row;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
     }
+
 
     h1, h2, h3 {
         color: #455950;
         text-align: center;
 
-        &.h1 {
-            margin: 45px;
-            font-size: 2em; /* Så att texten blir större med skärmen  */
-
-            @media (min-width: 1200px) {
-                margin: 60px; /* För desktop*/
-            }
+        @include mobile {
+            margin: 20px 0;
         }
 
-        &.h2 {
-            margin: 10px;
-            padding: 5px;
-            margin: 20px 0; /* Mer marginal runt h2 för desktop/större skärmar */
+        @include desktop {
+            margin: 40px 0;
         }
-
-        /*&.h3 { Om vi behöver ändra h3orna}*/ 
     }
+
 
     p {
         color: black;
-        text-align: center;
+        // text-align: center;
+        // margin-top: 20px;
+        // margin-bottom: 40px;
         margin: 10px 0;
         padding: 8px;
-        margin-top: 20px;
-        margin-bottom: 40px;
         line-height: 1.5;
 
-        @media (min-width: 1200px) {
-            /* Vi far kolla om det är nagot vi behöver ändra */
+        @include mobile {
+            text-align: left;
+            padding: 10px;
+        }
+
+        @include desktop {
+            text-align: center;
+            padding: 15px;
         }
     }
+
 
     li {
         color: black;
         margin: 10px 0;
-    }
-    
-  
-    @media (min-width: 768px) {
-        .button {
-            font-size: 16px; 
+
+        @include mobile {
+            padding: 5px;
+        }
+
+        @include desktop {
+            padding: 10px;
         }
     }
-    
-    @media (min-width: 1200px) { /* Satte en men vi kan ju bestämma det ihop när vi ska justera allt */
-        .service-wrap {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-    }
+
 }
