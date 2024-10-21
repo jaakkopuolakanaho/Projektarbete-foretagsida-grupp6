@@ -6,10 +6,61 @@ body.sign-in-page {
     font-family: Arial, Helvetica, sans-serif;
 
     main {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
 
+        @include desktop {
+            max-width: 640px;
+            margin: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+        
+            .login-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: wrap;
+                border-color: $primary-green;
+                padding: 80px 40px;
+
+                p {
+                    color: $primary-green;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+                .username-password {
+                    border-radius: 8px;
+                    padding: 20px;
+
+
+                }
+
+                button {
+                    color: white;
+                    background: $primary-green;
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin:20px 0px;
+                    padding: 20px;
+                    border-radius: 8px;
+                }
+
+                .checkbox {
+                    color: black;
+                    font-size: medium;
+                }
+
+                .forgot-password {
+
+                    p {
+                        font-size: medium;
+                    }
+                }
+            }   
+        }
     }
-
 }    

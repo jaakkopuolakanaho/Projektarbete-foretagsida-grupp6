@@ -7,54 +7,25 @@
     <title>Maindfullness - Startsida</title>
 </head>
 <body class="sign-in-page">
-  <!-- Header-kodblock -->
-  <header class="header-container">
-      
-    <div class="logo-container">
-      <img
-        src="https://i.ibb.co/k6L3HTy/Maindful-logo.png"
-        alt="Maindfulness Logo"
-        class="logo" />
-        
-    </div>
-
-    <div class="center-container">
-      <div class="slogan">
-        <h2>"Find your calm - Anytime, Anywhere."</h3>
-      </div>
-      
-      <div class="nav-container">          
-        <nav class="navigation">
-          <ul>
-            <!-- ange class="active" -->
-            <li><a href="home.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <div class="login-container">
-            <a href="#" class="login-btn" class="active">Sign in</a>
-        </nav>
-      </div>
-    </div>
-  </header>
 
   <main>
     <form action="action_page.php" method="post">
     
       <div class="login-container">
-        <label for="username"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="username" required>
+        <label for="username"><p>Username</p></label>
+        <input type="text" class="username-password" placeholder="Enter Username" name="username" required>
     
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <label for="password"><p>Password</p></label>
+        <input type="password" class="username-password" placeholder="Enter Password" name="password" required>
     
         <button type="submit">Login</button>
-        <label for="remember">
-          <input type="checkbox" checked="checked" name="remember"> Remember me
+        <label for="remember" class="checkbox">
+          <input type="checkbox" checked="checked" name="remember">Remember Me
         </label>
 
-        <button type="submit"></button>
+        <div class="forgot-password">
+          <p>Forgot your password? <a href="...">Click Here!</a></p>
+        </div>
       </div>
     </form>
   </main>
