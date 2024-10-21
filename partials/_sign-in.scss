@@ -25,8 +25,14 @@ body.sign-in-page {
                 flex-wrap: wrap;
                 border-color: $primary-green;
                 padding: 80px 40px;
+                gap: 10px;
 
-                p {
+                h1 {
+                    color: $primary-green;
+                    margin-bottom: 10px;
+                }
+
+                label {
                     color: $primary-green;
                     font-weight: bold;
                     font-size: 20px;
@@ -35,7 +41,7 @@ body.sign-in-page {
                 .username-password {
                     border-radius: 8px;
                     padding: 20px;
-
+                    gap: 10px;                    
 
                 }
 
@@ -52,12 +58,16 @@ body.sign-in-page {
                 .checkbox {
                     color: black;
                     font-size: medium;
+                    text-align: center;
+
                 }
 
                 .forgot-password {
+                    margin-top: 10px;
 
                     p {
                         font-size: medium;
+                        text-align: center;
                     }
                 }
             }   
