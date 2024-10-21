@@ -553,10 +553,50 @@ body.sign-in-page {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
-body.sign-in-page main {
+@media (width > 590px) {
+  body.sign-in-page main {
+    max-width: 640px;
+    margin: auto;
+  }
+}
+body.sign-in-page main form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+}
+body.sign-in-page main form .login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-color: #455950;
+  padding: 80px 40px;
+}
+body.sign-in-page main form .login-container p {
+  color: #455950;
+  font-weight: bold;
+  font-size: 20px;
+}
+body.sign-in-page main form .login-container .username-password {
+  border-radius: 8px;
+  padding: 20px;
+}
+body.sign-in-page main form .login-container button {
+  color: white;
+  background: #455950;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0px;
+  padding: 20px;
+  border-radius: 8px;
+}
+body.sign-in-page main form .login-container .checkbox {
+  color: black;
+  font-size: medium;
+}
+body.sign-in-page main form .login-container .forgot-password p {
+  font-size: medium;
 }
 
 footer {
