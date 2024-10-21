@@ -131,7 +131,7 @@ body.home-page main .sell-text {
   margin: 0px 40px;
 }
 body.home-page main .sell-text p {
-  margin-top: 10px;
+  margin: 10px 0px 0px 0px;
 }
 body.home-page main .vision-text-vip {
   border-left: 10px solid #455950;
@@ -513,7 +513,7 @@ body.services-page h1, body.services-page h2, body.services-page h3 {
   }
 }
 body.services-page p {
-  color: black;
+  color: rgb(255, 255, 255);
   margin: 10px 0;
   padding: 8px;
   line-height: 1.5;
@@ -646,6 +646,7 @@ footer .fot-parent .store {
 footer .fot-parent .copyright {
   display: flex;
   justify-content: center;
+  color: white;
   width: 100%;
   margin-top: 15px;
 }/*# sourceMappingURL=styles.css.map */
