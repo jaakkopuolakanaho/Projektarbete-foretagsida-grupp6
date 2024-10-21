@@ -514,7 +514,7 @@ body.services-page h1, body.services-page h2, body.services-page h3 {
   }
 }
 body.services-page p {
-  color: rgb(255, 255, 255);
+  color: black;
   margin: 10px 0;
   padding: 8px;
   line-height: 1.5;
@@ -546,6 +546,26 @@ body.services-page li {
   }
 }
 
+body.reviews-page {
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body.reviews-page .reviews-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+body.reviews-page .reviews-container h1 {
+  color: #455950;
+}
+body.reviews-page .reviews-container h2 {
+  color: #455950;
+}
+
 body.sign-in-page {
   background-color: white;
   height: 100vh;
@@ -572,8 +592,13 @@ body.sign-in-page main form .login-container {
   flex-wrap: wrap;
   border-color: #455950;
   padding: 80px 40px;
+  gap: 10px;
 }
-body.sign-in-page main form .login-container p {
+body.sign-in-page main form .login-container h1 {
+  color: #455950;
+  margin-bottom: 10px;
+}
+body.sign-in-page main form .login-container label {
   color: #455950;
   font-weight: bold;
   font-size: 20px;
@@ -581,6 +606,7 @@ body.sign-in-page main form .login-container p {
 body.sign-in-page main form .login-container .username-password {
   border-radius: 8px;
   padding: 20px;
+  gap: 10px;
 }
 body.sign-in-page main form .login-container button {
   color: white;
@@ -594,9 +620,14 @@ body.sign-in-page main form .login-container button {
 body.sign-in-page main form .login-container .checkbox {
   color: black;
   font-size: medium;
+  text-align: center;
+}
+body.sign-in-page main form .login-container .forgot-password {
+  margin-top: 10px;
 }
 body.sign-in-page main form .login-container .forgot-password p {
   font-size: medium;
+  text-align: center;
 }
 
 footer {
