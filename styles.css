@@ -513,7 +513,7 @@ body.services-page h1, body.services-page h2, body.services-page h3 {
   }
 }
 body.services-page p {
-  color: rgb(255, 255, 255);
+  color: black;
   margin: 10px 0;
   padding: 8px;
   line-height: 1.5;
@@ -543,6 +543,19 @@ body.services-page li {
   body.services-page li {
     padding: 10px;
   }
+}
+
+body.sign-in-page {
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body.sign-in-page main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 footer {
