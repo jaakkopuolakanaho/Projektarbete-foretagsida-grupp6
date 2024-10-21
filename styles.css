@@ -1,5 +1,12 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header {
+  width: 100%;
   font-family: Karla;
   position: sticky;
   display: flex;
@@ -7,11 +14,6 @@ header {
   align-items: flex-end;
   background-color: #ffffff;
   height: 165px;
-}
-header * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 header .logo-container {
   display: flex;
@@ -29,7 +31,6 @@ header .slogan {
   max-width: 80%;
 }
 header .slogan h2 {
-  position: relative;
   display: flex;
   justify-content: flex-end;
   margin-right: 50px;
@@ -45,22 +46,22 @@ header .nav-container {
   width: 100%;
   background-color: #455950;
 }
-header .navigation {
+header .nav-container .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .navigation ul {
+header .nav-container .navigation ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   padding: 15px;
   margin-left: 15%;
 }
-header .navigation li {
+header .nav-container .navigation ul li {
   margin-right: 40px;
 }
-header .navigation a {
+header .nav-container .navigation a {
   margin: auto;
   text-decoration: none;
   font-weight: 400;
@@ -69,10 +70,10 @@ header .navigation a {
   text-transform: uppercase;
   color: #ffffff;
 }
-header .navigation a:hover {
+header .nav-container .navigation a:hover {
   color: #969696;
 }
-header nav.navigation {
+header .nav-container nav.navigation {
   max-width: 75%;
 }
 header .login-btn {
@@ -513,7 +514,7 @@ body.services-page h1, body.services-page h2, body.services-page h3 {
   }
 }
 body.services-page p {
-  color: black;
+  color: rgb(255, 255, 255);
   margin: 10px 0;
   padding: 8px;
   line-height: 1.5;
