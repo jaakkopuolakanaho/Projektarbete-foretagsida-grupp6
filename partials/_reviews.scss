@@ -28,7 +28,7 @@ body.reviews-page {
 
             h1 {
                 color: $primary-green;
-                text-align: right;
+                text-align: center;
             }
         }
 
@@ -51,37 +51,43 @@ body.reviews-page {
 
     }
 
-    .customer-reviews-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        border: 2px solid $primary-green;
-        margin: 20px 100px 40px 100px;
-        border-radius: 8px;
-        padding: 20px;
-        gap: 20px;
+    aside {
 
-        @include desktop {
+        h2 {
+            color: $primary-green;
+            text-align: center;
+            margin: 0px 0px 10px 0px;
+        }
+
+        .customer-reviews-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            max-width: 640px;
-            margin: auto;
-        }
-
-        img {
-            width: 186px;
-
+            border: 2px solid $primary-green;
+            margin: 20px 100px 40px 100px;
+            border-radius: 8px;
+            padding: 20px;
+            gap: 20px;
+    
             @include desktop {
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
-                max-width: 185px;
+                max-width: 640px;
+                margin: auto;
             }
-
-        }    
+    
+            img {
+                width: 186px;
+    
+                @include desktop {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    max-width: 185px;
+                }
+    
+            }    
+        }
     }
-
-
-
 }
