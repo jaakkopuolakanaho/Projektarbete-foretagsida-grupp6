@@ -13,15 +13,12 @@
 }
 
 header {
-  width: 100%;
   font-family: Karla;
-  position: sticky;
+  position: fixed;
 }
 @media (width > 590px) {
   header {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    width: 100%;
     background-color: #ffffff;
     height: 165px;
   }
@@ -31,7 +28,7 @@ header {
     display: flex;
     align-items: flex-end;
     background-color: #ffffff;
-    height: 165px;
+    height: 130px;
   }
 }
 header .logo-container {
@@ -40,19 +37,15 @@ header .logo-container {
 }
 @media (width > 590px) {
   header .logo-container img {
-    margin-left: 15%;
-    margin-top: -1%;
     max-height: 135px;
-    max-width: 100%;
     position: absolute;
-    z-index: 0;
+    z-index: -1;
   }
 }
 @media (590px > width) {
   header .logo-container img {
-    height: 100px;
-    margin-top: -1%;
-    position: fixed;
+    height: 90px;
+    position: absolute;
   }
 }
 @media (590px > width) {
@@ -62,10 +55,10 @@ header .logo-container {
   }
   header .slogan h2 {
     display: flex;
+    justify-content: center;
     font-family: "Scope One";
     font-size: 17px;
     font-style: italic;
-    justify-content: flex-end;
   }
 }
 @media (width > 590px) {
@@ -83,32 +76,31 @@ header .logo-container {
   }
 }
 header .center-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: right;
   z-index: 1;
-  width: 100%;
-}
-@media (width > 590px) {
-  header .center-container {
-    margin: -1%;
-  }
 }
 header .nav-container {
-  width: 100%;
   background-color: #455950;
+  width: 100%;
 }
 @media (590px > width) {
-  header .nav-container .navigation {
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: 100%;
+  header .nav-container {
     display: flex;
+    justify-content: space-between;
+  }
+  header .nav-container .navigation {
     height: 45px;
-    flex-direction: row;
+    display: flex;
     align-items: center;
+    justify-content: center;
   }
   header .nav-container .navigation ul {
     list-style: none;
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin-left: -8%;
   }
   header .nav-container .navigation li {
@@ -117,11 +109,11 @@ header .nav-container {
   header .nav-container .navigation a {
     text-decoration: none;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #ffffff;
-    padding: 5px;
+    padding: 3px;
   }
   header .nav-container .navigation a:hover {
     color: #969696;
@@ -129,20 +121,16 @@ header .nav-container {
 }
 @media (width > 590px) {
   header .nav-container .navigation {
-    height: 75px;
+    height: 70px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
   header .nav-container .navigation ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    margin-left: 23%;
   }
   header .nav-container .navigation ul li {
-    margin-right: 40px;
+    margin: 15px;
   }
   header .nav-container .navigation a {
     margin: auto;
@@ -155,9 +143,6 @@ header .nav-container {
   }
   header .nav-container .navigation a:hover {
     color: #969696;
-  }
-  header .nav-container nav.navigation {
-    max-width: 100%;
   }
 }
 @media (width > 590px) {

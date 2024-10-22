@@ -5,16 +5,19 @@
 // }
 
 header {
-
-  width:100%;
   font-family: Karla;
-  position: sticky;
+  position: fixed;
   
+  .header-container {
+    // width:100wv;
+   
+  }
 
   @include desktop{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+     width:100%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: flex-end;
     background-color: #ffffff;
     height: 165px;
   }
@@ -23,47 +26,48 @@ header {
     display: flex;
     align-items: flex-end;
     background-color: #ffffff;
-    height: 165px;
+    height: 130px;
   }
-  
+
 
   .logo-container {
     display: flex;
     align-self: flex-start;
 
     img {
-
       @include desktop { 
-      margin-left: 15%;
-      margin-top: -1%;
+      // margin-left: 15%;
       max-height: 135px;
-      max-width: 100%;
+      // max-width: 100%;
       position: absolute;
-      z-index: 0;
+      z-index: -1;
       }
 
       @include mobile {
-        height: 100px;
-        margin-top:-1%;
-        position:fixed;
+        height: 90px;
+        position:absolute;
+        // margin-top:0%;
+        // margin-left:10px;
+        // position:fixed;
       }
     }
   }
 
   .slogan {
-
-@include mobile {
-  position:relative;
-  text-align:end;
+    @include mobile {
+      position:relative;
+      text-align:end;
 
   h2 {
     display:flex;
+    justify-content: center;
     font-family:"Scope One";
     font-size: 17px;
     font-style: italic;
-    justify-content: flex-end;
+    
+    // justify-content: center;
+    }
   }
-}
 
     @include desktop{
     position: relative;
@@ -81,40 +85,50 @@ header {
   }
 
   .center-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+
+    text-align: right; //påverkar h2
     z-index: 1;
-    width: 100%;
+    
+// bajs under
+    // margin:auto;
+    // width: 100%;
+    // text-wrap:wrap;
     
     // text-align: center;
+    
 
-    @include desktop{
-      margin:-1%;
+    @include desktop{      
+      // margin:-1%;
     }
     
     @include mobile {
-
+      
     }
     
   }
 
   .nav-container {
-    width: 100%;
     background-color: $primary-green;
-    
+    width:100%;
 
     @include mobile{
+      display:flex;
+      justify-content: space-between;
 
       .navigation {
-        width: fit-content;
-        max-width:100%;
-        display:flex;
         height: 45px;
-        flex-direction: row;
+        display:flex;
         align-items: center;
+        justify-content: center;
+
 
         ul{
           list-style: none;
           display: flex;
-          align-items: center;
+          justify-content: center;
           margin-left:-8%;
         }
 
@@ -125,11 +139,11 @@ header {
         a{
           text-decoration: none;
               font-weight: 400;
-              font-size: 17px;
+              font-size: 16px;
               letter-spacing: 1px;
               text-transform: uppercase;
               color: #ffffff;
-              padding:5px;
+              padding:3px;
 
               &:hover {
                 color: #969696;
@@ -140,22 +154,28 @@ header {
     }
 
 
-    @include desktop{
+    @include desktop{             
+      // nav.navigation {
+      
+      //   // max-width:100%;
+      // }
+      
       .navigation {
-        height:75px;
-        display: flex;        
-        justify-content: space-between;
+        height:70px;
+        display: flex;
+        // justify-content: space-between;
         align-items: center;
   
         ul {
           list-style: none;
           display: flex;
-          justify-content: space-between;
-          padding: 15px;
-          margin-left: 23%;
+          // justify-content: space-between;
+          // padding: 15px;
+          // margin-left: 23%;
   
           li {
-            margin-right: 40px;
+            margin:15px;
+            // margin-right: 40px;
               }
             }
             
@@ -175,9 +195,10 @@ header {
 
     }
 
-    nav.navigation {
-      max-width:100%;
-    }
+    // nav.navigation {
+      
+    //   // max-width:100%;
+    // }
     }
 
     
