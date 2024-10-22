@@ -15,7 +15,7 @@
 header {
   width: 100%;
   font-family: Karla;
-  position: sticky;
+  position: fixed;
 }
 @media (width > 590px) {
   header {
@@ -51,7 +51,8 @@ header .logo-container {
 @media (590px > width) {
   header .logo-container img {
     height: 100px;
-    margin-top: -1%;
+    margin-top: 0%;
+    margin-left: 10px;
     position: fixed;
   }
 }
@@ -62,10 +63,10 @@ header .logo-container {
   }
   header .slogan h2 {
     display: flex;
+    justify-content: center;
     font-family: "Scope One";
     font-size: 17px;
     font-style: italic;
-    justify-content: flex-end;
   }
 }
 @media (width > 590px) {
@@ -85,6 +86,7 @@ header .logo-container {
 header .center-container {
   z-index: 1;
   width: 100%;
+  text-wrap: wrap;
 }
 @media (width > 590px) {
   header .center-container {
@@ -96,23 +98,25 @@ header .nav-container {
   background-color: #455950;
 }
 @media (590px > width) {
-  header .nav-container .navigation {
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: 100%;
+  header .nav-container {
     display: flex;
+    justify-content: center;
+    width: -moz-min-content;
+    width: min-content;
+  }
+  header .nav-container .navigation {
     height: 45px;
     flex-direction: row;
-    align-items: center;
+    align-items: space-between;
   }
   header .nav-container .navigation ul {
     list-style: none;
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin-left: -8%;
   }
   header .nav-container .navigation li {
-    margin-right: 10px;
+    margin-right: 5px;
   }
   header .nav-container .navigation a {
     text-decoration: none;
@@ -121,7 +125,7 @@ header .nav-container {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #ffffff;
-    padding: 5px;
+    padding: 3px;
   }
   header .nav-container .navigation a:hover {
     color: #969696;
