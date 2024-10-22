@@ -1,102 +1,203 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
 
 header {
+
   width:100%;
   font-family: Karla;
   position: sticky;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  background-color: #ffffff;
-  height: 165px;
+
+  @include desktop{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #ffffff;
+    height: 165px;
+  }
+
+  @include mobile {
+    display: flex;
+    align-items: flex-end;
+    background-color: #ffffff;
+    height: 165px;
+  }
+  
 
   .logo-container {
     display: flex;
     align-self: flex-start;
 
     img {
-      margin-left: 10%;
-      height: 120px;
+
+      @include desktop { 
+      margin-left: 15%;
+      margin-top: -1%;
+      max-height: 135px;
       max-width: 100%;
       position: absolute;
       z-index: 0;
+      }
+
+      @include mobile {
+        height: 100px;
+        margin-top:-2%;
+        position:fixed;
+      }
     }
   }
 
   .slogan {
+
+@include mobile {
+  position:relative;
+  text-align:end;
+
+  h2 {
+    display:flex;
+    font-family: "Scope One";
+    font-size: 17px;
+    font-style: italic;
+    justify-content: flex-end;
+  }
+}
+
+    @include desktop{
     position: relative;
     max-width: 80%;
 
     h2 {
+      font-family: 'Scope One';
       display: flex;
       justify-content: flex-end;
       margin-right: 50px;
       padding: 0.5%;
       font-style: italic;
     }
+    }
   }
 
   .center-container {
     z-index: 1;
     width: 100%;
-    text-align: center;
+    
+    // text-align: center;
+
+    @include desktop{
+      margin:-1%;
+    }
+    
+    @include mobile {
+    }
+    
   }
 
   .nav-container {
     width: 100%;
     background-color: $primary-green;
+    
 
-    .navigation {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    @include mobile{
 
-      ul {
-        list-style: none;
-        display: flex;
+      .navigation {
+        display:flex;
+        height: 55px;
+        flex-direction: row;
         justify-content: space-between;
-        padding: 15px;
-        margin-left: 15%;
+        align-items: center;
 
-        li {
-          margin-right: 40px;
-            }
-          }
-          
-        a {
-            margin: auto;
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 19px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #ffffff;
+        ul{
+          list-style: none;
+          display: flex;
+          margin-left:-7%;
+        }
 
-            &:hover {
-              color: #969696;
+        li{
+          margin-right: 10px;
+        }
+
+        a{
+          text-decoration: none;
+              font-weight: 500;
+              font-size: 18px;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+              color: #ffffff;
+              padding:5px;
+
+              &:hover {
+                color: #969696;
+              }
+              
+        }
+      }
+    }
+
+
+    @include desktop{
+      .navigation {
+        height:75px;
+        display: flex;        
+        justify-content: space-between;
+        align-items: center;
+  
+        ul {
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          padding: 15px;
+          margin-left: 23%;
+  
+          li {
+            margin-right: 40px;
+              }
             }
-          }
+            
+          a {
+              margin: auto;
+              text-decoration: none;
+              font-weight: 400;
+              font-size: 25px;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              color: #ffffff;
+  
+              &:hover {
+                color: #969696;
+              }
+            }
+
     }
 
     nav.navigation {
       max-width: 75%;
     }
+    }
+
+    
   }
 
   .login-btn {
+
+    @include desktop{
     text-decoration: none;
     margin-right: 40px;
     letter-spacing: 2px;
     font-size: 19px;
     color: #333;
     background-color: transparent;
+    }
+
+    @include mobile{
+      text-align: end;
+    }
+
   }
 
   .active {
-    font-style: italic;
+    text-decoration:italic;
   }
+
 }
