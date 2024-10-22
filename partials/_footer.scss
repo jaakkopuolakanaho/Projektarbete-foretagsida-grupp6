@@ -5,8 +5,12 @@ footer {
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
 
+
+
+
+
     .fot-parent {
-        display: flex;
+        display: flex; // foot parent flex gör att linjen försvinner?
         flex-direction: column;
         align-items: center;
         padding: 10px;
@@ -53,7 +57,7 @@ footer {
 
                 @media (min-width: 768px) {
                     flex-direction: row; 
-                    justify-content: center;
+                    justify-content: flex-end;
                 }
             }
 
@@ -90,6 +94,10 @@ footer {
 
                 }
 
+                
+
+                
+
 
 
             
@@ -102,6 +110,7 @@ footer {
         }
 
             .sign-in{
+               // display här gjorde sa att sign fick sträck under sig KANSKE SKA BORT MEN 
                 padding-top: 10px;
  
 
@@ -124,21 +133,71 @@ footer {
             width: 90%;         
             height: 2px;         
             background-color: white;
-            margin: 20px 0;    
+            margin: 20px 0;
+            color: white;    
         }
 
-        .store {
+        .fot-end{
             display: flex;
-            justify-content: center;
-            margin-top: 10px;
+            flex-direction: column;
+           justify-self:flex-end;
         }
 
-        .copyright {
-            display: flex;
-            justify-content: center;
-            color: white;
-            width: 100%;
-            margin-top: 15px;
+        @media (max-width:365px) {
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+        
         }
+    
+        
+
+
+    
+        
+
+            .store {
+                flex-direction: column;
+                justify-content: center;
+                align-self: center;
+                margin-top: 10px;
+            }
+
+        
+
+            .copyright {
+                display: flex;
+                justify-content: center;
+                color: white;
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 15px;
+
+            
+            }
+
+
+        
     }
-}
+
+
+        .fotlog img {
+            content: url('partials/media/430_px_maindful-logo.png');
+        }
+
+        @media (max-width:441px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .fotlog img {
+                content: url('partials/media/square_maindful-logo.png'); 
+
+                // content: url('partials/media/200px-text--maindful-logo.png');
+                // När skärmen blir 453px eller mindre byter den till bara loggan pa lejonet?
+                // align-items: center;
+            
+            }
+        }
+
+ }
