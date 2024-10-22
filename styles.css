@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 .karla-font {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
@@ -12,14 +11,6 @@
   font-weight: 400;
   font-style: normal;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-=======
 
 header {
   width: 100%;
@@ -206,44 +197,52 @@ body.home-page main {
   flex-wrap: wrap;
 }
 @media (width > 590px) {
-  body.home-page main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0px 100px;
-    max-width: 640px;
+  body.home-page main .img-desktop {
+    width: 100%;
+    height: 427px;
   }
 }
-body.home-page main .img-wrap {
-  overflow: hidden;
-}
-body.home-page main .img-wrap img.responsive {
-  width: 640px;
+body.home-page main .img-desktop .img-wrap img.responsive {
+  max-width: 100%;
   height: 427px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-body.home-page main h1 {
+@media (width > 590px) {
+  body.home-page main .img-desktop .img-wrap img.responsive {
+    width: 100%;
+    height: 427px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (width > 590px) {
+  body.home-page main .desktop-view {
+    width: 640px;
+  }
+}
+body.home-page main .desktop-view h1 {
   color: #455950;
   margin-top: 10px;
 }
-body.home-page main .sell-text {
+body.home-page main .desktop-view .sell-text {
   margin: 0px 40px;
 }
-body.home-page main .sell-text p {
+body.home-page main .desktop-view .sell-text p {
   margin: 10px 0px 0px 0px;
 }
-body.home-page main .vision-text-vip {
+body.home-page main .desktop-view .vision-text-vip {
   border-left: 10px solid #455950;
   border-right: 10px solid #455950;
   padding: 20px 40px;
   margin: 40px;
 }
-body.home-page main .vision-text-vip q {
+body.home-page main .desktop-view .vision-text-vip q {
   color: #455950;
   font-size: larger;
   font-weight: bold;
 }
-body.home-page main .vision-text-vip p {
+body.home-page main .desktop-view .vision-text-vip p {
   text-align: end;
   color: #455950;
   font-style: italic;
@@ -262,6 +261,7 @@ body.home-page .trial {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 10px 0px 20px 0px;
 }
 @media (width > 590px) {
   body.home-page .trial {
@@ -275,7 +275,7 @@ body.home-page .trial {
 body.home-page .trial h2 {
   color: #455950;
   text-align: center;
-  margin: 0px 40px 10px 40px;
+  margin: 20px 40px 10px 40px;
 }
 body.home-page .trial .cta-button {
   background: #455950;
@@ -297,7 +297,7 @@ body.home-page form {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 40px 200px;
+    margin: 0px 200px;
     max-width: 640px;
   }
 }
@@ -307,6 +307,7 @@ body.home-page .newsletter-container {
 }
 body.home-page .newsletter-container h2 {
   text-align: center;
+  margin: 10px 0px;
 }
 body.home-page input[type=text], body.home-page input[type=submit] {
   width: 100%;
@@ -326,6 +327,9 @@ body.home-page input[type=submit] {
 }
 body.home-page input[type=submit]:hover {
   opacity: 0.8;
+}
+body.home-page aside {
+  margin-top: 20px;
 }
 body.home-page aside h2 {
   color: #455950;
@@ -366,7 +370,7 @@ body.about-page {
   height: 100vh;
   width: 100%;
   margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Karla", Helvetica, sans-serif;
 }
 @media (width > 590px) {
   body.about-page {
@@ -380,9 +384,6 @@ body.about-page main {
   justify-content: center;
   flex-wrap: wrap;
 }
-body.about-page main .img-wrap {
-  overflow: hidden;
-}
 @media (width > 590px) {
   body.about-page main .img-wrap {
     display: flex;
@@ -392,8 +393,10 @@ body.about-page main .img-wrap {
   }
 }
 body.about-page main .img-wrap img {
-  width: 430px;
+  max-width: 100%;
   height: 287px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (width > 590px) {
   body.about-page main .img-wrap img {
@@ -434,7 +437,7 @@ body.about-page .staff-container {
   justify-content: center;
   flex-wrap: wrap;
   background: #455950;
-  padding: 20px 80px;
+  padding: 0px 0px 0px 0px;
   gap: 20px;
 }
 @media (width > 590px) {
@@ -454,7 +457,6 @@ body.about-page .staff-container h2 {
 body.about-page .staff-container .staff {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   width: 100%;
   gap: 20px;
@@ -463,19 +465,14 @@ body.about-page .staff-container .staff {
   body.about-page .staff-container .staff {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px 220px;
+    margin: 0px 260px;
   }
 }
 body.about-page .staff-container .staff .staff-one, body.about-page .staff-container .staff .staff-two, body.about-page .staff-container .staff .staff-three, body.about-page .staff-container .staff .staff-four, body.about-page .staff-container .staff .staff-five, body.about-page .staff-container .staff .staff-six {
   background: white;
   padding: 10px;
-  width: 220px;
-}
-@media (width > 590px) {
-  body.about-page .staff-container .staff .staff-one, body.about-page .staff-container .staff .staff-two, body.about-page .staff-container .staff .staff-three, body.about-page .staff-container .staff .staff-four, body.about-page .staff-container .staff .staff-five, body.about-page .staff-container .staff .staff-six {
-    width: 220px;
-    height: 425px;
-  }
+  width: 200px;
+  height: auto;
 }
 body.about-page .staff-container .staff .staff-one img, body.about-page .staff-container .staff .staff-two img, body.about-page .staff-container .staff .staff-three img, body.about-page .staff-container .staff .staff-four img, body.about-page .staff-container .staff .staff-five img, body.about-page .staff-container .staff .staff-six img {
   width: 200px;
@@ -677,6 +674,7 @@ body.reviews-page .reviews-container .h1-wrap {
 body.reviews-page .reviews-container .h1-wrap h1 {
   color: #455950;
   text-align: center;
+  margin: 0px;
 }
 body.reviews-page .reviews-container h2 {
   color: white;

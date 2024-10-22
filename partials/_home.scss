@@ -18,56 +18,68 @@ body.home-page {
         justify-content: center;
         flex-wrap: wrap;
 
-        @include desktop {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 0px 100px;
-            max-width: 640px;
-        }
+            .img-desktop {
 
-        .img-wrap {
-            overflow: hidden;
+                @include desktop {
+                    width: 100%;
+                    height: 427px;
 
+                    }
+            
+                .img-wrap {
 
-            img.responsive {
+                    img.responsive {
+                        max-width: 100%;
+                        height: 427px;
+                        object-fit: cover;                        
+                        
+                        @include desktop {
+                        width: 100%;
+                        height: 427px;
+                        object-fit: cover;
+                        }
+
+                    }
+                }
+            }
+            
+        .desktop-view {
+
+            @include desktop {
                 width: 640px;
-                height: 427px;
-                
-            }
-        }
+                }
 
-        h1 {
-            color: $primary-green;
-            margin-top: 10px;
-        }
-
-        .sell-text {
-            margin: 0px 40px;
-
-            p {
-                margin: 10px 0px 0px 0px;
-            }
-        }
-
-        .vision-text-vip {
-            border-left: 10px solid $primary-green;
-            border-right: 10px solid $primary-green;
-            padding: 20px 40px;
-            margin: 40px;
-    
-            q {
+            h1 {
                 color: $primary-green;
-                font-size: larger;
-                font-weight: bold;
-            }
-    
-            p {
-                text-align: end;
-                color: $primary-green;
-                font-style: italic;
                 margin-top: 10px;
+            }
+
+            .sell-text {
+                margin: 0px 40px;
+
+                p {
+                    margin: 10px 0px 0px 0px;
+                }
+            }
+
+            .vision-text-vip {
+                border-left: 10px solid $primary-green;
+                border-right: 10px solid $primary-green;
+                padding: 20px 40px;
+                margin: 40px;
+        
+                q {
+                    color: $primary-green;
+                    font-size: larger;
+                    font-weight: bold;
+                }
+        
+                p {
+                    text-align: end;
+                    color: $primary-green;
+                    font-style: italic;
+                    margin-top: 10px;
+                }
             }
         }
     }
@@ -89,6 +101,8 @@ body.home-page {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        margin: 10px 0px 20px 0px;
+
 
         @include desktop {
             display: flex;
@@ -101,7 +115,7 @@ body.home-page {
         h2 {
             color: #455950;
             text-align: center;
-            margin: 0px 40px 10px 40px;
+            margin: 20px 40px 10px 40px;
         }
 
         .cta-button {
@@ -125,7 +139,7 @@ body.home-page {
             flex-direction: column;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 40px 200px;
+            margin: 0px 200px;
             max-width: 640px;
         }
 
@@ -137,6 +151,7 @@ body.home-page {
 
             h2 {
                 text-align: center;
+                margin: 10px 0px;
             }
       }
       
@@ -163,6 +178,9 @@ body.home-page {
       }
 
     aside {
+
+        margin-top: 20px;
+
         h2 {
             color: $primary-green;
             text-align: center;
