@@ -3,11 +3,23 @@ header {
   width: 100%;
   font-family: Karla;
   position: sticky;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  background-color: #ffffff;
-  height: 165px;
+}
+@media (width > 590px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #ffffff;
+    height: 165px;
+  }
+}
+@media (590px > width) {
+  header {
+    display: flex;
+    align-items: flex-end;
+    background-color: #ffffff;
+    height: 165px;
+  }
 }
 header .logo-container {
   display: flex;
@@ -26,20 +38,36 @@ header .logo-container {
 @media (590px > width) {
   header .logo-container img {
     height: 100px;
-    position: absolute;
+    margin-top: -2%;
+    position: fixed;
   }
 }
-header .slogan {
-  position: relative;
-  max-width: 80%;
+@media (590px > width) {
+  header .slogan {
+    position: relative;
+    text-align: end;
+  }
+  header .slogan h2 {
+    display: flex;
+    font-family: "Scope One";
+    font-size: 17px;
+    font-style: italic;
+    justify-content: flex-end;
+  }
 }
-header .slogan h2 {
-  font-family: "Scope One";
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 50px;
-  padding: 0.5%;
-  font-style: italic;
+@media (width > 590px) {
+  header .slogan {
+    position: relative;
+    max-width: 80%;
+  }
+  header .slogan h2 {
+    font-family: "Scope One";
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    padding: 0.5%;
+    font-style: italic;
+  }
 }
 header .center-container {
   z-index: 1;
@@ -57,7 +85,7 @@ header .nav-container {
 @media (590px > width) {
   header .nav-container .navigation {
     display: flex;
-    height: 60px;
+    height: 55px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

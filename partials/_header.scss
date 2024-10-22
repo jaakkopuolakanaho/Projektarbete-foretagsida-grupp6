@@ -5,14 +5,26 @@
 // }
 
 header {
+
   width:100%;
   font-family: Karla;
   position: sticky;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  background-color: #ffffff;
-  height: 165px;
+
+  @include desktop{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #ffffff;
+    height: 165px;
+  }
+
+  @include mobile {
+    display: flex;
+    align-items: flex-end;
+    background-color: #ffffff;
+    height: 165px;
+  }
+  
 
   .logo-container {
     display: flex;
@@ -31,12 +43,28 @@ header {
 
       @include mobile {
         height: 100px;
-        position:absolute;
+        margin-top:-2%;
+        position:fixed;
       }
     }
   }
 
   .slogan {
+
+@include mobile {
+  position:relative;
+  text-align:end;
+
+  h2 {
+    display:flex;
+    font-family: "Scope One";
+    font-size: 17px;
+    font-style: italic;
+    justify-content: flex-end;
+  }
+}
+
+    @include desktop{
     position: relative;
     max-width: 80%;
 
@@ -47,6 +75,7 @@ header {
       margin-right: 50px;
       padding: 0.5%;
       font-style: italic;
+    }
     }
   }
 
@@ -61,7 +90,6 @@ header {
     }
     
     @include mobile {
-      
     }
     
   }
@@ -75,7 +103,7 @@ header {
 
       .navigation {
         display:flex;
-        height: 60px;
+        height: 55px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
