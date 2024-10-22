@@ -1,91 +1,185 @@
 @charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.karla-font {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: none;
+  font-style: normal;
+}
+
+.scope-one-regular {
+  font-family: "Scope One", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 header {
   width: 100%;
   font-family: Karla;
   position: sticky;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  background-color: #ffffff;
-  height: 165px;
+}
+@media (width > 590px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #ffffff;
+    height: 165px;
+  }
+}
+@media (590px > width) {
+  header {
+    display: flex;
+    align-items: flex-end;
+    background-color: #ffffff;
+    height: 165px;
+  }
 }
 header .logo-container {
   display: flex;
   align-self: flex-start;
 }
-header .logo-container img {
-  margin-left: 10%;
-  height: 120px;
-  max-width: 100%;
-  position: absolute;
-  z-index: 0;
+@media (width > 590px) {
+  header .logo-container img {
+    margin-left: 15%;
+    margin-top: -1%;
+    max-height: 135px;
+    max-width: 100%;
+    position: absolute;
+    z-index: 0;
+  }
 }
-header .slogan {
-  position: relative;
-  max-width: 80%;
+@media (590px > width) {
+  header .logo-container img {
+    height: 100px;
+    margin-top: -1%;
+    position: fixed;
+  }
 }
-header .slogan h2 {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 50px;
-  padding: 0.5%;
-  font-style: italic;
+@media (590px > width) {
+  header .slogan {
+    position: relative;
+    text-align: end;
+  }
+  header .slogan h2 {
+    display: flex;
+    font-family: "Scope One";
+    font-size: 17px;
+    font-style: italic;
+    justify-content: flex-end;
+  }
+}
+@media (width > 590px) {
+  header .slogan {
+    position: relative;
+    max-width: 80%;
+  }
+  header .slogan h2 {
+    font-family: "Scope One";
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    padding: 0.5%;
+    font-style: italic;
+  }
 }
 header .center-container {
   z-index: 1;
   width: 100%;
-  text-align: center;
+}
+@media (width > 590px) {
+  header .center-container {
+    margin: -1%;
+  }
 }
 header .nav-container {
   width: 100%;
   background-color: #455950;
 }
-header .nav-container .navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media (590px > width) {
+  header .nav-container .navigation {
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    display: flex;
+    height: 45px;
+    flex-direction: row;
+    align-items: center;
+  }
+  header .nav-container .navigation ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: -8%;
+  }
+  header .nav-container .navigation li {
+    margin-right: 10px;
+  }
+  header .nav-container .navigation a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 5px;
+  }
+  header .nav-container .navigation a:hover {
+    color: #969696;
+  }
 }
-header .nav-container .navigation ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  margin-left: 15%;
+@media (width > 590px) {
+  header .nav-container .navigation {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .nav-container .navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-left: 23%;
+  }
+  header .nav-container .navigation ul li {
+    margin-right: 40px;
+  }
+  header .nav-container .navigation a {
+    margin: auto;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  header .nav-container .navigation a:hover {
+    color: #969696;
+  }
+  header .nav-container nav.navigation {
+    max-width: 100%;
+  }
 }
-header .nav-container .navigation ul li {
-  margin-right: 40px;
+@media (width > 590px) {
+  header .login-btn {
+    text-decoration: none;
+    margin-right: 40px;
+    letter-spacing: 2px;
+    font-size: 19px;
+    color: #333;
+    background-color: transparent;
+  }
 }
-header .nav-container .navigation a {
-  margin: auto;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 19px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-header .nav-container .navigation a:hover {
-  color: #969696;
-}
-header .nav-container nav.navigation {
-  max-width: 75%;
-}
-header .login-btn {
-  text-decoration: none;
-  margin-right: 40px;
-  letter-spacing: 2px;
-  font-size: 19px;
-  color: #333;
-  background-color: transparent;
+@media (590px > width) {
+  header .login-btn {
+    text-align: end;
+    border: 1px solid;
+    text-align: center;
+  }
 }
 header .active {
-  font-style: italic;
+  -webkit-text-decoration: italic;
+          text-decoration: italic;
 }
 
 body.home-page {
@@ -93,7 +187,7 @@ body.home-page {
   height: 100vh;
   width: 100%;
   margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Karla", Arial, Helvetica;
 }
 @media (width > 590px) {
   body.home-page {
@@ -120,7 +214,7 @@ body.home-page main {
 body.home-page main .img-wrap {
   overflow: hidden;
 }
-body.home-page main .img-wrap img {
+body.home-page main .img-wrap img.responsive {
   width: 640px;
   height: 427px;
 }
@@ -229,7 +323,11 @@ body.home-page input[type=submit] {
 body.home-page input[type=submit]:hover {
   opacity: 0.8;
 }
-body.home-page .customer-reviews-container {
+body.home-page aside h2 {
+  color: #455950;
+  text-align: center;
+}
+body.home-page aside .customer-reviews-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -240,18 +338,18 @@ body.home-page .customer-reviews-container {
   gap: 20px;
 }
 @media (width > 590px) {
-  body.home-page .customer-reviews-container {
+  body.home-page aside .customer-reviews-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     max-width: 640px;
   }
 }
-body.home-page .customer-reviews-container img {
+body.home-page aside .customer-reviews-container img {
   width: 186px;
 }
 @media (width > 590px) {
-  body.home-page .customer-reviews-container img {
+  body.home-page aside .customer-reviews-container img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -514,7 +612,7 @@ body.services-page h1, body.services-page h2, body.services-page h3 {
   }
 }
 body.services-page p {
-  color: rgb(255, 255, 255);
+  color: black;
   margin: 10px 0;
   padding: 8px;
   line-height: 1.5;
@@ -546,6 +644,85 @@ body.services-page li {
   }
 }
 
+body.reviews-page {
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body.reviews-page .reviews-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 20px;
+}
+@media (width > 590px) {
+  body.reviews-page .reviews-container {
+    display: flex;
+    justify-content: center;
+    width: 640px;
+    margin: auto;
+  }
+}
+body.reviews-page .reviews-container .h1-wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+body.reviews-page .reviews-container .h1-wrap h1 {
+  color: #455950;
+  text-align: center;
+}
+body.reviews-page .reviews-container h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+body.reviews-page .reviews-container .stars {
+  color: rgb(210, 185, 0);
+}
+body.reviews-page .reviews-container .review-one, body.reviews-page .reviews-container .review-two, body.reviews-page .reviews-container .review-three, body.reviews-page .reviews-container .review-four, body.reviews-page .reviews-container .review-five {
+  background: #455950;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+body.reviews-page aside h2 {
+  color: #455950;
+  text-align: center;
+  margin: 0px 0px 10px 0px;
+}
+body.reviews-page aside .customer-reviews-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 2px solid #455950;
+  margin: 20px 100px 40px 100px;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 20px;
+}
+@media (width > 590px) {
+  body.reviews-page aside .customer-reviews-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 640px;
+    margin: auto;
+  }
+}
+body.reviews-page aside .customer-reviews-container img {
+  width: 186px;
+}
+@media (width > 590px) {
+  body.reviews-page aside .customer-reviews-container img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 185px;
+  }
+}
+
 body.sign-in-page {
   background-color: white;
   height: 100vh;
@@ -553,10 +730,61 @@ body.sign-in-page {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
-body.sign-in-page main {
+@media (width > 590px) {
+  body.sign-in-page main {
+    max-width: 640px;
+    margin: auto;
+  }
+}
+body.sign-in-page main form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+}
+body.sign-in-page main form .login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-color: #455950;
+  padding: 80px 40px;
+  gap: 10px;
+}
+body.sign-in-page main form .login-container h1 {
+  color: #455950;
+  margin-bottom: 10px;
+}
+body.sign-in-page main form .login-container label {
+  color: #455950;
+  font-weight: bold;
+  font-size: 20px;
+}
+body.sign-in-page main form .login-container .username-password {
+  border-radius: 8px;
+  padding: 20px;
+  gap: 10px;
+}
+body.sign-in-page main form .login-container button {
+  color: white;
+  background: #455950;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0px;
+  padding: 20px;
+  border-radius: 8px;
+}
+body.sign-in-page main form .login-container .checkbox {
+  color: black;
+  font-size: medium;
+  text-align: center;
+}
+body.sign-in-page main form .login-container .forgot-password {
+  margin-top: 10px;
+}
+body.sign-in-page main form .login-container .forgot-password p {
+  font-size: medium;
+  text-align: center;
 }
 
 footer {
