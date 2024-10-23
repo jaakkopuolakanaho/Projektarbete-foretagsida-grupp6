@@ -2,208 +2,156 @@ footer {
     background-color: #455950;
     color: white;
     width: 100%;
-    padding: 10px;
+    /* padding: 10px; */
     font-family: "Karla", Helvetica, sans-serif;
+}
 
-    // .karla-font {
-    //     font-family: "Karla", sans-serif;
-    //     font-optical-sizing: auto;
-    //     font-weight: none;
-    //     font-style: normal;
-    //   }
+.fot-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 
-
-
-    .fot-parent {
-        display: flex; // foot parent flex gör att linjen försvinner?
+    .fot-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        width: 100%;
+  
+        @media (min-width: 590px) {
+            flex-direction: row; 
+            justify-content: space-between;
+        }
 
-        .fot-container {
+        .fot-menu {
             display: flex;
-            flex-direction: column; /* för mobiler */
+            flex-direction: column;
             align-items: center;
-            width: 100%;
+            padding: 15px;
+            margin: 5px;
+            list-style: none;
+            line-height: 1.5;
+            letter-spacing: .1rem;
 
-            @media (min-width: 768px) {
-                flex-direction: row; 
-                justify-content: space-between; /* gör lite luftigare*/
-            }
-
-            
-
-            .fot-menu {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 15px;
-                margin: 5px;
-                list-style: none;
-                line-height: 1.5;
-
-
-                .fot, a{
-                    list-style: none;
-                    color: white;
-                    text-decoration: none;
-                    width: 100%;
-
-                  
-                  }
-
-                &-child-1,
-                &-child-2,
-                &-child-3,
-                &-child-4 {
-                    padding: 5px;
+            a {
+                color: white;
+                text-decoration: none;
+                width: 100%;
+                padding: 5px;
+                transition: background-color 0.3s ease;
+        
+                &:hover {
                     
-                
-                }
-
-                @media (min-width: 768px) {
-                    flex-direction: row; 
-                    justify-content: flex-end;
-                }
-            }
-
-            .fot-btn {
-               color: #455950;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 10px;
-                margin: 10px;
-                
-                button{
-                    width: auto;
-                    border-radius: 15px; 
-                    padding-left:12px;
-                    padding-right: 10px;
-                    margin: 15px;
-                    
-
-
-
-                }
-
-                
-                    input{
-                    background-color: #455950;
-                    width: auto;
-                    border-radius: 15px;
-                    margin-inline-start: 10px;
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    
-                    
-
-                }
-
-                
-
-                
-
-
-
-            
-                @media (min-width: 768px) {
-                    flex-direction: row;
-                    justify-content: flex-end; 
+                    background-color: transparent (255, 255, 255, 0.2);
+                    border: 2px solid rgb(222, 238, 234);
+                    border-radius: 9px;
+                    padding: 4px;
                     
                 }
             }
         }
 
-            .sign-in{
-               // display här gjorde sa att sign fick sträck under sig KANSKE SKA BORT MEN 
-                padding-top: 10px;
- 
+        .fot-btn {
+            color: #455950;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
 
-                button {
-                    padding-top:5px;
-                    padding-bottom:5px;
-                    padding: 5px;
-                    border-radius: 12px;
- 
-                
-                }
+            .sub-btn{
 
-
+               padding-top:5px;
+               padding-bottom: 5px;
+               padding-left: 15px;
+               padding-right: 5px;
                
 
 
+
             }
 
-        .horizontal-line {
-            width: 90%;         
-            height: 2px;         
-            background-color: white;
-            margin: 20px 0;
-            color: white;    
-        }
-
-        .fot-end{
-            display: flex;
-            flex-direction: column;
-           justify-self:flex-end;
-        }
-
-        @media (max-width:365px) {
-            flex-direction: column;
-            align-items: center;
-            flex-wrap: wrap;
-        
-        }
-    
-        
+            button {
+                width: auto;
+                border-radius: 15px; 
+                padding-top: px; 
+                padding-bottom: 5px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin: 15px;
+                letter-spacing: .1rem;
+                outline: none;
+                border:none ;
 
 
-    
-        
-
-            .store {
-                flex-direction: column;
-                justify-content: center;
-                align-self: center;
-                margin-top: 10px;
             }
 
-        
+            input::placeholder {
+                background-color: #455950;
+                color: #ffffff; 
+                padding: 10px;
+                letter-spacing: .1rem;
+              
 
-            .copyright {
-                display: flex;
-                justify-content: center;
-                color: white;
-                width: 100%;
-                margin-top: 20px;
-                margin-bottom: 15px;
 
+            }
+
+            input {
+                background-color: #455950;
+                width: auto;
+                border-radius: 15px;
+                margin-inline-start: 10px;
+                padding: 5px;
+                outline: white;
+                border:white ;
+              
+                
             
+                
+
             }
-
-
-        
+            
+            @media (min-width: 590px) {
+                flex-direction: row;
+                justify-content: flex-end; 
+            }
+        }
     }
 
+    .horizontal-line {
+        width: 90%;         
+        height: 2px;         
+        background-color: white;
+        margin: 20px 0;
+    }
 
+    .fot-end {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+
+    .store {
+        margin-top: 10px;
+    }
+
+    .copyright {
+        color: white;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .fotlog img {
+        content: url('partials/media/430_px_maindful-logo.png');
+    }
+
+    @media (max-width: 465px) {
         .fotlog img {
-            content: url('partials/media/430_px_maindful-logo.png');
+            content: url('partials/media/square_maindful-logo.png'); 
         }
-
-        @media (max-width:441px){
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .fotlog img {
-                content: url('partials/media/square_maindful-logo.png'); 
-
-                // content: url('partials/media/200px-text--maindful-logo.png');
-                // När skärmen blir 453px eller mindre byter den till bara loggan pa lejonet?
-                // align-items: center;
-            
-            }
-        }
-
- }
+    }
+}
