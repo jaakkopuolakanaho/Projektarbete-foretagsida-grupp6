@@ -14,37 +14,43 @@
 
 header {
   font-family: Karla;
-  position: fixed;
+}
+header .header-container {
+  position: relative;
 }
 @media (width > 590px) {
   header {
     width: 100%;
     background-color: #ffffff;
-    height: 165px;
+    min-height: 200px;
   }
 }
 @media (590px > width) {
   header {
-    display: flex;
-    align-items: flex-end;
     background-color: #ffffff;
-    height: 130px;
+    min-height: 150px;
+    max-width: 100%;
   }
 }
 header .logo-container {
   display: flex;
   align-self: flex-start;
+  left: 20px;
 }
 @media (width > 590px) {
   header .logo-container img {
+    max-width: 100%;
+    height: auto;
     max-height: 135px;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
   }
 }
 @media (590px > width) {
   header .logo-container img {
-    height: 90px;
+    top: -5px;
+    max-width: 90%;
+    max-height: 90px;
     position: absolute;
   }
 }
@@ -52,6 +58,8 @@ header .logo-container {
   header .slogan {
     position: relative;
     text-align: end;
+    top: 56px;
+    right: -30px;
   }
   header .slogan h2 {
     display: flex;
@@ -63,24 +71,30 @@ header .logo-container {
 }
 @media (width > 590px) {
   header .slogan {
-    position: relative;
-    max-width: 80%;
+    width: 70%;
+    text-align: end;
   }
   header .slogan h2 {
+    position: relative;
+    bottom: -75px;
+    left: 0;
     font-family: "Scope One";
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 50px;
     padding: 0.5%;
     font-style: italic;
   }
 }
 header .center-container {
+  min-width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   text-align: right;
   z-index: 1;
+}
+@media (width > 590px) {
+  header .center-container {
+    position: absolute;
+  }
 }
 header .nav-container {
   background-color: #455950;
@@ -89,9 +103,11 @@ header .nav-container {
 }
 @media (590px > width) {
   header .nav-container {
+    max-height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
+    top: 40px;
   }
   header .nav-container .navigation {
     height: auto;
@@ -103,28 +119,32 @@ header .nav-container {
   header .nav-container .navigation ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
-    margin-left: -8%;
+    margin: 10px;
   }
   header .nav-container .navigation li {
     margin-right: 10px;
   }
   header .nav-container .navigation a {
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #ffffff;
-    padding: 3px;
+    padding: 4px;
   }
   header .nav-container .navigation a:hover {
     color: #969696;
   }
 }
 @media (width > 590px) {
+  header .nav-container {
+    top: 50px;
+  }
   header .nav-container .navigation {
-    height: 70px;
+    height: 60px;
     display: flex;
     align-items: center;
   }
@@ -155,11 +175,11 @@ header .login-btn {
 }
 @media (590px > width) {
   header .login-btn {
-    top: 2px;
-    right: 8px;
+    top: 5px;
+    right: 5px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 18px;
     letter-spacing: 1px;
     border: 1px solid;
     padding: 3px;
@@ -171,7 +191,7 @@ header .login-btn {
 @media (width > 590px) {
   header .login-btn {
     top: 5px;
-    right: 15px;
+    right: 12%;
     text-decoration: none;
     font-weight: 700;
     font-size: x-large;
