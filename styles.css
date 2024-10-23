@@ -85,22 +85,25 @@ header .center-container {
 header .nav-container {
   background-color: #455950;
   width: 100%;
+  position: relative;
 }
 @media (590px > width) {
   header .nav-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
   header .nav-container .navigation {
-    height: 45px;
+    height: auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    /* #region */
+    /* #endregion */
   }
   header .nav-container .navigation ul {
-    list-style: none;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
     margin-left: -8%;
   }
   header .nav-container .navigation li {
@@ -145,24 +148,44 @@ header .nav-container {
     color: #969696;
   }
 }
-@media (width > 590px) {
-  header .login-btn {
-    text-decoration: none;
-    margin-right: 40px;
-    letter-spacing: 2px;
-    font-size: 19px;
-    color: #333;
-    background-color: transparent;
-  }
+header .login-btn {
+  position: absolute;
+  text-transform: uppercase;
+  color: #455950;
 }
 @media (590px > width) {
   header .login-btn {
-    text-align: end;
+    top: 2px;
+    right: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 1px;
     border: 1px solid;
-    text-align: center;
+    padding: 3px;
+  }
+  header .login-btn:hover {
+    color: #969696;
   }
 }
-header .active {
+@media (width > 590px) {
+  header .login-btn {
+    top: 5px;
+    right: 15px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: x-large;
+    letter-spacing: 3px;
+    border: 2px solid;
+    padding: 4px;
+    color: #455950;
+  }
+  header .login-btn:hover {
+    color: #969696;
+  }
+}
+
+a .active {
   -webkit-text-decoration: italic;
           text-decoration: italic;
 }
