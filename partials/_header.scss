@@ -1,23 +1,11 @@
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
-
 header {
   font-family: Karla;
   position: fixed;
-  
-  .header-container {
-    // width:100wv;
-   
-  }
 
-  @include desktop{
-     width:100%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: flex-end;
+  .header-container {}
+
+  @include desktop {
+    width: 100%;
     background-color: #ffffff;
     height: 165px;
   }
@@ -29,202 +17,193 @@ header {
     height: 130px;
   }
 
-
   .logo-container {
     display: flex;
     align-self: flex-start;
 
     img {
-      @include desktop { 
-      // margin-left: 15%;
-      max-height: 135px;
-      // max-width: 100%;
-      position: absolute;
-      z-index: -1;
+      @include desktop {
+        max-height: 135px;
+        position: absolute;
+        z-index: -1;
       }
 
       @include mobile {
         height: 90px;
-        position:absolute;
-        // margin-top:0%;
-        // margin-left:10px;
-        // position:fixed;
+        position: absolute;
       }
     }
   }
 
   .slogan {
     @include mobile {
-      position:relative;
-      text-align:end;
+      position: relative;
+      text-align: end;
 
-  h2 {
-    display:flex;
-    justify-content: center;
-    font-family:"Scope One";
-    font-size: 17px;
-    font-style: italic;
-    
-    // justify-content: center;
+      h2 {
+        display: flex;
+        justify-content: center;
+        font-family: "Scope One";
+        font-size: 17px;
+        font-style: italic;
+      }
     }
-  }
 
-    @include desktop{
-    position: relative;
-    max-width: 80%;
+    @include desktop {
+      position: relative;
+      max-width: 80%;
 
-    h2 {
-      font-family: "Scope One";
-      display: flex;
-      justify-content: flex-end;
-      margin-right: 50px;
-      padding: 0.5%;
-      font-style: italic;
-    }
+      h2 {
+        font-family: "Scope One";
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 50px;
+        padding: 0.5%;
+        font-style: italic;
+      }
     }
   }
 
   .center-container {
     display: flex;
     justify-content: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 
     text-align: right; //påverkar h2
     z-index: 1;
-    
-// bajs under
-    // margin:auto;
-    // width: 100%;
-    // text-wrap:wrap;
-    
-    // text-align: center;
-    
 
-    @include desktop{      
-      // margin:-1%;
-    }
-    
-    @include mobile {
-      
-    }
-    
+    @include desktop {}
+
+    @include mobile {}
   }
 
   .nav-container {
     background-color: $primary-green;
-    width:100%;
+    width: 100%;
+    position: relative; //for login-btn to attach to top right corner
 
-    @include mobile{
-      display:flex;
-      justify-content: space-between;
+    @include mobile {
+      display: flex;
+      flex-wrap: wrap; // allow items to wrap
+      justify-content: flex-start; //for login-btn to attach to top right corner
+
+      // justify-content: space-between;
 
       .navigation {
-        height: 45px;
-        display:flex;
-        align-items: center;
-        justify-content: center;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap; //allow menu items to wrap //for login-btn to attach to top right corner
 
+        /* #region */
+        // height: 45px;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        /* #endregion */
 
-        ul{
-          list-style: none;
+        ul {
           display: flex;
-          justify-content: center;
-          margin-left:-8%;
+          flex-wrap: wrap; // wrap list items
+          list-style: none;
+          margin-left: -8%; //adjust as needed
+          // justify-content: center;
         }
 
-        li{
-          margin-right: 10px;
+        li {
+          margin-right: 10px; //margin between lines
         }
 
-        a{
+        a {
           text-decoration: none;
-              font-weight: 400;
-              font-size: 16px;
-              letter-spacing: 1px;
-              text-transform: uppercase;
-              color: #ffffff;
-              padding:3px;
+          font-weight: 400;
+          font-size: 16px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #ffffff;
+          padding: 3px;
 
-              &:hover {
-                color: #969696;
-              }
-              
+          &:hover {
+            color: #969696;
+          }
         }
       }
     }
 
-
-    @include desktop{             
-      // nav.navigation {
-      
-      //   // max-width:100%;
-      // }
-      
+    @include desktop {
       .navigation {
-        height:70px;
+        height: 70px;
         display: flex;
-        // justify-content: space-between;
         align-items: center;
-  
+
         ul {
           list-style: none;
           display: flex;
-          // justify-content: space-between;
-          // padding: 15px;
-          // margin-left: 23%;
-  
+
           li {
-            margin:15px;
-            // margin-right: 40px;
-              }
-            }
-            
-          a {
-              margin: auto;
-              text-decoration: none;
-              font-weight: 400;
-              font-size: 25px;
-              letter-spacing: 2px;
-              text-transform: uppercase;
-              color: #ffffff;
-  
-              &:hover {
-                color: #969696;
-              }
-            }
+            margin: 15px;
+          }
+        }
 
+        a {
+          margin: auto;
+          text-decoration: none;
+          font-weight: 400;
+          font-size: 25px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #ffffff;
+
+          &:hover {
+            color: #969696;
+          }
+        }
+      }
     }
-
-    // nav.navigation {
-      
-    //   // max-width:100%;
-    // }
-    }
-
-    
   }
 
   .login-btn {
+    //adjust styling as needed
+    position: absolute;
+    text-transform: uppercase;
+    color: $primary-green;
 
-    @include desktop{
-    text-decoration: none;
-    margin-right: 40px;
-    letter-spacing: 2px;
-    font-size: 19px;
-    color: #333;
-    background-color: transparent;
+    @include mobile {
+      top: 2px;
+      right: 8px;
+
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 17px;
+      letter-spacing: 1px;
+      border: 1px solid;
+      padding: 3px;
+
+      &:hover {
+        color: #969696;
+      }
     }
 
-    @include mobile{
-      text-align: end;
-      border:1px solid;
-      text-align:center;
+    @include desktop {
+      top: 5px;
+      right: 15px;
+
+      text-decoration: none;
+      font-weight: 700;
+      font-size: x-large;
+      letter-spacing: 3px;
+      border: 2px solid;
+      padding: 4px;
+      color: $primary-green;
+
+      &:hover {
+        color: #969696;
+      }
+
+      // background-color: transparent;
     }
-
   }
+}
 
-  .active {
-    text-decoration:italic;
-  }
-
+a .active {
+  text-decoration: italic;
 }
