@@ -1,10 +1,8 @@
 header {
   font-family: Karla;
-  // position: fixed;
-
 
   .header-container {
-    position: relative; //ensure this is relative for absolute positioning inside it    
+    position: relative;
   }
 
   @include desktop {
@@ -198,7 +196,6 @@ header {
   }
 
   .login-btn {
-    //adjust styling as needed
     position: absolute;
     text-transform: uppercase;
     color: $primary-green;
