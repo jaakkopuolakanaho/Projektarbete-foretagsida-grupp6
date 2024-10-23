@@ -150,6 +150,7 @@ body.home-page {
         color: $primary-green;
 
         @include desktop {
+            padding: 0px;
             width: 640px;
         }
             h2 {
