@@ -3,9 +3,14 @@ footer {
     color: white;
     width: 100%;
     padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Karla", Helvetica, sans-serif;
 
-
+    // .karla-font {
+    //     font-family: "Karla", sans-serif;
+    //     font-optical-sizing: auto;
+    //     font-weight: none;
+    //     font-style: normal;
+    //   }
 
 
 
@@ -37,7 +42,8 @@ footer {
                 list-style: none;
                 line-height: 1.5;
 
-                fot, a{
+
+                .fot, a{
                     list-style: none;
                     color: white;
                     text-decoration: none;
