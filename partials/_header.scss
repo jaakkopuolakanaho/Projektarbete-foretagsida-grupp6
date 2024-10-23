@@ -1,78 +1,96 @@
 header {
   font-family: Karla;
-  position: fixed;
+  // position: fixed;
 
-  .header-container {}
+
+  .header-container {
+    position: relative; //ensure this is relative for absolute positioning inside it    
+  }
 
   @include desktop {
     width: 100%;
     background-color: #ffffff;
-    height: 165px;
+    min-height: 200px;
   }
 
   @include mobile {
-    display: flex;
-    align-items: flex-end;
     background-color: #ffffff;
-    height: 130px;
+    min-height: 150px;
+    max-width: 100%;
   }
 
+  // Logo, img //
   .logo-container {
-    display: flex;
-    align-self: flex-start;
+    left: 20px;
 
     img {
       @include desktop {
-        max-height: 135px;
         position: absolute;
-        z-index: -1;
+        max-width: 100%;
+        height: auto;
+        left: 10%;
+        max-height: 120px;
+        z-index: 0;
       }
 
       @include mobile {
-        height: 90px;
+        top: -5px;
+        max-width: 80%;
+        max-height: 90px;
         position: absolute;
       }
     }
   }
 
+  // SLOGAN //
   .slogan {
+    z-index: 10;
+
     @include mobile {
       position: relative;
-      text-align: end;
+      top: 55px; // flyttar ner slogan-texten
+      right: 3px;
 
       h2 {
-        display: flex;
-        justify-content: center;
+        display: inline-flex;
         font-family: "Scope One";
-        font-size: 17px;
         font-style: italic;
+        text-wrap: wrap;
+        text-align: right;
+        font-size: clamp(16px, 4vw, 22px);
       }
     }
 
     @include desktop {
-      position: relative;
-      max-width: 80%;
+      width: 99%;
+      text-align: end;
 
       h2 {
+        position: relative;
+        bottom: -65px;
+        left: 0;
         font-family: "Scope One";
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 50px;
         padding: 0.5%;
         font-style: italic;
+        text-align: right;
+
+        // Scale with the window size using clamp for fluid resizing
+        font-size: clamp(25px, 2vw, 32px); // Adjust as needed for desktop
+        padding: 1%;
+
       }
     }
   }
 
   .center-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    min-width: 100%;
 
-    text-align: right; //påverkar h2
+    text-align: center;
     z-index: 1;
 
-    @include desktop {}
+    @include desktop {
+      position: absolute;
+    }
 
     @include mobile {}
   }
@@ -83,61 +101,69 @@ header {
     position: relative; //for login-btn to attach to top right corner
 
     @include mobile {
+      max-height: auto;
       display: flex;
       flex-wrap: wrap; // allow items to wrap
-      justify-content: flex-start; //for login-btn to attach to top right corner
-
-      // justify-content: space-between;
+      justify-content: space-between;
+      top: 40px; // puttar ner gröna nav-menyn litegrann
 
       .navigation {
-        height: auto;
-        display: flex;
-        flex-wrap: wrap; //allow menu items to wrap //for login-btn to attach to top right corner
-
-        /* #region */
-        // height: 45px;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        /* #endregion */
+        text-transform: uppercase;
+        margin-left: -5%;
 
         ul {
-          display: flex;
-          flex-wrap: wrap; // wrap list items
+          max-width: 100%;
+          display: flexbox;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
           list-style: none;
-          margin-left: -8%; //adjust as needed
-          // justify-content: center;
+          margin: 8px;
         }
 
         li {
+          display: inline-flex;
           margin-right: 10px; //margin between lines
         }
 
         a {
-          text-decoration: none;
-          font-weight: 400;
+          text-decoration: overline 1px rgba(255, 255, 255, 0.5);
+          font-weight: 450;
           font-size: 16px;
           letter-spacing: 1px;
-          text-transform: uppercase;
+
           color: #ffffff;
-          padding: 3px;
+          padding: 4px 5px 4px 5px;
 
           &:hover {
             color: #969696;
+          }
+
+          &.active {
+            letter-spacing: 2px;
+            text-decoration: underline overline 1.3px rgba(255, 255, 255, 0.8);
+            text-underline-offset: 4px;
+
+            text-shadow: rgba(0, 0, 0, 0.6) 3px 0 4px;
           }
         }
       }
     }
 
     @include desktop {
+      top: 50px;
+
       .navigation {
-        height: 70px;
+        max-height: 60px;
         display: flex;
+        justify-content: center;
+        text-align: center;
         align-items: center;
 
         ul {
           list-style: none;
           display: flex;
+          padding: 10px;
 
           li {
             margin: 15px;
@@ -146,19 +172,29 @@ header {
 
         a {
           margin: auto;
-          text-decoration: none;
-          font-weight: 400;
-          font-size: 25px;
+          text-decoration: overline 1px;
+          font-weight: 450;
+          font-size: 22px;
           letter-spacing: 2px;
           text-transform: uppercase;
           color: #ffffff;
 
+
           &:hover {
             color: #969696;
+          }
+
+          &.active {
+            letter-spacing: 3px;
+            text-decoration: underline overline 2px;
+            text-decoration-color: rgba(255, 255, 255, 0.8);
+            text-underline-offset: 7px;
+            text-shadow: rgba(0, 0, 0, 0.6) 3px 0 4px;
           }
         }
       }
     }
+
   }
 
   .login-btn {
@@ -168,12 +204,12 @@ header {
     color: $primary-green;
 
     @include mobile {
-      top: 2px;
-      right: 8px;
+      top: 5px;
+      right: 5px;
 
       text-decoration: none;
       font-weight: 600;
-      font-size: 17px;
+      font-size: 18px;
       letter-spacing: 1px;
       border: 1px solid;
       padding: 3px;
@@ -185,7 +221,7 @@ header {
 
     @include desktop {
       top: 5px;
-      right: 15px;
+      right: 12%;
 
       text-decoration: none;
       font-weight: 700;
@@ -198,12 +234,6 @@ header {
       &:hover {
         color: #969696;
       }
-
-      // background-color: transparent;
     }
   }
-}
-
-a .active {
-  text-decoration: italic;
 }
