@@ -1,174 +1,153 @@
-body.services-page {
+body.services-page{
     background-color: white;
-    height: auto;
+    height: 100vh;
     width: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
- 
-    @include mobile {
-        .service-wrap {
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-        }
-
-        .button{
-            width: 100%;
-            font-size: 14px;
-        }
-
-        h1 {
-            font-size: 1.8em;
-            margin:20px 0;
-        }
-
-        h2 {
-        font-size: 1.4em;
-        }
-
-        .pricing-plan{
-            padding: 20px;
-        }
-    }
-    
-    @include desktop {
-        .service-wrap{
-            flex-direction: row;
-            justify-content: space-around;
-            max-width: 1200px;
-            max-width: 0 auto;
-        }
-
-        .button {
-            width: auto;
-            font-size: 16px;
-        }
-
-        h1{
-            font-size: 2.5em;
-            margin: 40px 0;
-        }
-
-        h2{
-            font-size: 1.8em;
-        }
-
-        .pricing-plan {
-            padding: 40px;
-            max-width: 1000px;
-        }
-    }
+    margin: 0px;
+    font-family: "Karla", Helvetica, sans-serif;
+.content-wrap{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
 
-        .button {
-            background-color: #455950;
-            border: 3px solid #455950;
-            color: white;
-            padding: 12px 28px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            font-weight: bold;
-            margin: 10px 0;
-            transition-duration: 0.4s;
-            cursor: pointer;
-            border-radius: 9px;
-            margin-bottom: 20px;
-            margin-top: 40px;
 
-            &:hover {
-                background-color: white;
-                color: #455950;
-            }
-        }
-    
-
-    .sub {
+    @media desktop { /* BYT till i projektarbetet : @include desktop { */
         display: flex;
-        justify-content: flex-end;
-        padding: 20px;
-        margin: 20px;
-
-        @include mobile {
-            justify-content: center;
-            padding: 20px;
-        }
-
-        @include desktop {
-            justify-content: flex-end;
-            padding: 20px;
-        }
-    }
-    
-
-    .pricing-plan {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        padding: 40px;
-
-        @include mobile{
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        @include desktop{
-            flex-direction: row;
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        flex-wrap: wrap;
+        /* Lägg in det som ska gälla desktop är: */
     }
 
+        main {
+            display:flex;
+            justify-content:center;
+            flex-wrap: wrap;
 
-    h1, h2, h3 {
-        color: #455950;
-        text-align: center;
+                .service-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 40px;
 
-        @include mobile {
-            margin: 20px 0;
-        }
+                    .free-trial {
+                        display: flex;
+                        justify-content: center;
 
-        @include desktop {
-            margin: 40px 0;
-        }
-    }
+                        .button {
+                            background-color: #455950;
+                            border: 3px solid #455950;
+                            color: white;
+                            padding: 12px 28px;
+                            text-align: center; /* kanske kan ta bort */
+                            text-decoration: none;/* kanske kan ta bort */
+                            display: inline-block; /* kanske kan ta bort */
+                            font-size: 14px; /* kanske kan ta bort */
+                            font-weight: bold;
+                            margin: 10px 0; /* kanske kan ta bort */
+                            transition-duration: 0.4s;
+                            cursor: pointer;
+                            border-radius: 12px;
+                            margin-bottom: 40px;  /* kanske kan ta bort */
+                            margin-top: 10px;
+                
+                
+                            &:hover {
+                                background-color: white;
+                                color: #455950;
+                            }
+                        }
+                    }
+                                       
+                    /*.pricing-plan{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center; */
+                 
+                
+                    h1, h2, h3{  /* fixa media  minska med rem (em) */
+                        display: flex;
+                        justify-content: center;
+                        color:#455950;  /* color: $primary-green; */
+                        margin: 10px;
+
+                    }
+                    h4 { color: black;
+                        
+                    }
+                    
+                    p{  /* fixa media */
+                        display: flex;
+                        
+                        
+                        text-align: center;
+                        margin-left: 18px;
+                        padding-bottom: 30px;
+                        padding: 25px;
+
+                        /* padding-left: 5px; */
+                        /* fixa media */
 
 
-    p {
-        color: black;
-        // text-align: center;
-        // margin-top: 20px;
-        // margin-bottom: 40px;
-        margin: 10px 0;
-        padding: 8px;
-        line-height: 1.5;
-
-        @include mobile {
-            text-align: left;
-            padding: 10px;
-        }
-
-        @include desktop {
-            text-align: center;
-            padding: 15px;
-        }
-    }
 
 
-    li {
-        color: black;
-        margin: 10px 0;
+                    /* .li{   
+                        display: flex;
+                        align-items: center ;
+                        /* color:black  }
+                        bara för att slippa kommenter aut hela .li */
+                        
+                    }
+                    .add-notes,p {
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding: 0;
+                        margin: 0;
+                        max-width: 900px;
 
-        @include mobile {
-            padding: 5px;
-        }
+                        li{
+                            margin: 0;
+                        }
+                    } 
+                    
+                         
+                }
 
-        @include desktop {
-            padding: 10px;
-        }
-    }
 
-}
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                }/* .service-wrap */        
+            } /* content-wrap - Kanske ej behövs*/
+        } /* main */
+
+    /* } @media/@includ om jag vill ha med allt över */
+
+} /* body */
