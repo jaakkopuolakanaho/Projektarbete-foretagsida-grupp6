@@ -318,6 +318,12 @@ body.home-page .newsletter-container {
   padding: 0px 40px;
   color: #455950;
 }
+@media (width > 590px) {
+  body.home-page .newsletter-container {
+    padding: 0px;
+    width: 640px;
+  }
+}
 body.home-page .newsletter-container h2 {
   text-align: center;
   margin: 10px 0px;
@@ -337,9 +343,6 @@ body.home-page input[type=submit] {
   font-weight: bold;
   border: none;
   border-radius: 8px;
-}
-body.home-page input[type=submit]:hover {
-  opacity: 0.8;
 }
 body.home-page aside {
   margin-top: 20px;
