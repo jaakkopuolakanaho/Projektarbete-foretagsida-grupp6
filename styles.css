@@ -503,6 +503,359 @@ body.about-page .staff-container .staff .staff-one p, body.about-page .staff-con
   color: black;
 }
 
+/* SKA SLÄNGA SEN - Bara har min ursprungskod här medan jag rensar upp scss'en */
+body.services-page {
+  /* Plocka ifran  */
+  /* }
+  mobile {
+  @media ( 590px > width ){
+      @content
+  }
+  }  */
+  /* @media   (width > 590px) {
+      max-width 640px *
+  }
+
+
+  /*
+  @media ( 590px > width ){
+
+  }
+
+
+
+
+  @media desktop {
+  @media ( width > 590px ){
+
+
+  }
+  } */
+}
+body.services-page main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+@media desktop {
+  body.services-page main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 640px;
+  }
+}
+@media (width > 590px) {
+  body.services-page main {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    max-width: 640px;
+  }
+  body.services-page .content-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (width > 590px) and (width > 590px) {
+  body.services-page .content-wrap .service-wrap {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    max-width: 640px;
+    padding: 10px 40px 40px 40px;
+    /* padding-left: 100px; */
+  }
+}
+@media (width > 590px) and (width > 590px) {
+  body.services-page .content-wrap .pricing-plan {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    max-width: 640px;
+  }
+}
+@media (width > 590px) and (width > 590px) and (590px > width) {
+  body.services-page .content-wrap .service-wrap {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    max-width: 640px;
+  }
+}
+@media (width > 590px) and (width > 590px) and (590px > width) {
+  body.services-page .content-wrap {
+    /* .free-trial {
+        display: inline-block;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        } */
+  }
+  body.services-page .content-wrap .pricing-plan {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    max-width: 640px;
+  }
+  body.services-page .content-wrap h1 {
+    font-size: 1.8em;
+    margin: 20px 0;
+  }
+  body.services-page .content-wrap h2 {
+    font-size: 1.4em;
+  }
+}
+body.services-page body.services-page {
+  background-color: white;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  /* media eller include? */
+}
+@media (590px > width) {
+  body.services-page body.services-page .service-wrap {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  body.services-page body.services-page .button {
+    width: 100%;
+    font-size: 14px;
+  }
+  body.services-page body.services-page h1 {
+    font-size: 1.8em;
+    margin: 20px 0;
+  }
+  body.services-page body.services-page h2 {
+    font-size: 1.4em;
+  }
+  body.services-page body.services-page .pricing-plan {
+    padding: 20px;
+  }
+}
+@media (width > 590px) {
+  body.services-page body.services-page .service-wrap {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1200px;
+    max-width: 0 auto;
+  }
+  body.services-page body.services-page .button {
+    width: auto;
+    font-size: 16px;
+  }
+  body.services-page body.services-page h1 {
+    font-size: 2.5em;
+    margin: 40px 0;
+  }
+  body.services-page body.services-page h2 {
+    font-size: 1.8em;
+  }
+  body.services-page body.services-page .pricing-plan {
+    padding: 40px;
+    max-width: 1000px;
+  }
+}
+body.services-page body.services-page .button {
+  background-color: #455950;
+  border: 3px solid #455950;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  /* .free-trial {
+      display: block;
+      justify-content: center;
+      } */
+}
+body.services-page body.services-page .button:hover {
+  background-color: white;
+  color: #455950;
+}
+body.services-page body.services-page .sub {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  margin: 20px;
+}
+@media (590px > width) {
+  body.services-page body.services-page .sub {
+    justify-content: center;
+    padding: 20px;
+  }
+}
+@media (width > 590px) {
+  body.services-page body.services-page .sub {
+    justify-content: flex-end;
+    padding: 20px;
+  }
+}
+body.services-page body.services-page .pricing-plan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+  /* När löste det sig att "Plan" och pris hamnade p samma rad - för iphone 14/mobil*/
+}
+@media (590px > width) {
+  body.services-page body.services-page .pricing-plan {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+@media (width > 590px) {
+  body.services-page body.services-page .pricing-plan {
+    flex-direction: column;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+body.services-page body.services-page h1, body.services-page body.services-page h2, body.services-page body.services-page h3 {
+  color: #455950;
+  text-align: center;
+}
+@media (590px > width) {
+  body.services-page body.services-page h1, body.services-page body.services-page h2, body.services-page body.services-page h3 {
+    margin: 20px 0;
+  }
+}
+@media (width > 590px) {
+  body.services-page body.services-page h1, body.services-page body.services-page h2, body.services-page body.services-page h3 {
+    margin: 40px 0;
+  }
+}
+body.services-page body.services-page p {
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin: 10px 0;
+  padding: 8px;
+  line-height: 1.5;
+}
+@media (590px > width) {
+  body.services-page body.services-page p {
+    text-align: left;
+    padding: 10px;
+  }
+}
+@media (width > 590px) {
+  body.services-page body.services-page p {
+    text-align: center;
+    padding: 15px;
+  }
+}
+body.services-page body.services-page li {
+  color: black;
+  margin: 10px 0;
+}
+@media (width < 350px) {
+  body.services-page .store {
+    display: grid;
+    max-width: auto;
+  }
+  body.services-page .copyright {
+    font-size: 0.85rem;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+@media desktop {
+  main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 640px;
+  }
+}
+
+@media (width > 590px) {
+  main {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    max-width: 640px;
+  }
+  .content-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (width > 590px) and (width > 590px) {
+  .content-wrap .service-wrap {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    max-width: 640px;
+    padding: 10px 40px 40px 40px;
+    /* padding-left: 100px; */
+  }
+}
+@media (width > 590px) and (width > 590px) {
+  .content-wrap .pricing-plan {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    max-width: 640px;
+  }
+}
+@media (width > 590px) and (width > 590px) and (590px > width) {
+  .content-wrap .service-wrap {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    max-width: 640px;
+  }
+}
+@media (width > 590px) and (width > 590px) and (590px > width) {
+  .content-wrap {
+    /* .free-trial {
+        display: inline-block;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        } */
+  }
+  .content-wrap .pricing-plan {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    max-width: 640px;
+  }
+  .content-wrap h1 {
+    font-size: 1.8em;
+    margin: 20px 0;
+  }
+  .content-wrap h2 {
+    font-size: 1.4em;
+  }
+}
+/* Plocka ifran  */
 body.services-page {
   background-color: white;
   height: auto;
@@ -510,6 +863,7 @@ body.services-page {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   padding: 10px;
+  /* media eller include? */
 }
 @media (590px > width) {
   body.services-page .service-wrap {
@@ -571,6 +925,10 @@ body.services-page .button {
   border-radius: 9px;
   margin-bottom: 20px;
   margin-top: 40px;
+  /* .free-trial {
+      display: block;
+      justify-content: center;
+      } */
 }
 body.services-page .button:hover {
   background-color: white;
@@ -599,6 +957,7 @@ body.services-page .pricing-plan {
   flex-wrap: wrap;
   justify-content: center;
   padding: 40px;
+  /* När löste det sig att "Plan" och pris hamnade p samma rad - för iphone 14/mobil*/
 }
 @media (590px > width) {
   body.services-page .pricing-plan {
@@ -608,7 +967,7 @@ body.services-page .pricing-plan {
 }
 @media (width > 590px) {
   body.services-page .pricing-plan {
-    flex-direction: row;
+    flex-direction: column;
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -630,6 +989,9 @@ body.services-page h1, body.services-page h2, body.services-page h3 {
 }
 body.services-page p {
   color: black;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
   margin: 10px 0;
   padding: 8px;
   line-height: 1.5;
@@ -650,17 +1012,41 @@ body.services-page li {
   color: black;
   margin: 10px 0;
 }
-@media (590px > width) {
-  body.services-page li {
-    padding: 5px;
+
+@media (width < 350px) {
+  .store {
+    display: grid;
+    max-width: auto;
+  }
+  .copyright {
+    font-size: 0.85rem;
   }
 }
-@media (width > 590px) {
-  body.services-page li {
-    padding: 10px;
-  }
+/* }
+mobile {
+@media ( 590px > width ){
+    @content
+}
+}  */
+/* @media   (width > 590px) {
+    max-width 640px *
 }
 
+
+/*
+@media ( 590px > width ){
+
+}
+
+
+
+
+@media desktop {
+@media ( width > 590px ){
+
+
+}
+} */
 body.reviews-page {
   background-color: white;
   height: 100vh;
@@ -810,7 +1196,7 @@ footer {
   color: white;
   width: 100%;
   padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Karla", Helvetica, sans-serif;
 }
 footer .fot-parent {
   display: flex;
@@ -839,7 +1225,7 @@ footer .fot-parent .fot-container .fot-menu {
   list-style: none;
   line-height: 1.5;
 }
-footer .fot-parent .fot-container .fot-menu fot, footer .fot-parent .fot-container .fot-menu a {
+footer .fot-parent .fot-container .fot-menu .fot, footer .fot-parent .fot-container .fot-menu a {
   list-style: none;
   color: white;
   text-decoration: none;
@@ -851,7 +1237,7 @@ footer .fot-parent .fot-container .fot-menu-child-1, footer .fot-parent .fot-con
 @media (min-width: 768px) {
   footer .fot-parent .fot-container .fot-menu {
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
   }
 }
 footer .fot-parent .fot-container .fot-btn {
@@ -897,10 +1283,24 @@ footer .fot-parent .horizontal-line {
   height: 2px;
   background-color: white;
   margin: 20px 0;
+  color: white;
+}
+footer .fot-parent .fot-end {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+}
+@media (max-width: 365px) {
+  footer .fot-parent {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 footer .fot-parent .store {
-  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-self: center;
   margin-top: 10px;
 }
 footer .fot-parent .copyright {
@@ -908,5 +1308,19 @@ footer .fot-parent .copyright {
   justify-content: center;
   color: white;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+footer .fotlog img {
+  content: url("partials/media/430_px_maindful-logo.png");
+}
+@media (max-width: 441px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .fotlog img {
+    content: url("partials/media/square_maindful-logo.png");
+  }
 }/*# sourceMappingURL=styles.css.map */
