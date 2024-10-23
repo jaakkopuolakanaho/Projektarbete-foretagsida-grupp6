@@ -33,62 +33,64 @@ header .header-container {
   }
 }
 header .logo-container {
-  display: flex;
-  align-self: flex-start;
   left: 20px;
 }
 @media (width > 590px) {
   header .logo-container img {
+    position: absolute;
     max-width: 100%;
     height: auto;
-    max-height: 135px;
-    position: absolute;
+    left: 10%;
+    max-height: 120px;
     z-index: 0;
   }
 }
 @media (590px > width) {
   header .logo-container img {
     top: -5px;
-    max-width: 90%;
+    max-width: 80%;
     max-height: 90px;
     position: absolute;
   }
 }
+header .slogan {
+  z-index: 10;
+}
 @media (590px > width) {
   header .slogan {
     position: relative;
-    text-align: end;
-    top: 56px;
-    right: -30px;
+    top: 55px;
+    right: 3px;
   }
   header .slogan h2 {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     font-family: "Scope One";
-    font-size: 17px;
     font-style: italic;
+    text-wrap: wrap;
+    text-align: right;
+    font-size: clamp(16px, 4vw, 22px);
   }
 }
 @media (width > 590px) {
   header .slogan {
-    width: 70%;
+    width: 99%;
     text-align: end;
   }
   header .slogan h2 {
     position: relative;
-    bottom: -75px;
+    bottom: -65px;
     left: 0;
     font-family: "Scope One";
     padding: 0.5%;
     font-style: italic;
+    text-align: right;
+    font-size: clamp(25px, 2vw, 32px);
+    padding: 1%;
   }
 }
 header .center-container {
   min-width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: right;
+  text-align: center;
   z-index: 1;
 }
 @media (width > 590px) {
@@ -110,33 +112,40 @@ header .nav-container {
     top: 40px;
   }
   header .nav-container .navigation {
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    /* #region */
-    /* #endregion */
+    text-transform: uppercase;
+    margin-left: -5%;
   }
   header .nav-container .navigation ul {
-    display: flex;
+    max-width: 100%;
+    display: flexbox;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
-    margin: 10px;
+    margin: 8px;
   }
   header .nav-container .navigation li {
+    display: inline-flex;
     margin-right: 10px;
   }
   header .nav-container .navigation a {
-    text-decoration: none;
-    font-weight: 500;
+    -webkit-text-decoration: overline 1px rgba(255, 255, 255, 0.5);
+            text-decoration: overline 1px rgba(255, 255, 255, 0.5);
+    font-weight: 450;
     font-size: 16px;
     letter-spacing: 1px;
-    text-transform: uppercase;
     color: #ffffff;
-    padding: 4px;
+    padding: 4px 5px 4px 5px;
   }
   header .nav-container .navigation a:hover {
     color: #969696;
+  }
+  header .nav-container .navigation a.active {
+    letter-spacing: 2px;
+    -webkit-text-decoration: underline overline 1.3px rgba(255, 255, 255, 0.8);
+            text-decoration: underline overline 1.3px rgba(255, 255, 255, 0.8);
+    text-underline-offset: 4px;
+    text-shadow: rgba(0, 0, 0, 0.6) 3px 0 4px;
   }
 }
 @media (width > 590px) {
@@ -144,28 +153,40 @@ header .nav-container {
     top: 50px;
   }
   header .nav-container .navigation {
-    height: 60px;
+    max-height: 60px;
     display: flex;
+    justify-content: center;
+    text-align: center;
     align-items: center;
   }
   header .nav-container .navigation ul {
     list-style: none;
     display: flex;
+    padding: 10px;
   }
   header .nav-container .navigation ul li {
     margin: 15px;
   }
   header .nav-container .navigation a {
     margin: auto;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 25px;
+    -webkit-text-decoration: overline 1px;
+            text-decoration: overline 1px;
+    font-weight: 450;
+    font-size: 22px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #ffffff;
   }
   header .nav-container .navigation a:hover {
     color: #969696;
+  }
+  header .nav-container .navigation a.active {
+    letter-spacing: 3px;
+    -webkit-text-decoration: underline overline 2px;
+            text-decoration: underline overline 2px;
+    text-decoration-color: rgba(255, 255, 255, 0.8);
+    text-underline-offset: 7px;
+    text-shadow: rgba(0, 0, 0, 0.6) 3px 0 4px;
   }
 }
 header .login-btn {
@@ -203,11 +224,6 @@ header .login-btn {
   header .login-btn:hover {
     color: #969696;
   }
-}
-
-a .active {
-  -webkit-text-decoration: italic;
-          text-decoration: italic;
 }
 
 body.home-page {
