@@ -547,558 +547,116 @@ body.about-page .staff-container .staff .staff-one p, body.about-page .staff-con
   color: black;
 }
 
-/* SKA SLÄNGA SEN - Bara har min ursprungskod här medan jag rensar upp scss'en */
 body.services-page {
-  /* Plocka ifran  */
-  /* }
-  mobile {
-  @media ( 590px > width ){
-      @content
-  }
-  }  */
-  /* @media   (width > 590px) {
-      max-width 640px *
-  }
-
-
-  /*
-  @media ( 590px > width ){
-
-  }
-
-
-
-
-  @media desktop {
-  @media ( width > 590px ){
-
-
-  }
-  } */
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  font-family: "Karla", Helvetica, sans-serif;
+  /* content-wrap - Kanske ej behövs*/
 }
-body.services-page main {
+body.services-page .content-wrap {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  /* .service-wrap */
 }
 @media desktop {
-  body.services-page main {
+  body.services-page .content-wrap { /* BYT till i projektarbetet : @include desktop { */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 640px;
+    /* Lägg in det som ska gälla desktop är: */
   }
 }
-@media (width > 590px) {
-  body.services-page main {
-    display: grid;
-    flex-direction: column;
-    justify-items: center;
-    max-width: 640px;
-  }
-  body.services-page .content-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+body.services-page .content-wrap main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-@media (width > 590px) and (width > 590px) {
-  body.services-page .content-wrap .service-wrap {
-    display: grid;
-    flex-direction: column;
-    justify-items: center;
-    align-content: center;
-    max-width: 640px;
-    padding: 10px 40px 40px 40px;
-    /* padding-left: 100px; */
-  }
+body.services-page .content-wrap main .service-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  /*.pricing-plan{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
 }
-@media (width > 590px) and (width > 590px) {
-  body.services-page .content-wrap .pricing-plan {
-    display: grid;
-    flex-direction: column;
-    justify-items: center;
-    max-width: 640px;
-  }
+body.services-page .content-wrap main .service-wrap .free-trial {
+  display: flex;
+  justify-content: center;
 }
-@media (width > 590px) and (width > 590px) and (590px > width) {
-  body.services-page .content-wrap .service-wrap {
-    display: grid;
-    flex-direction: column;
-    justify-items: center;
-    max-width: 640px;
-  }
-}
-@media (width > 590px) and (width > 590px) and (590px > width) {
-  body.services-page .content-wrap {
-    /* .free-trial {
-        display: inline-block;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
-        } */
-  }
-  body.services-page .content-wrap .pricing-plan {
-    display: grid;
-    flex-direction: column;
-    justify-items: center;
-    max-width: 640px;
-  }
-  body.services-page .content-wrap h1 {
-    font-size: 1.8em;
-    margin: 20px 0;
-  }
-  body.services-page .content-wrap h2 {
-    font-size: 1.4em;
-  }
-}
-body.services-page body.services-page {
-  background-color: white;
-  height: auto;
-  width: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 10px;
-  /* media eller include? */
-}
-@media (590px > width) {
-  body.services-page body.services-page .service-wrap {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-  body.services-page body.services-page .button {
-    width: 100%;
-    font-size: 14px;
-  }
-  body.services-page body.services-page h1 {
-    font-size: 1.8em;
-    margin: 20px 0;
-  }
-  body.services-page body.services-page h2 {
-    font-size: 1.4em;
-  }
-  body.services-page body.services-page .pricing-plan {
-    padding: 20px;
-  }
-}
-@media (width > 590px) {
-  body.services-page body.services-page .service-wrap {
-    flex-direction: row;
-    justify-content: space-around;
-    max-width: 1200px;
-    max-width: 0 auto;
-  }
-  body.services-page body.services-page .button {
-    width: auto;
-    font-size: 16px;
-  }
-  body.services-page body.services-page h1 {
-    font-size: 2.5em;
-    margin: 40px 0;
-  }
-  body.services-page body.services-page h2 {
-    font-size: 1.8em;
-  }
-  body.services-page body.services-page .pricing-plan {
-    padding: 40px;
-    max-width: 1000px;
-  }
-}
-body.services-page body.services-page .button {
+body.services-page .content-wrap main .service-wrap .free-trial .button {
   background-color: #455950;
   border: 3px solid #455950;
   color: white;
   padding: 12px 28px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
+  text-align: center; /* kanske kan ta bort */
+  text-decoration: none; /* kanske kan ta bort */
+  display: inline-block; /* kanske kan ta bort */
+  font-size: 14px; /* kanske kan ta bort */
   font-weight: bold;
-  margin: 10px 0;
+  margin: 10px 0; /* kanske kan ta bort */
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 9px;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  /* .free-trial {
-      display: block;
-      justify-content: center;
-      } */
+  border-radius: 12px;
+  margin-bottom: 40px; /* kanske kan ta bort */
+  margin-top: 10px;
 }
-body.services-page body.services-page .button:hover {
+body.services-page .content-wrap main .service-wrap .free-trial .button:hover {
   background-color: white;
   color: #455950;
 }
-body.services-page body.services-page .sub {
+body.services-page .content-wrap main .service-wrap h1, body.services-page .content-wrap main .service-wrap h2, body.services-page .content-wrap main .service-wrap h3 { /* fixa media  minska med rem (em) */
   display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-  margin: 20px;
-}
-@media (590px > width) {
-  body.services-page body.services-page .sub {
-    justify-content: center;
-    padding: 20px;
-  }
-}
-@media (width > 590px) {
-  body.services-page body.services-page .sub {
-    justify-content: flex-end;
-    padding: 20px;
-  }
-}
-body.services-page body.services-page .pricing-plan {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  padding: 40px;
-  /* När löste det sig att "Plan" och pris hamnade p samma rad - för iphone 14/mobil*/
+  color: #455950; /* color: $primary-green; */
+  margin: 10px;
 }
-@media (590px > width) {
-  body.services-page body.services-page .pricing-plan {
-    flex-direction: column;
-    padding: 20px;
-  }
-}
-@media (width > 590px) {
-  body.services-page body.services-page .pricing-plan {
-    flex-direction: column;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-body.services-page body.services-page h1, body.services-page body.services-page h2, body.services-page body.services-page h3 {
-  color: #455950;
-  text-align: center;
-}
-@media (590px > width) {
-  body.services-page body.services-page h1, body.services-page body.services-page h2, body.services-page body.services-page h3 {
-    margin: 20px 0;
-  }
-}
-@media (width > 590px) {
-  body.services-page body.services-page h1, body.services-page body.services-page h2, body.services-page body.services-page h3 {
-    margin: 40px 0;
-  }
-}
-body.services-page body.services-page p {
+body.services-page .content-wrap main .service-wrap h4 {
   color: black;
+}
+body.services-page .content-wrap main .service-wrap p { /* fixa media */
+  display: flex;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  margin: 10px 0;
-  padding: 8px;
-  line-height: 1.5;
+  margin-left: 18px;
+  padding-bottom: 30px;
+  padding: 25px;
+  /* padding-left: 5px; */
+  /* fixa media */
+  /* .li{   
+      display: flex;
+      align-items: center ;
+      /* color:black  }
+      bara för att slippa kommenter aut hela .li */
 }
-@media (590px > width) {
-  body.services-page body.services-page p {
-    text-align: left;
-    padding: 10px;
-  }
-}
-@media (width > 590px) {
-  body.services-page body.services-page p {
-    text-align: center;
-    padding: 15px;
-  }
-}
-body.services-page body.services-page li {
-  color: black;
-  margin: 10px 0;
-}
-@media (width < 350px) {
-  body.services-page .store {
-    display: grid;
-    max-width: auto;
-  }
-  body.services-page .copyright {
-    font-size: 0.85rem;
-  }
-}
-
-main {
+body.services-page .content-wrap main .service-wrap .add-notes, body.services-page .content-wrap main .service-wrap p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-}
-@media desktop {
-  main {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 640px;
-  }
-}
-
-@media (width > 590px) {
-  main {
-    display: grid;
-    flex-direction: column;
-    justify-items: center;
-    max-width: 640px;
-  }
-  .content-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media (width > 590px) and (width > 590px) {
-  .content-wrap .service-wrap {
-    display: grid;
-    flex-direction: column;
-    justify-items: center;
-    align-content: center;
-    max-width: 640px;
-    padding: 10px 40px 40px 40px;
-    /* padding-left: 100px; */
-  }
-}
-@media (width > 590px) and (width > 590px) {
-  .content-wrap .pricing-plan {
-    display: grid;
-    flex-direction: column;
-    justify-items: center;
-    max-width: 640px;
-  }
-}
-@media (width > 590px) and (width > 590px) and (590px > width) {
-  .content-wrap .service-wrap {
-    display: grid;
-    flex-direction: column;
-    justify-items: center;
-    max-width: 640px;
-  }
-}
-@media (width > 590px) and (width > 590px) and (590px > width) {
-  .content-wrap {
-    /* .free-trial {
-        display: inline-block;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
-        } */
-  }
-  .content-wrap .pricing-plan {
-    display: grid;
-    flex-direction: column;
-    justify-items: center;
-    max-width: 640px;
-  }
-  .content-wrap h1 {
-    font-size: 1.8em;
-    margin: 20px 0;
-  }
-  .content-wrap h2 {
-    font-size: 1.4em;
-  }
-}
-/* Plocka ifran  */
-body.services-page {
-  background-color: white;
-  height: auto;
-  width: 100%;
+  padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 10px;
-  /* media eller include? */
+  max-width: 900px;
 }
-@media (590px > width) {
-  body.services-page .service-wrap {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-  body.services-page .button {
-    width: 100%;
-    font-size: 14px;
-  }
-  body.services-page h1 {
-    font-size: 1.8em;
-    margin: 20px 0;
-  }
-  body.services-page h2 {
-    font-size: 1.4em;
-  }
-  body.services-page .pricing-plan {
-    padding: 20px;
-  }
-}
-@media (width > 590px) {
-  body.services-page .service-wrap {
-    flex-direction: row;
-    justify-content: space-around;
-    max-width: 1200px;
-    max-width: 0 auto;
-  }
-  body.services-page .button {
-    width: auto;
-    font-size: 16px;
-  }
-  body.services-page h1 {
-    font-size: 2.5em;
-    margin: 40px 0;
-  }
-  body.services-page h2 {
-    font-size: 1.8em;
-  }
-  body.services-page .pricing-plan {
-    padding: 40px;
-    max-width: 1000px;
-  }
-}
-body.services-page .button {
-  background-color: #455950;
-  border: 3px solid #455950;
-  color: white;
-  padding: 12px 28px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  margin: 10px 0;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 9px;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  /* .free-trial {
-      display: block;
-      justify-content: center;
-      } */
-}
-body.services-page .button:hover {
-  background-color: white;
-  color: #455950;
-}
-body.services-page .sub {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-  margin: 20px;
-}
-@media (590px > width) {
-  body.services-page .sub {
-    justify-content: center;
-    padding: 20px;
-  }
-}
-@media (width > 590px) {
-  body.services-page .sub {
-    justify-content: flex-end;
-    padding: 20px;
-  }
-}
-body.services-page .pricing-plan {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 40px;
-  /* När löste det sig att "Plan" och pris hamnade p samma rad - för iphone 14/mobil*/
-}
-@media (590px > width) {
-  body.services-page .pricing-plan {
-    flex-direction: column;
-    padding: 20px;
-  }
-}
-@media (width > 590px) {
-  body.services-page .pricing-plan {
-    flex-direction: column;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-body.services-page h1, body.services-page h2, body.services-page h3 {
-  color: #455950;
-  text-align: center;
-}
-@media (590px > width) {
-  body.services-page h1, body.services-page h2, body.services-page h3 {
-    margin: 20px 0;
-  }
-}
-@media (width > 590px) {
-  body.services-page h1, body.services-page h2, body.services-page h3 {
-    margin: 40px 0;
-  }
-}
-body.services-page p {
-  color: black;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  margin: 10px 0;
-  padding: 8px;
-  line-height: 1.5;
-}
-@media (590px > width) {
-  body.services-page p {
-    text-align: left;
-    padding: 10px;
-  }
-}
-@media (width > 590px) {
-  body.services-page p {
-    text-align: center;
-    padding: 15px;
-  }
-}
-body.services-page li {
-  color: black;
-  margin: 10px 0;
+body.services-page .content-wrap main .service-wrap .add-notes li, body.services-page .content-wrap main .service-wrap p li {
+  margin: 0;
 }
 
-@media (width < 350px) {
-  .store {
-    display: grid;
-    max-width: auto;
-  }
-  .copyright {
-    font-size: 0.85rem;
-  }
-}
-/* }
-mobile {
-@media ( 590px > width ){
-    @content
-}
-}  */
-/* @media   (width > 590px) {
-    max-width 640px *
-}
-
-<<<<<<< HEAD
-
-/*
-@media ( 590px > width ){
-
-}
-
-
-
-
-@media desktop {
-@media ( width > 590px ){
-
-
-}
-} */
-=======
+/* main */
+/* } @media/@includ om jag vill ha med allt över */
+/* body */
 body.contact-page {
   background-color: white;
   height: 100vh;
   width: 100%;
   margin: 0px;
-  font-family: Karla;
+  font-family: "Karla", Arial, Helvetica;
 }
 @media (width > 590px) {
   body.contact-page main {
@@ -1111,6 +669,9 @@ body.contact-page main form {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+}
+body.contact-page main form input {
+  font-family: monospace;
 }
 body.contact-page main form .login-container {
   display: flex;
@@ -1157,7 +718,6 @@ body.contact-page main form .login-container .forgot-password p {
   text-align: center;
 }
 
->>>>>>> a577ced43aadd88c03f932e3ec6622008e3d4956
 body.reviews-page {
   background-color: white;
   height: 100vh;
@@ -1306,28 +866,29 @@ footer {
   background-color: #455950;
   color: white;
   width: 100%;
-  padding: 10px;
+  /* padding: 10px; */
   font-family: "Karla", Helvetica, sans-serif;
 }
-footer .fot-parent {
+
+.fot-parent {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
 }
-footer .fot-parent .fot-container {
+.fot-parent .fot-container {
   display: flex;
-  flex-direction: column; /* för mobiler */
+  flex-direction: column;
   align-items: center;
   width: 100%;
 }
-@media (min-width: 768px) {
-  footer .fot-parent .fot-container {
+@media (min-width: 590px) {
+  .fot-parent .fot-container {
     flex-direction: row;
-    justify-content: space-between; /* gör lite luftigare*/
+    justify-content: space-between;
   }
 }
-footer .fot-parent .fot-container .fot-menu {
+.fot-parent .fot-container .fot-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1335,23 +896,28 @@ footer .fot-parent .fot-container .fot-menu {
   margin: 5px;
   list-style: none;
   line-height: 1.5;
+  letter-spacing: 0.1rem;
 }
-footer .fot-parent .fot-container .fot-menu .fot, footer .fot-parent .fot-container .fot-menu a {
-  list-style: none;
+@media (min-width: 890px) {
+  .fot-parent .fot-container .fot-menu {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+.fot-parent .fot-container .fot-menu a {
   color: white;
   text-decoration: none;
   width: 100%;
-}
-footer .fot-parent .fot-container .fot-menu-child-1, footer .fot-parent .fot-container .fot-menu-child-2, footer .fot-parent .fot-container .fot-menu-child-3, footer .fot-parent .fot-container .fot-menu-child-4 {
   padding: 5px;
+  transition: background-color 0.3s ease;
 }
-@media (min-width: 768px) {
-  footer .fot-parent .fot-container .fot-menu {
-    flex-direction: row;
-    justify-content: flex-end;
-  }
+.fot-parent .fot-container .fot-menu a:hover {
+  background-color: transparent 255, 255, 255, 0.2;
+  border: 2px solid rgb(222, 238, 234);
+  border-radius: 9px;
+  padding: 4px;
 }
-footer .fot-parent .fot-container .fot-btn {
+.fot-parent .fot-container .fot-btn {
   color: #455950;
   display: flex;
   flex-direction: column;
@@ -1359,79 +925,77 @@ footer .fot-parent .fot-container .fot-btn {
   padding: 10px;
   margin: 10px;
 }
-footer .fot-parent .fot-container .fot-btn button {
+.fot-parent .fot-container .fot-btn .sub-btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+.fot-parent .fot-container .fot-btn button {
   width: auto;
   border-radius: 15px;
-  padding-left: 12px;
-  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 15px;
+  letter-spacing: 0.1rem;
+  outline: none;
+  border: none;
 }
-footer .fot-parent .fot-container .fot-btn input {
+.fot-parent .fot-container .fot-btn input::-moz-placeholder {
+  background-color: #455950;
+  color: #ffffff;
+  padding: 10px;
+  letter-spacing: 0.1rem;
+}
+.fot-parent .fot-container .fot-btn input::placeholder {
+  background-color: #455950;
+  color: #ffffff;
+  padding: 10px;
+  letter-spacing: 0.1rem;
+}
+.fot-parent .fot-container .fot-btn input {
   background-color: #455950;
   width: auto;
   border-radius: 15px;
   margin-inline-start: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
+  outline: white;
+  border: white;
 }
-@media (min-width: 768px) {
-  footer .fot-parent .fot-container .fot-btn {
+@media (min-width: 590px) {
+  .fot-parent .fot-container .fot-btn {
     flex-direction: row;
     justify-content: flex-end;
   }
 }
-footer .fot-parent .sign-in {
-  padding-top: 10px;
-}
-footer .fot-parent .sign-in button {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding: 5px;
-  border-radius: 12px;
-}
-footer .fot-parent .horizontal-line {
+.fot-parent .horizontal-line {
   width: 90%;
   height: 2px;
   background-color: white;
   margin: 20px 0;
-  color: white;
 }
-footer .fot-parent .fot-end {
+.fot-parent .fot-end {
   display: flex;
   flex-direction: column;
-  justify-self: flex-end;
+  align-items: center;
 }
-@media (max-width: 365px) {
-  footer .fot-parent {
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-}
-footer .fot-parent .store {
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
+.fot-parent .store {
   margin-top: 10px;
 }
-footer .fot-parent .copyright {
-  display: flex;
-  justify-content: center;
+.fot-parent .copyright {
   color: white;
   width: 100%;
   margin-top: 20px;
   margin-bottom: 15px;
+  text-align: center;
 }
-footer .fotlog img {
-  content: url("partials/media/430_px_maindful-logo.png");
+.fot-parent .fotlog img {
+  content: url("partials/media/google_50px.png");
 }
-@media (max-width: 441px) {
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  footer .fotlog img {
+@media (max-width: 465px) {
+  .fot-parent .fotlog img {
     content: url("partials/media/square_maindful-logo.png");
   }
 }/*# sourceMappingURL=styles.css.map */
