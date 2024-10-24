@@ -8,7 +8,7 @@
       content="App, Free trial, Mindfulness, Community, Maindful, AI" />
     <meta
       name="description"
-      content="Start Page To The Maindful AI Mindfulness App And Community" />
+      content="Contact Page Maindful App Developers And Community" />
 
     <!--Karla Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,7 +28,7 @@
   </head>
 
   <body class="contact-page">
-    <!-- Header-kodblock -->
+    <!--    HEADER:     -->
     <header class="header-container">
       <div class="logo-container">
         <img
@@ -46,10 +46,10 @@
           <nav class="navigation">
             <ul>
               <!-- ange class="active" -->
-              <li><a href="#" class="active">Home</a></li>
+              <li><a href="home.html">Home</a></li>
               <li><a href="services.html">Services</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#" class="active">Contact</a></li>
               <li><a href="reviews.html">Reviews</a></li>
             </ul>
           </nav>
@@ -57,27 +57,57 @@
         <a href="sign-in.html" class="login-btn">Sign in</a>
       </div>
     </header>
+    <!--    END HEADER     -->
 
-    <div class="form1 demo">
-      <h1>Forms Demo</h1>
-      <p>Try different Forms!</p>
-      <h2>Contact 1</h2>
-      <form id="form" name="form" action="">
-        First name:<br />
-        <input type="text" name="fnamn" id="fnamn" /> <br />
+    <main>
+      <form  id="contact-form" name="form" action="action_page.php" method="post">
+        <div class="login-container">
+          <h1>Contact us!</h1>
 
-        Surname:<br />
-        <input type="text" name="enamn" id="enamn" /> <br />
+          <!-- First name:<br /> -->
+          <label for="firstname">First name</label>
+          <input
+            type="text"
+            class="username-password"
+            placeholder="Enter first name"
+            id="firstname"
+            name="firstname"
+            required />
 
-        E-mail:<br />
-        <input type="text" name="epost" id="epost" /> <br />
+          <!-- Surname:<br /> -->
+          <label for="surname">Surname</label>
+          <input
+            type="surname"
+            class="username-password"
+            placeholder="Enter surname"
+            id="surname"
+            name="surname"
+            required />
 
-        Message:<br />
-        <textarea name="message" id="message" cols="45" rows="5"></textarea>
-        <br />
+          <!-- Email:<br /> -->
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            class="username-password"
+            placeholder="Enter email"
+            id="email"
+            name="email"
+            required />
 
-        <input type="submit" name="send" id="send" value="Send message" />
+          <br />
+          <label for="message">Tell us what we can help you with</label>
+          <textarea
+            name="message"
+            cols="45"
+            rows="5"
+            class="username-password"
+            placeholder="Enter your message..."
+            id="message"></textarea>
+          <button type="submit">Send message</button>
+
       </form>
-    </div>
+        </div>
+      </form>
+    </main>
   </body>
 </html>

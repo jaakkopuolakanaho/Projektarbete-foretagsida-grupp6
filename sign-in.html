@@ -1,37 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Sign in, Member, Account, Maindful, AI">
-    <meta name="description" content="Sign In To Your Account">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Sign in, Member, Account, Maindful, AI" />
+    <meta name="description" content="Sign In To Your Account" />
+    <!--Karla Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet" />
+    <!--Scope One Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Scope+One&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
     <title>Maindful - Sign In To Your Account</title>
-</head>
-<body class="sign-in-page">
+  </head>
 
-  <main>
-    <form action="action_page.php" method="post">
-    
-      <div class="login-container">
-        <h1>Sign In To Your Account</h1>
-        <label for="username">Username</label>
-        <input type="text" class="username-password" placeholder="Enter Username" id="username" name="username" required>
-    
-        <label for="password">Password</label>
-        <input type="password" class="username-password" placeholder="Enter Password"  id="password" name="password" required>
-    
-        <button type="submit">Login</button>
-        <label for="remember" class="checkbox">
-          <input type="checkbox" checked="checked" name="remember" id="remember"> Remember Me
-        </label>
-
-        <div class="forgot-password">
-          <p>Forgot your password? <a href="...">Click Here!</a></p>
-        </div>
+  <body class="sign-in-page">
+    <!-- Header-kodblock -->
+    <header class="header-container">
+      <div class="logo-container">
+        <img
+          src="https://i.ibb.co/k6L3HTy/Maindful-logo.png"
+          alt="Maindfulness Logo"
+          class="logo" />
       </div>
-    </form>
-  </main>
 
-</body>
+      <div class="center-container">
+        <div class="slogan">
+          <h2>"Find your calm - Anytime, Anywhere."</h2>
+        </div>
+
+        <div class="nav-container">
+          <nav class="navigation">
+            <ul>
+              <!-- ange class="active" -->
+              <li><a href="home.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+          </nav>
+        </div>
+        <a href="#" class="login-btn" class="active">Sign in</a>
+      </div>
+    </header>
+
+    <main>
+      <form action="action_page.php" method="post">
+        <div class="login-container">
+          <h1>Sign In To Your Account</h1>
+          <label for="username">Username</label>
+          <input
+            type="text"
+            class="username-password"
+            placeholder="Enter Username"
+            id="username"
+            name="username"
+            required />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="username-password"
+            placeholder="Enter Password"
+            id="password"
+            name="password"
+            required />
+
+          <button type="submit">Login</button>
+          <label for="remember" class="checkbox">
+            <input
+              type="checkbox"
+              checked="checked"
+              name="remember"
+              id="remember" />
+            Remember Me
+          </label>
+
+          <div class="forgot-password">
+            <p>Forgot your password? <a href="...">Click Here!</a></p>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
 </html>

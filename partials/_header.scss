@@ -1,10 +1,8 @@
 header {
   font-family: Karla;
-  // position: fixed;
-
 
   .header-container {
-    position: relative; //ensure this is relative for absolute positioning inside it    
+    position: relative;
   }
 
   @include desktop {
@@ -74,17 +72,14 @@ header {
         font-style: italic;
         text-align: right;
 
-        // Scale with the window size using clamp for fluid resizing
         font-size: clamp(25px, 2vw, 32px); // Adjust as needed for desktop
         padding: 1%;
-
       }
     }
   }
 
   .center-container {
     min-width: 100%;
-
     text-align: center;
     z-index: 1;
 
@@ -221,19 +216,29 @@ header {
 
     @include desktop {
       top: 5px;
-      right: 12%;
+      right: 5%;
 
       text-decoration: none;
       font-weight: 700;
       font-size: x-large;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       border: 2px solid;
-      padding: 4px;
+      padding: 3px;
       color: $primary-green;
+      // text-decoration: overline;
 
       &:hover {
         color: #969696;
       }
+
+      &.active {
+        letter-spacing: 2px;
+        text-decoration: underline 2px;
+        text-decoration-color: rgba(255, 255, 255, 0.8);
+        text-underline-offset: 7px;
+        text-shadow: rgba(0, 0, 0, 0.6) 3px 0 4px;
+      }
+
     }
   }
 }
