@@ -992,7 +992,7 @@ footer {
   text-align: center;
 }
 .fot-parent .fotlog img {
-  content: url("partials/media/google_50px.png");
+  content: url("correct.png");
 }
 @media (max-width: 465px) {
   .fot-parent .fotlog img {
